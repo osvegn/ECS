@@ -1,5 +1,10 @@
-set(ECS_SOURCE_ROOT ${PROJECT_SOURCE_DIR}/lib/ECS/source)
-set(ECS_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/lib/ECS/include)
+cmake_minimum_required(VERSION 3.26)
+project(ECS)
+
+add_subdirectory(lib/vector)
+
+set(ECS_SOURCE_ROOT ${PROJECT_SOURCE_DIR}/source)
+set(ECS_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/include)
 set(TARGET ecs)
 set(SOURCE
     ${ECS_SOURCE_ROOT}/world.c

@@ -8,6 +8,7 @@
  */
 
 #include "component.h"
+#include <stdlib.h>
 
 void component_destructor(component_t *c)
 {
