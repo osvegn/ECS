@@ -1,0 +1,23 @@
+set(ECS_SOURCE_ROOT ${PROJECT_SOURCE_DIR}/lib/ECS/source)
+set(ECS_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/lib/ECS/include)
+set(TARGET ecs)
+set(SOURCE
+    ${ECS_SOURCE_ROOT}/world.c
+    ${ECS_SOURCE_ROOT}/world_entity.c
+    ${ECS_SOURCE_ROOT}/world_resource.c
+    ${ECS_SOURCE_ROOT}/world_system.c
+    ${ECS_SOURCE_ROOT}/world_constructor.c
+    ${ECS_SOURCE_ROOT}/entity_component.c
+    ${ECS_SOURCE_ROOT}/component_destructor.c
+)
+set_property(GLOBAL PROPERTY VECTOR_SOURCE ${VECTOR_SOURCE})
+
+add_library(${TARGET} ${SOURCE})
+
+target_include_directories(${TARGET}
+    PUBLIC ${ECS_INCLUDE_ROOT}
+)
+
+target_link_libraries(${TARGET}
+    vector
+)
