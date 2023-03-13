@@ -145,8 +145,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0, or -1 if an error occurs. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if an error occurs.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
+<div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world_8c.html#a4f80ba9c85a499aa8ca8a778abeda990">world_run_systems</a>(world);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue)</div>
+<div class="line">        <span class="keywordflow">return</span> rvalue;</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="astructworld__s_html"><div class="ttname"><a href="structworld__s.html">world_s</a></div><div class="ttdoc">It's the structure of a world. A world contains a list of systems, a list of resources,...</div><div class="ttdef"><b>Definition:</b> world.h:22</div></div>
+<div class="ttc" id="aworld_8c_html_a4f80ba9c85a499aa8ca8a778abeda990"><div class="ttname"><a href="world_8c.html#a4f80ba9c85a499aa8ca8a778abeda990">world_run_systems</a></div><div class="ttdeci">int world_run_systems(world_t *world)</div><div class="ttdoc">It runs all systems which exists in the world.</div><div class="ttdef"><b>Definition:</b> world.c:13</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->
