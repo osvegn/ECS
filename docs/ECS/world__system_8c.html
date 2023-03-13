@@ -182,8 +182,10 @@ Functions</h2></td></tr>
 <div class="line">    <span class="comment">// Create your own system run function, it&#39;s just an example</span></div>
 <div class="line">    system.<a class="code hl_variable" href="structsystem__s.html#aed5ef4aad149706719e84699af3b73c7">run</a> = &amp;system_example_run;</div>
 <div class="line">    rvalue = <a class="code hl_function" href="world__system_8c.html#a2028fbc7082a547a093271cb02d5b20e">world_add_system</a>(world, &amp;system);</div>
-<div class="line">    <span class="keywordflow">if</span> (rvalue)</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_add_system() failed: system already exists\n&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">return</span> rvalue;</div>
+<div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="astructsystem__s_html"><div class="ttname"><a href="structsystem__s.html">system_s</a></div><div class="ttdoc">It's the structure of a system. A system is used to update a type of component or resource....</div><div class="ttdef"><b>Definition:</b> system.h:23</div></div>
@@ -228,8 +230,23 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the system is found, false otherwise. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>True if the system is found, false otherwise.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
+<div class="line">    <a class="code hl_struct" href="structsystem__s.html">system_t</a> system = {0};</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create your own system type, it&#39;s just an example</span></div>
+<div class="line">    system.<a class="code hl_variable" href="structsystem__s.html#a4bfea42429249a1f65204f0c0f34704a">type</a> = SYSTEM_TYPE_EXAMPLE;</div>
+<div class="line">    <span class="comment">// Create your own system run function, it&#39;s just an example</span></div>
+<div class="line">    system.<a class="code hl_variable" href="structsystem__s.html#aed5ef4aad149706719e84699af3b73c7">run</a> = &amp;system_example_run;</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="world__system_8c.html#aa37f89ca543aef0b3fce616b98035a43">world_contains_system</a>(world, &amp;system)) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The system exists in the world\n&quot;</span>);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The system doesn&#39;t exist in the world\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__system_8c_html_aa37f89ca543aef0b3fce616b98035a43"><div class="ttname"><a href="world__system_8c.html#aa37f89ca543aef0b3fce616b98035a43">world_contains_system</a></div><div class="ttdeci">bool world_contains_system(world_t *world, system_t *system)</div><div class="ttdoc">It returns true if the world contains the system, false otherwise.</div><div class="ttdef"><b>Definition:</b> world_system.c:68</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ae1b2cd4a9788581d705b2cad387ee54a" name="ae1b2cd4a9788581d705b2cad387ee54a"></a>
@@ -266,8 +283,17 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the system type if found, false otherwise. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>True if the system type if found, false otherwise.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="world__system_8c.html#ae1b2cd4a9788581d705b2cad387ee54a">world_contains_system_by_type</a>(world, SYSTEM_TYPE_EXAMPLE)) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The system type exists in the world\n&quot;</span>);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The system type doesn&#39;t exist in the world\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__system_8c_html_ae1b2cd4a9788581d705b2cad387ee54a"><div class="ttname"><a href="world__system_8c.html#ae1b2cd4a9788581d705b2cad387ee54a">world_contains_system_by_type</a></div><div class="ttdeci">bool world_contains_system_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It checks if a system type exists in the system list of the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:78</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a6f1c273fe33dcdd9b670e6799654df83" name="a6f1c273fe33dcdd9b670e6799654df83"></a>
@@ -304,8 +330,25 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the corresponding system, 0 otherwise. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the corresponding system, 0 otherwise.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
+<div class="line">    <a class="code hl_struct" href="structsystem__s.html">system_t</a> system = {0};</div>
+<div class="line">    <a class="code hl_struct" href="structsystem__s.html">system_t</a> *system_ptr = 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create your own system type, it&#39;s just an example</span></div>
+<div class="line">    system.<a class="code hl_variable" href="structsystem__s.html#a4bfea42429249a1f65204f0c0f34704a">type</a> = SYSTEM_TYPE_EXAMPLE;</div>
+<div class="line">    <span class="comment">// Create your own system run function, it&#39;s just an example</span></div>
+<div class="line">    system.<a class="code hl_variable" href="structsystem__s.html#aed5ef4aad149706719e84699af3b73c7">run</a> = &amp;system_example_run;</div>
+<div class="line">    system_ptr = <a class="code hl_function" href="world__system_8c.html#a6f1c273fe33dcdd9b670e6799654df83">world_get_system</a>(world, &amp;system);</div>
+<div class="line">    <span class="keywordflow">if</span> (system_ptr) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The system exists in the world\n&quot;</span>);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The system doesn&#39;t exist in the world\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__system_8c_html_a6f1c273fe33dcdd9b670e6799654df83"><div class="ttname"><a href="world__system_8c.html#a6f1c273fe33dcdd9b670e6799654df83">world_get_system</a></div><div class="ttdeci">system_t * world_get_system(world_t *world, system_t *system)</div><div class="ttdoc">It gets a system from the system list of the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:88</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a999c462b06edb9772125a6ae974b0224" name="a999c462b06edb9772125a6ae974b0224"></a>
@@ -342,8 +385,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the corresponding system, 0 otherwise. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the corresponding system, 0 otherwise.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
+<div class="line">    <a class="code hl_struct" href="structsystem__s.html">system_t</a> *system_ptr = 0;</div>
+<div class="line"> </div>
+<div class="line">    system_ptr = <a class="code hl_function" href="world__system_8c.html#a999c462b06edb9772125a6ae974b0224">world_get_system_by_type</a>(world, SYSTEM_TYPE_EXAMPLE);</div>
+<div class="line">    <span class="keywordflow">if</span> (system_ptr) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The system type exists in the world\n&quot;</span>);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The system type doesn&#39;t exist in the world\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__system_8c_html_a999c462b06edb9772125a6ae974b0224"><div class="ttname"><a href="world__system_8c.html#a999c462b06edb9772125a6ae974b0224">world_get_system_by_type</a></div><div class="ttdeci">system_t * world_get_system_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It gets a system from the system list of the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:98</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a287e88615dcc2de7912d72c64b587b61" name="a287e88615dcc2de7912d72c64b587b61"></a>
@@ -380,8 +435,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the system isn't found. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the system isn't found.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
+<div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
+<div class="line">    <a class="code hl_struct" href="structsystem__s.html">system_t</a> system = {0};</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__system_8c.html#a287e88615dcc2de7912d72c64b587b61">world_remove_system</a>(world, &amp;system);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_remove_system() failed: system not found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> rvalue;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__system_8c_html_a287e88615dcc2de7912d72c64b587b61"><div class="ttname"><a href="world__system_8c.html#a287e88615dcc2de7912d72c64b587b61">world_remove_system</a></div><div class="ttdeci">int world_remove_system(world_t *world, system_t *system)</div><div class="ttdoc">It removes a system from the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:46</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a6b086b11db0f59527408f5f375c8c62f" name="a6b086b11db0f59527408f5f375c8c62f"></a>
@@ -418,8 +485,19 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the system type isn't found. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the system type isn't found.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
+<div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__system_8c.html#a6b086b11db0f59527408f5f375c8c62f">world_remove_system_by_type</a>(world, SYSTEM_TYPE_EXAMPLE);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_remove_system_by_type() failed: system type not found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> rvalue;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__system_8c_html_a6b086b11db0f59527408f5f375c8c62f"><div class="ttname"><a href="world__system_8c.html#a6b086b11db0f59527408f5f375c8c62f">world_remove_system_by_type</a></div><div class="ttdeci">int world_remove_system_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It removes a system from the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:57</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

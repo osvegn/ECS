@@ -150,8 +150,10 @@ Functions</h2></td></tr>
 <div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
 <div class="line"> </div>
 <div class="line">    rvalue = <a class="code hl_function" href="world_8c.html#a4f80ba9c85a499aa8ca8a778abeda990">world_run_systems</a>(world);</div>
-<div class="line">    <span class="keywordflow">if</span> (rvalue)</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_run_systems() failed\n&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">return</span> rvalue;</div>
+<div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="astructworld__s_html"><div class="ttname"><a href="structworld__s.html">world_s</a></div><div class="ttdoc">It's the structure of a world. A world contains a list of systems, a list of resources,...</div><div class="ttdef"><b>Definition:</b> world.h:22</div></div>
