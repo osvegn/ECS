@@ -34,6 +34,22 @@ int world_run_systems(world_t *world);
 /// @param world The world to add the system to.
 /// @param system The system to add to the world.
 /// @return 0, or -1 if the system already exists.
+/// @details **Example:**
+/// @code
+/// int example(world_t *world) {
+///     int rvalue = 0;
+///     system_t system = {0};
+///
+///     // Create your own system type, it's just an example
+///     system.type = SYSTEM_TYPE_EXAMPLE;
+///     // Create your own system run function, it's just an example
+///     system.run = &system_example_run;
+///     rvalue = world_add_system(world, &system);
+///     if (rvalue)
+///         return rvalue;
+///     return 0;
+/// }
+/// @endcode
 int world_add_system(world_t *world, system_t *system);
 
 /// @brief It removes a system from the world
