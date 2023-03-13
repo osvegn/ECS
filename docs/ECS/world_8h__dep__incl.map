@@ -1,0 +1,11 @@
+<map id="include/world.h" name="include/world.h">
+<area shape="rect" id="node1" title=" " alt="" coords="629,5,737,31"/>
+<area shape="rect" id="node2" href="$world__entity_8h.html" title=" " alt="" coords="5,79,152,104"/>
+<area shape="rect" id="node3" href="$world__resource_8h.html" title=" " alt="" coords="176,79,341,104"/>
+<area shape="rect" id="node4" href="$world__system_8h.html" title=" " alt="" coords="365,79,523,104"/>
+<area shape="rect" id="node5" href="$world_8c.html" title=" " alt="" coords="547,79,653,104"/>
+<area shape="rect" id="node6" href="$world__constructor_8c.html" title=" " alt="" coords="677,79,856,104"/>
+<area shape="rect" id="node7" href="$world__entity_8c.html" title=" " alt="" coords="880,79,1024,104"/>
+<area shape="rect" id="node8" href="$world__resource_8c.html" title=" " alt="" coords="1048,79,1211,104"/>
+<area shape="rect" id="node9" href="$world__system_8c.html" title=" " alt="" coords="1235,79,1389,104"/>
+</map>

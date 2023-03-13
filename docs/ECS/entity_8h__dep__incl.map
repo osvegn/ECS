@@ -1,0 +1,13 @@
+<map id="include/entity.h" name="include/entity.h">
+<area shape="rect" id="node1" title=" " alt="" coords="546,5,654,31"/>
+<area shape="rect" id="node2" href="$world_8h.html" title=" " alt="" coords="546,79,654,104"/>
+<area shape="rect" id="node3" href="$world__entity_8h.html" title=" " alt="" coords="5,152,152,177"/>
+<area shape="rect" id="node11" href="$entity__component_8c.html" title=" " alt="" coords="678,79,855,104"/>
+<area shape="rect" id="node4" href="$world__resource_8h.html" title=" " alt="" coords="176,152,341,177"/>
+<area shape="rect" id="node5" href="$world__system_8h.html" title=" " alt="" coords="365,152,523,177"/>
+<area shape="rect" id="node6" href="$world_8c.html" title=" " alt="" coords="547,152,653,177"/>
+<area shape="rect" id="node7" href="$world__constructor_8c.html" title=" " alt="" coords="677,152,856,177"/>
+<area shape="rect" id="node8" href="$world__entity_8c.html" title=" " alt="" coords="880,152,1024,177"/>
+<area shape="rect" id="node9" href="$world__resource_8c.html" title=" " alt="" coords="1048,152,1211,177"/>
+<area shape="rect" id="node10" href="$world__system_8c.html" title=" " alt="" coords="1235,152,1389,177"/>
+</map>
