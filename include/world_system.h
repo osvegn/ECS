@@ -17,6 +17,7 @@
 /// @param world The world which contains all systems to be run.
 /// It also contains all resources and entities that exists.
 /// @return 0, or -1 if an error occurs.
+/// @note See system.h for more information about systems.
 /// @details **Example:**
 /// @code
 /// int example(world_t *world) {

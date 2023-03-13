@@ -17,6 +17,7 @@
 /// @param world The world object
 /// @param resource The resource to add to the world.
 /// @return 0, or -1 if the resource already exists.
+/// @note See resource.h for more information about resources.
 /// @details **Example:**
 /// @code
 ///    int example(world_t *world)
