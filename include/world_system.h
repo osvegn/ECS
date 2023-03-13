@@ -17,6 +17,17 @@
 /// @param world The world which contains all systems to be run.
 /// It also contains all resources and entities that exists.
 /// @return 0, or -1 if an error occurs.
+/// @details **Example:**
+/// @code
+/// int example(world_t *world) {
+///     int rvalue = 0;
+///
+///     rvalue = world_run_systems(world);
+///     if (rvalue)
+///         return rvalue;
+///     return 0;
+/// }
+/// @endcode
 int world_run_systems(world_t *world);
 
 /// @brief It adds a system to the world
