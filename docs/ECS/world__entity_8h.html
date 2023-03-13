@@ -124,9 +124,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a53c47319d553d6f0cc40bac726a9abe9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8h.html#a53c47319d553d6f0cc40bac726a9abe9">world_remove_entity</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, <a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *entity)</td></tr>
 <tr class="memdesc:a53c47319d553d6f0cc40bac726a9abe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">It removes an entity from the world.  <a href="world__entity_8h.html#a53c47319d553d6f0cc40bac726a9abe9">More...</a><br /></td></tr>
 <tr class="separator:a53c47319d553d6f0cc40bac726a9abe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018f4fc9652790fe22ba4d75f91d6f30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8h.html#a018f4fc9652790fe22ba4d75f91d6f30">world_remove_entity_by_id</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, unsigned int id)</td></tr>
+<tr class="memdesc:a018f4fc9652790fe22ba4d75f91d6f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">It removes an entity from the world.  <a href="world__entity_8h.html#a018f4fc9652790fe22ba4d75f91d6f30">More...</a><br /></td></tr>
+<tr class="separator:a018f4fc9652790fe22ba4d75f91d6f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76248669a6b79823d4741754f2e4a41a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8h.html#a76248669a6b79823d4741754f2e4a41a">world_contains_entity</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, <a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *entity)</td></tr>
 <tr class="memdesc:a76248669a6b79823d4741754f2e4a41a"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns true if the entity is in the world, false otherwise.  <a href="world__entity_8h.html#a76248669a6b79823d4741754f2e4a41a">More...</a><br /></td></tr>
 <tr class="separator:a76248669a6b79823d4741754f2e4a41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdf2df2afa49ee00b089e3334e84e8e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8h.html#acdf2df2afa49ee00b089e3334e84e8e5">world_contains_entity_by_id</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, unsigned int id)</td></tr>
+<tr class="memdesc:acdf2df2afa49ee00b089e3334e84e8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns true if the entity is in the world, false otherwise.  <a href="world__entity_8h.html#acdf2df2afa49ee00b089e3334e84e8e5">More...</a><br /></td></tr>
+<tr class="separator:acdf2df2afa49ee00b089e3334e84e8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0414d6ea7fbc43bbb94f129e20219ff5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8h.html#a0414d6ea7fbc43bbb94f129e20219ff5">world_get_entity_by_id</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, unsigned int id)</td></tr>
 <tr class="memdesc:a0414d6ea7fbc43bbb94f129e20219ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an entity from the world entity list by his id.  <a href="world__entity_8h.html#a0414d6ea7fbc43bbb94f129e20219ff5">More...</a><br /></td></tr>
 <tr class="separator:a0414d6ea7fbc43bbb94f129e20219ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +176,22 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0, or -1 if the entity already exists. </dd></dl>
-
+<dl class="section note"><dt>Note</dt><dd>See <a class="el" href="entity_8h.html">entity.h</a> for more information about entities.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world, <a class="code hl_struct" href="structentity__s.html">entity_t</a> *entity)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#ae769993c3f5d70f3d8edc10073495cd3">world_add_entity</a>(world, entity);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_add_entity() failed: entity already exists\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="astructentity__s_html"><div class="ttname"><a href="structentity__s.html">entity_s</a></div><div class="ttdoc">It's the structure of an entity. An entity contains an id, a name and a list of components....</div><div class="ttdef"><b>Definition:</b> entity.h:22</div></div>
+<div class="ttc" id="astructworld__s_html"><div class="ttname"><a href="structworld__s.html">world_s</a></div><div class="ttdoc">It's the structure of a world. A world contains a list of systems, a list of resources,...</div><div class="ttdef"><b>Definition:</b> world.h:22</div></div>
+<div class="ttc" id="aworld__entity_8c_html_ae769993c3f5d70f3d8edc10073495cd3"><div class="ttname"><a href="world__entity_8c.html#ae769993c3f5d70f3d8edc10073495cd3">world_add_entity</a></div><div class="ttdeci">int world_add_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">It adds an entity to the world.</div><div class="ttdef"><b>Definition:</b> world_entity.c:37</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a76248669a6b79823d4741754f2e4a41a" name="a76248669a6b79823d4741754f2e4a41a"></a>
@@ -208,7 +229,72 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean value. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Prefer using <a class="el" href="world__entity_8h.html#acdf2df2afa49ee00b089e3334e84e8e5" title="It returns true if the entity is in the world, false otherwise.">world_contains_entity_by_id()</a> instead.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world, <a class="code hl_struct" href="structentity__s.html">entity_t</a> *entity)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">bool</span> rvalue = <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#a76248669a6b79823d4741754f2e4a41a">world_contains_entity</a>(world, entity);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue == <span class="keyword">true</span>) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The entity is in the world\n&quot;</span>);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The entity isn&#39;t in the world\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__entity_8c_html_a76248669a6b79823d4741754f2e4a41a"><div class="ttname"><a href="world__entity_8c.html#a76248669a6b79823d4741754f2e4a41a">world_contains_entity</a></div><div class="ttdeci">bool world_contains_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">It returns true if the entity is in the world, false otherwise.</div><div class="ttdef"><b>Definition:</b> world_entity.c:70</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="acdf2df2afa49ee00b089e3334e84e8e5" name="acdf2df2afa49ee00b089e3334e84e8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdf2df2afa49ee00b089e3334e84e8e5">&#9670;&#160;</a></span>world_contains_entity_by_id()</h2>
 
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool world_contains_entity_by_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>It returns true if the entity is in the world, false otherwise. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>The world that the entity is in. </td></tr>
+    <tr><td class="paramname">id</td><td>The id of the entity to check for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean value.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">bool</span> rvalue = <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#acdf2df2afa49ee00b089e3334e84e8e5">world_contains_entity_by_id</a>(world, <span class="keywordtype">id</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue == <span class="keyword">true</span>) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The entity is in the world\n&quot;</span>);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The entity isn&#39;t in the world\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__entity_8c_html_acdf2df2afa49ee00b089e3334e84e8e5"><div class="ttname"><a href="world__entity_8c.html#acdf2df2afa49ee00b089e3334e84e8e5">world_contains_entity_by_id</a></div><div class="ttdeci">bool world_contains_entity_by_id(world_t *world, unsigned int id)</div><div class="ttdoc">It returns true if the entity is in the world, false otherwise.</div><div class="ttdef"><b>Definition:</b> world_entity.c:79</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a0414d6ea7fbc43bbb94f129e20219ff5" name="a0414d6ea7fbc43bbb94f129e20219ff5"></a>
@@ -245,8 +331,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the entity, 0 otherwise. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the entity, 0 otherwise.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="structentity__s.html">entity_t</a> *entity = 0;</div>
+<div class="line"> </div>
+<div class="line">    entity = <a class="code hl_function" href="world__entity_8c.html#a0414d6ea7fbc43bbb94f129e20219ff5">world_get_entity_by_id</a>(world, <span class="keywordtype">id</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (entity == 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_get_entity_by_id() failed: entity not found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__entity_8c_html_a0414d6ea7fbc43bbb94f129e20219ff5"><div class="ttname"><a href="world__entity_8c.html#a0414d6ea7fbc43bbb94f129e20219ff5">world_get_entity_by_id</a></div><div class="ttdeci">entity_t * world_get_entity_by_id(world_t *world, unsigned int id)</div><div class="ttdoc">Get an entity from the world entity list by his id.</div><div class="ttdef"><b>Definition:</b> world_entity.c:88</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ab7ff0b58102c05b45a6722f11c9a3d2b" name="ab7ff0b58102c05b45a6722f11c9a3d2b"></a>
@@ -297,8 +395,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of entity find, or -1 otherwise. </dd></dl>
-<div class="dynheader">
+<dl class="section return"><dt>Returns</dt><dd>The number of entity find, or -1 otherwise.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world, vector_t *entities)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b">world_join_entities</a>(world, entities, 2, COMPONENT_EXAMPLE_1, COMPONENT_EXAMPLE_2);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_join_entities() failed: no entity found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__entity_8c_html_ab7ff0b58102c05b45a6722f11c9a3d2b"><div class="ttname"><a href="world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b">world_join_entities</a></div><div class="ttdeci">int world_join_entities(world_t *world, vector_t *entities, unsigned int type,...)</div><div class="ttdoc">Initialize entities vector with entities which contain all components types asked.</div><div class="ttdef"><b>Definition:</b> world_entity.c:96</div></div>
+</div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="world__entity_8h_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph.png" border="0" usemap="#aworld__entity_8h_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph" alt=""/></div>
@@ -345,7 +455,70 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0, or -1 if the entity isn't found. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Prefer using <a class="el" href="world__entity_8h.html#a018f4fc9652790fe22ba4d75f91d6f30" title="It removes an entity from the world.">world_remove_entity_by_id()</a> instead.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world, <a class="code hl_struct" href="structentity__s.html">entity_t</a> *entity)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#a53c47319d553d6f0cc40bac726a9abe9">world_remove_entity</a>(world, entity);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_remove_entity() failed: entity not found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__entity_8c_html_a53c47319d553d6f0cc40bac726a9abe9"><div class="ttname"><a href="world__entity_8c.html#a53c47319d553d6f0cc40bac726a9abe9">world_remove_entity</a></div><div class="ttdeci">int world_remove_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">It removes an entity from the world.</div><div class="ttdef"><b>Definition:</b> world_entity.c:48</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a018f4fc9652790fe22ba4d75f91d6f30" name="a018f4fc9652790fe22ba4d75f91d6f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a018f4fc9652790fe22ba4d75f91d6f30">&#9670;&#160;</a></span>world_remove_entity_by_id()</h2>
 
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int world_remove_entity_by_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>It removes an entity from the world. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>The world that the entity is in. </td></tr>
+    <tr><td class="paramname">id</td><td>The id of the entity to remove from the world. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the entity isn't found.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#a018f4fc9652790fe22ba4d75f91d6f30">world_remove_entity_by_id</a>(world, <span class="keywordtype">id</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_remove_entity_by_id() failed: entity not found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__entity_8c_html_a018f4fc9652790fe22ba4d75f91d6f30"><div class="ttname"><a href="world__entity_8c.html#a018f4fc9652790fe22ba4d75f91d6f30">world_remove_entity_by_id</a></div><div class="ttdeci">int world_remove_entity_by_id(world_t *world, unsigned int id)</div><div class="ttdoc">It removes an entity from the world.</div><div class="ttdef"><b>Definition:</b> world_entity.c:59</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->
