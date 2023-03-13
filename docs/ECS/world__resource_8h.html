@@ -176,14 +176,16 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0, or -1 if the resource already exists.</dd></dl>
-<p><b>Example</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> add_resource(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world)</div>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
 <div class="line">    <a class="code hl_struct" href="structresource__s.html">resource_t</a> resource = {1, 0};</div>
 <div class="line"> </div>
 <div class="line">    rvalue = <a class="code hl_function" href="world__resource_8c.html#a9eb5a28740432c44a88c0f18c712ffbb">world_add_resource</a>(world, &amp;resource);</div>
-<div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0)</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_add_resource() failed: resource already exists\n&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="astructresource__s_html"><div class="ttname"><a href="structresource__s.html">resource_s</a></div><div class="ttdoc">It's the structure of a resource. All resources are contained in the world. A resource is a data usef...</div><div class="ttdef"><b>Definition:</b> resource.h:22</div></div>
@@ -227,7 +229,20 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean value. </dd></dl>
-
+<dl class="section note"><dt>Note</dt><dd>Prefer using <a class="el" href="world__resource_8h.html#a1560e18899fbe4e54d1802330b3d1948" title="It returns if the resource is in the world&#39;s resource list or not.">world_contains_resource_by_type()</a> instead.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="structresource__s.html">resource_t</a> resource = {1, 0};</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="world__resource_8c.html#a816c2d0c07da2dcc4df867f26d03cf63">world_contains_resource</a>(world, &amp;resource)) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The resource is in the world&#39;s resource list\n&quot;</span>);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The resource isn&#39;t in the world&#39;s resource list\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__resource_8c_html_a816c2d0c07da2dcc4df867f26d03cf63"><div class="ttname"><a href="world__resource_8c.html#a816c2d0c07da2dcc4df867f26d03cf63">world_contains_resource</a></div><div class="ttdeci">bool world_contains_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It returns true if the resource is in the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:73</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a1560e18899fbe4e54d1802330b3d1948" name="a1560e18899fbe4e54d1802330b3d1948"></a>
@@ -264,8 +279,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the resource is found, false otherwise. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>True if the resource is found, false otherwise.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="world__resource_8c.html#a1560e18899fbe4e54d1802330b3d1948">world_contains_resource_by_type</a>(world, RESOURCE_TYPE_EXAMPLE)) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The resource is in the world&#39;s resource list\n&quot;</span>);</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;The resource isn&#39;t in the world&#39;s resource list\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__resource_8c_html_a1560e18899fbe4e54d1802330b3d1948"><div class="ttname"><a href="world__resource_8c.html#a1560e18899fbe4e54d1802330b3d1948">world_contains_resource_by_type</a></div><div class="ttdeci">bool world_contains_resource_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It returns if the resource is in the world's resource list or not.</div><div class="ttdef"><b>Definition:</b> world_resource.c:83</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a85e7b1294385ca7dd73582e73f085793" name="a85e7b1294385ca7dd73582e73f085793"></a>
@@ -303,7 +328,21 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>It returns a pointer to the resource asked, or 0 if it's not found. </dd></dl>
-
+<dl class="section note"><dt>Note</dt><dd>Prefer using <a class="el" href="world__resource_8h.html#a815baab96080a74c676000e986f2ea09" title="It returns the resource contained in the world corresponding on the resource type passed as parameter...">world_get_resource_by_type()</a> instead.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="structresource__s.html">resource_t</a> resource = {1, 0};</div>
+<div class="line">    <a class="code hl_struct" href="structresource__s.html">resource_t</a> *resource_found = 0;</div>
+<div class="line"> </div>
+<div class="line">    resource_found = <a class="code hl_function" href="world__resource_8c.html#a85e7b1294385ca7dd73582e73f085793">world_get_resource</a>(world, &amp;resource);</div>
+<div class="line">    <span class="keywordflow">if</span> (resource_found == 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_get_resource() failed: resource not found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__resource_8c_html_a85e7b1294385ca7dd73582e73f085793"><div class="ttname"><a href="world__resource_8c.html#a85e7b1294385ca7dd73582e73f085793">world_get_resource</a></div><div class="ttdeci">resource_t * world_get_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It returns the resource contained in the world corresponding on the resource passed as parameter.</div><div class="ttdef"><b>Definition:</b> world_resource.c:93</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a815baab96080a74c676000e986f2ea09" name="a815baab96080a74c676000e986f2ea09"></a>
@@ -340,8 +379,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>It returns a pointer to the resource asked, or 0 if it's not found. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>It returns a pointer to the resource asked, or 0 if it's not found.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="structresource__s.html">resource_t</a> *resource_found = 0;</div>
+<div class="line"> </div>
+<div class="line">    resource_found = <a class="code hl_function" href="world__resource_8c.html#a815baab96080a74c676000e986f2ea09">world_get_resource_by_type</a>(world, RESOURCE_TYPE_EXAMPLE);</div>
+<div class="line">    <span class="keywordflow">if</span> (resource_found == 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_get_resource_by_type() failed: resource not found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__resource_8c_html_a815baab96080a74c676000e986f2ea09"><div class="ttname"><a href="world__resource_8c.html#a815baab96080a74c676000e986f2ea09">world_get_resource_by_type</a></div><div class="ttdeci">resource_t * world_get_resource_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It returns the resource contained in the world corresponding on the resource type passed as parameter...</div><div class="ttdef"><b>Definition:</b> world_resource.c:103</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="adde03f843cd9050e9f9bc07ad0dcb9b8" name="adde03f843cd9050e9f9bc07ad0dcb9b8"></a>
@@ -378,15 +429,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the resource isn't found.</dd></dl>
-<p><b>Example</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> remove_resource(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world)</div>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the resource isn't found. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Prefer using <a class="el" href="world__resource_8h.html#ae57c22040339251932b15a4eaa7a8888" title="It removes a resource from the world&#39;s resource list.">world_remove_resource_by_type()</a> instead.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
 <div class="line">    <a class="code hl_struct" href="structresource__s.html">resource_t</a> resource = {1, 0};</div>
 <div class="line"> </div>
 <div class="line">    rvalue = <a class="code hl_function" href="world__resource_8c.html#adde03f843cd9050e9f9bc07ad0dcb9b8">world_remove_resource</a>(world, &amp;resource);</div>
-<div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0)</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_remove_resource() failed: resource not found\n&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aworld__resource_8c_html_adde03f843cd9050e9f9bc07ad0dcb9b8"><div class="ttname"><a href="world__resource_8c.html#adde03f843cd9050e9f9bc07ad0dcb9b8">world_remove_resource</a></div><div class="ttdeci">int world_remove_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It removes a resource from the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:51</div></div>
@@ -427,8 +481,20 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the resource isn't found. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the resource isn't found.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
+<div class="line"> </div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__resource_8c.html#ae57c22040339251932b15a4eaa7a8888">world_remove_resource_by_type</a>(world, RESOURCE_TYPE_EXAMPLE);</div>
+<div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_remove_resource_by_type() failed: resource not found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__resource_8c_html_ae57c22040339251932b15a4eaa7a8888"><div class="ttname"><a href="world__resource_8c.html#ae57c22040339251932b15a4eaa7a8888">world_remove_resource_by_type</a></div><div class="ttdeci">int world_remove_resource_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It removes a resource from the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:62</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

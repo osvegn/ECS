@@ -230,7 +230,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the system is found, false otherwise.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the system is found, false otherwise. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Prefer using <a class="el" href="world__system_8h.html#ae1b2cd4a9788581d705b2cad387ee54a" title="It checks if a system type exists in the system list of the world.">world_contains_system_by_type()</a> instead.</dd></dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
 <div class="line">    <a class="code hl_struct" href="structsystem__s.html">system_t</a> system = {0};</div>
 <div class="line"> </div>
@@ -330,7 +331,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the corresponding system, 0 otherwise.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the corresponding system, 0 otherwise. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Prefer using <a class="el" href="world__system_8h.html#a999c462b06edb9772125a6ae974b0224" title="It gets a system from the system list of the world.">world_get_system_by_type()</a> instead.</dd></dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
 <div class="line">    <a class="code hl_struct" href="structsystem__s.html">system_t</a> system = {0};</div>
 <div class="line">    <a class="code hl_struct" href="structsystem__s.html">system_t</a> *system_ptr = 0;</div>
@@ -435,7 +437,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the system isn't found.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if the system isn't found. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Prefer using <a class="el" href="world__system_8h.html#a6b086b11db0f59527408f5f375c8c62f" title="It removes a system from the world.">world_remove_system_by_type()</a> instead.</dd></dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world) {</div>
 <div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
 <div class="line">    <a class="code hl_struct" href="structsystem__s.html">system_t</a> system = {0};</div>
