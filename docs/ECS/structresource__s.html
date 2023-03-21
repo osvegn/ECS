@@ -110,6 +110,8 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a735984d41155bc1032e09bece8f8d66d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structresource__s.html#a735984d41155bc1032e09bece8f8d66d">data</a></td></tr>
 <tr class="memdesc:a735984d41155bc1032e09bece8f8d66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data of the resource. It stores all informations needed by the resource. Use the type of a resource to know how to cast data to use it properly.  <a href="structresource__s.html#a735984d41155bc1032e09bece8f8d66d">More...</a><br /></td></tr>
 <tr class="separator:a735984d41155bc1032e09bece8f8d66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716f180892d5048cd8ee82ab0c7602f6"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structresource__s.html#a716f180892d5048cd8ee82ab0c7602f6">destructor</a> )(struct <a class="el" href="structresource__s.html">resource_s</a> *resource)</td></tr>
+<tr class="separator:a716f180892d5048cd8ee82ab0c7602f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >It's the structure of a resource. All resources are contained in the world. A resource is a data usefull for the world. Only systems can update resource data. Resources are only stores in the world. A resource contains a type and some data. </p>
@@ -130,6 +132,20 @@ Good practice is to create a constructor, a getter and a setter functions for yo
 </div><div class="memdoc">
 
 <p>The data of the resource. It stores all informations needed by the resource. Use the type of a resource to know how to cast data to use it properly. </p>
+
+</div>
+</div>
+<a id="a716f180892d5048cd8ee82ab0c7602f6" name="a716f180892d5048cd8ee82ab0c7602f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a716f180892d5048cd8ee82ab0c7602f6">&#9670;&#160;</a></span>destructor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* destructor) (struct <a class="el" href="structresource__s.html">resource_s</a> *resource)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
