@@ -30,6 +30,8 @@ typedef struct resource_s {
     /// the resource. Use the type of a resource to know how to cast data to
     /// use it properly.
     void *data;
+
+    int (*destructor)(struct resource_s *resource);
 } resource_t;
 
 #endif /* !RESOURCE_H_ */
