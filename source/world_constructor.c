@@ -27,7 +27,22 @@ int world_constructor(world_t *world)
 
 void world_destructor(world_t *world)
 {
+    entity_t *entity = 0;
+
+    while (world->entity_list.size(&world->entity_list)) {
+        entity = world->entity_list.back(&world->entity_list);
+        while (entity->components.size(&entity->components)) {
+            component_destructor(entity->components.back(&entity->components));
+            entity->components.pop_back(&entity->components);
+        }
+        entity->components.destructor(&entity->components);
+        world->entity_list.pop_back(&world->entity_list);
+    }
     world->entity_list.destructor(&world->entity_list);
-    world->resource_list.destructor(&world->resource_list);
     world->system_list.destructor(&world->system_list);
+    while (world->resource_list.size(&world->resource_list)) {
+        (resource_t *){world->resource_list.back(&world->resource_list)}->destructor(world->resource_list.back(&world->resource_list));
+        world->resource_list.pop_back(&world->resource_list);
+    }
+    world->resource_list.destructor(&world->resource_list);
 }
