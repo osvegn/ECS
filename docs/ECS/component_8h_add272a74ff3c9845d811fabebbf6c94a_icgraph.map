@@ -1,0 +1,4 @@
+<map id="component_destructor" name="component_destructor">
+<area shape="rect" id="node1" title="Free the data of a component." alt="" coords="172,5,323,31"/>
+<area shape="rect" id="node2" href="$world__constructor_8c.html#a58a55676e9106f803d354dcd7f0d4db3" title="It calls the destructor of each of the three lists in the world." alt="" coords="5,5,124,31"/>
+</map>
