@@ -65,6 +65,7 @@ jobs:
         run: |
           mkdir -p coverage
           gcovr -e tests --html-details coverage/index.html
+          gcovr -e tests --xml coverage.xml
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v3
