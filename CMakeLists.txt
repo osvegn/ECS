@@ -6,6 +6,15 @@ add_subdirectory(lib/vector)
 set(ECS_SOURCE_ROOT ${PROJECT_SOURCE_DIR}/source)
 set(ECS_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/include)
 set(TARGET ecs)
+
+option(TESTING OFF)
+if(TESTING)
+    enable_testing()
+    add_compile_options("-lcriterion" "--coverage" "-fprofile-arcs" "-ftest-coverage")
+    add_link_options("-lcriterion" "--coverage" "-fprofile-arcs" "-ftest-coverage")
+    add_subdirectory(tests)
+endif()
+
 set(SOURCE
     ${ECS_SOURCE_ROOT}/world.c
     ${ECS_SOURCE_ROOT}/world_entity.c
@@ -26,11 +35,3 @@ target_include_directories(${TARGET}
 target_link_libraries(${TARGET}
     vector
 )
-
-option(TESTING OFF)
-if(TESTING)
-    enable_testing()
-    add_compile_options("-lcriterion" "--coverage" "-fprofile-arcs" "-ftest-coverage")
-    add_link_options("-lcriterion" "--coverage" "-fprofile-arcs" "-ftest-coverage")
-    add_subdirectory(tests)
-endif()
