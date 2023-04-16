@@ -1,3 +1,7 @@
+[![codecov](https://codecov.io/gh/osvegn/ECS/branch/main/graph/badge.svg)](https://codecov.io/gh/osvegn/ECS)
+[![CI](https://github.com/osvegn/ECS/actions/workflows/CI.yml/badge.svg)](https://github.com/osvegn/ECS/actions/workflows/CI.yml)
+[![Documentation](https://github.com/osvegn/ECS/actions/workflows/Documentation.yml/badge.svg)](https://github.com/osvegn/ECS/actions/workflows/Documentation.yml)
+
 # ECS
 Hi visitor, you're about to read some documentation about a basic and simple ECS in C language.
 
