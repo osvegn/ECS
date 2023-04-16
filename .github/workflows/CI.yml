@@ -78,3 +78,6 @@ jobs:
           folder: ./coverage
           target-folder: docs/coverage
           branch: gh-pages
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
