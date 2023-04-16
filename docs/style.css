@@ -1,0 +1,56 @@
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+button {
+    background-color: #ddd;
+    border: 1px solid #000;
+    border-radius: 5px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+button:hover {
+    background-color: #eee;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a {
+    all:unset;
+}
+
+a:hover {
+    all:unset;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+footer {
+    text-align: center;
+}
