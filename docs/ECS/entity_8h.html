@@ -154,6 +154,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a047dda0071c76403873c41814fe77c20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8h.html#a047dda0071c76403873c41814fe77c20">entity_contains_component</a> (<a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *entity, <a class="el" href="component_8h.html#a49bad398620c83ea04ae915279e7ac46">component_t</a> *component)</td></tr>
 <tr class="memdesc:a047dda0071c76403873c41814fe77c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if an entity contains a component.  <a href="entity_8h.html#a047dda0071c76403873c41814fe77c20">More...</a><br /></td></tr>
 <tr class="separator:a047dda0071c76403873c41814fe77c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc2f14b15d533482f2180f149afc72b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8h.html#a0fc2f14b15d533482f2180f149afc72b">entity_contains_component_by_type</a> (<a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *entity, unsigned int type)</td></tr>
+<tr class="memdesc:a0fc2f14b15d533482f2180f149afc72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if an entity contains a component type.  <a href="entity_8h.html#a0fc2f14b15d533482f2180f149afc72b">More...</a><br /></td></tr>
+<tr class="separator:a0fc2f14b15d533482f2180f149afc72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0e9402cb9be7aa3d6e10cb7e81c3124"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="entity_8h.html#ac0e9402cb9be7aa3d6e10cb7e81c3124">entity_remove_component</a> (<a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *entity, <a class="el" href="component_8h.html#a49bad398620c83ea04ae915279e7ac46">component_t</a> *component)</td></tr>
 <tr class="memdesc:ac0e9402cb9be7aa3d6e10cb7e81c3124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a component from an entity.  <a href="entity_8h.html#ac0e9402cb9be7aa3d6e10cb7e81c3124">More...</a><br /></td></tr>
 <tr class="separator:ac0e9402cb9be7aa3d6e10cb7e81c3124"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -322,6 +325,66 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="aentity__component_8c_html_a047dda0071c76403873c41814fe77c20"><div class="ttname"><a href="entity__component_8c.html#a047dda0071c76403873c41814fe77c20">entity_contains_component</a></div><div class="ttdeci">bool entity_contains_component(entity_t *entity, component_t *component)</div><div class="ttdoc">Check if an entity contains a component.</div><div class="ttdef"><b>Definition:</b> entity_component.c:28</div></div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="a0fc2f14b15d533482f2180f149afc72b" name="a0fc2f14b15d533482f2180f149afc72b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc2f14b15d533482f2180f149afc72b">&#9670;&#160;</a></span>entity_contains_component_by_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool entity_contains_component_by_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if an entity contains a component type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>The entity to check. </td></tr>
+    <tr><td class="paramname">type</td><td>The type to check for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the entity contains the component, false if not</dd></dl>
+<p><b>Example</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
+<div class="line">    <a class="code hl_struct" href="structentity__s.html">entity_t</a> entity;</div>
+<div class="line">    <a class="code hl_struct" href="structcomponent__s.html">component_t</a> component;</div>
+<div class="line"> </div>
+<div class="line">    component.<a class="code hl_variable" href="structcomponent__s.html#a4bfea42429249a1f65204f0c0f34704a">type</a> = 0;</div>
+<div class="line">    <a class="code hl_function" href="entity__component_8c.html#aa4d524c8b6d170b4b513842e4d858c63">entity_constructor</a>(&amp;entity);</div>
+<div class="line">    <a class="code hl_function" href="entity__component_8c.html#ae9c4710107a012ef60c252072a5dd5b9">entity_add_component</a>(&amp;entity, component);</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="entity__component_8c.html#a0fc2f14b15d533482f2180f149afc72b">entity_contains_component_by_type</a>(&amp;entity, 0) == <span class="keyword">false</span>)</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    <a class="code hl_function" href="entity__component_8c.html#aa52c87ef09bcc4c44121c235b1a77244">entity_destructor</a>(&amp;entity);</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aentity__component_8c_html_a0fc2f14b15d533482f2180f149afc72b"><div class="ttname"><a href="entity__component_8c.html#a0fc2f14b15d533482f2180f149afc72b">entity_contains_component_by_type</a></div><div class="ttdeci">bool entity_contains_component_by_type(entity_t *entity, unsigned int type)</div><div class="ttdoc">Check if an entity contains a component type.</div><div class="ttdef"><b>Definition:</b> entity_component.c:38</div></div>
+</div><!-- fragment --> <div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="entity_8h_a0fc2f14b15d533482f2180f149afc72b_icgraph.png" border="0" usemap="#aentity_8h_a0fc2f14b15d533482f2180f149afc72b_icgraph" alt=""/></div>
+<map name="aentity_8h_a0fc2f14b15d533482f2180f149afc72b_icgraph" id="aentity_8h_a0fc2f14b15d533482f2180f149afc72b_icgraph">
+<area shape="rect" title="Check if an entity contains a component type." alt="" coords="183,5,363,45"/>
+<area shape="rect" href="world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b" title="Initialize entities vector with entities which contain all components types asked." alt="" coords="5,13,135,38"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="aa52c87ef09bcc4c44121c235b1a77244" name="aa52c87ef09bcc4c44121c235b1a77244"></a>
