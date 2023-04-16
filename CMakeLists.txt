@@ -26,3 +26,11 @@ target_include_directories(${TARGET}
 target_link_libraries(${TARGET}
     vector
 )
+
+option(TESTING OFF)
+if(TESTING)
+    enable_testing()
+    add_compile_options("-lcriterion" "--coverage" "-fprofile-arcs" "-ftest-coverage")
+    add_link_options("-lcriterion" "--coverage" "-fprofile-arcs" "-ftest-coverage")
+    add_subdirectory(tests)
+endif()

@@ -82,6 +82,27 @@ void entity_destructor(entity_t *entity);
 /// @endcode
 bool entity_contains_component(entity_t *entity, component_t *component);
 
+/// @brief Check if an entity contains a component type.
+/// @param entity The entity to check.
+/// @param type The type to check for.
+/// @return true if the entity contains the component, false if not
+/// @details **Example**
+/// @code
+///    int main(void) {
+///        entity_t entity;
+///        component_t component;
+///
+///        component.type = 0;
+///        entity_constructor(&entity);
+///        entity_add_component(&entity, component);
+///        if (entity_contains_component_by_type(&entity, 0) == false)
+///            return 1;
+///        entity_destructor(&entity);
+///        return 0;
+///    }
+/// @endcode
+bool entity_contains_component_by_type(entity_t *entity, unsigned int type);
+
 /// @brief Remove a component from an entity
 /// @param entity The entity to remove the component from
 /// @param component The component to remove

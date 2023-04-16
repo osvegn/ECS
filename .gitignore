@@ -1,2 +1,4 @@
 build
 docs
+ecs_tests
+vector_tests
