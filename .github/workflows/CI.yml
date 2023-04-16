@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build-linux:
     runs-on: ubuntu-22.04
@@ -74,3 +77,4 @@ jobs:
         with:
           folder: ./coverage
           target-folder: docs/coverage
+          branch: gh-pages
