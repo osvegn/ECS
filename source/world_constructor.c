@@ -1,13 +1,14 @@
 /*
- * Filename: /workspaces/our_rpg/lib/ECS/source/world_constructor.c
- * Path: /workspaces/our_rpg/lib/ECS/source
+ * Filename: source/world_constructor.c
+ * Path: source
  * Created Date: Monday, January 2nd 2023, 2:38:37 pm
  * Author: osvegn
- * 
+ *
  * Copyright (c) 2023 our_rpg
  */
 
 #include "world.h"
+#include "world_logger.h"
 
 int world_constructor(world_t *world)
 {
@@ -20,8 +21,10 @@ int world_constructor(world_t *world)
     if (rvalue < 0)
         return -1;
     rvalue = vector_constructor(&world->system_list, sizeof(system_t), 0);
-    if (rvalue < 0)
+    if (rvalue < 0) {
         return -1;
+    }
+    world_log(WORLD_LOG_LEVEL_DEBUG, "World created");
     return 0;
 }
 
@@ -41,8 +44,12 @@ void world_destructor(world_t *world)
     world->entity_list.destructor(&world->entity_list);
     world->system_list.destructor(&world->system_list);
     while (world->resource_list.size(&world->resource_list)) {
-        (resource_t *){world->resource_list.back(&world->resource_list)}->destructor(world->resource_list.back(&world->resource_list));
+        (resource_t *)
+        {
+            world->resource_list.back(&world->resource_list)
+            } -> destructor(world->resource_list.back(&world->resource_list));
         world->resource_list.pop_back(&world->resource_list);
     }
     world->resource_list.destructor(&world->resource_list);
+    world_log_init();
 }
