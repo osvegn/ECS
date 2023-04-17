@@ -1,4 +1,14 @@
 <map id="world_log" name="world_log">
-<area shape="rect" id="node1" title=" " alt="" coords="179,5,256,31"/>
-<area shape="rect" id="node2" href="$world__constructor_8c.html#ad0a0383db69c03fbebb354f9361a8716" title="It creates a new world by creating a new resource list, entity list, and system list." alt="" coords="5,5,131,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="411,211,488,236"/>
+<area shape="rect" id="node2" href="$component__destructor_8c.html#add272a74ff3c9845d811fabebbf6c94a" title="Free the data of a component." alt="" coords="197,5,348,31"/>
+<area shape="rect" id="node4" href="$entity__component_8c.html#ae9c4710107a012ef60c252072a5dd5b9" title="Add a component to an entity." alt="" coords="197,55,349,80"/>
+<area shape="rect" id="node5" href="$entity__component_8c.html#aa4d524c8b6d170b4b513842e4d858c63" title="Constructor for the entity struct." alt="" coords="210,104,335,129"/>
+<area shape="rect" id="node6" href="$entity__component_8c.html#a047dda0071c76403873c41814fe77c20" title="Check if an entity contains a component." alt="" coords="183,153,363,179"/>
+<area shape="rect" id="node7" href="$entity__component_8c.html#a0fc2f14b15d533482f2180f149afc72b" title="Check if an entity contains a component type." alt="" coords="183,203,363,243"/>
+<area shape="rect" id="node9" href="$entity__component_8c.html#aa52c87ef09bcc4c44121c235b1a77244" title="Destructor for the entity struct." alt="" coords="213,268,332,293"/>
+<area shape="rect" id="node10" href="$entity__component_8c.html#afc477fdf5c88e639c50f163067c84053" title="Get a component from an entity." alt="" coords="198,317,347,343"/>
+<area shape="rect" id="node11" href="$entity__component_8c.html#ac0e9402cb9be7aa3d6e10cb7e81c3124" title="Remove a component from an entity." alt="" coords="185,367,360,392"/>
+<area shape="rect" id="node12" href="$world__constructor_8c.html#ad0a0383db69c03fbebb354f9361a8716" title="It creates a new world by creating a new resource list, entity list, and system list." alt="" coords="210,416,335,441"/>
+<area shape="rect" id="node3" href="$world__constructor_8c.html#a58a55676e9106f803d354dcd7f0d4db3" title="It calls the destructor of each of the three lists in the world." alt="" coords="11,5,129,31"/>
+<area shape="rect" id="node8" href="$world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b" title="Initialize entities vector with entities which contain all components types asked." alt="" coords="5,211,135,236"/>
 </map>
