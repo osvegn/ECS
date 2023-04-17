@@ -23,6 +23,7 @@ set(SOURCE
     ${ECS_SOURCE_ROOT}/world_constructor.c
     ${ECS_SOURCE_ROOT}/entity_component.c
     ${ECS_SOURCE_ROOT}/component_destructor.c
+    ${ECS_SOURCE_ROOT}/world_logger.c
 )
 set_property(GLOBAL PROPERTY VECTOR_SOURCE ${VECTOR_SOURCE})
 
