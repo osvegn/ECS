@@ -1,11 +1,12 @@
 <map id="source/world_constructor.c" name="source/world_constructor.c">
-<area shape="rect" id="node1" title=" " alt="" coords="120,5,299,31"/>
-<area shape="rect" id="node2" href="$world_8h.html" title=" " alt="" coords="125,79,187,104"/>
-<area shape="rect" id="node9" href="$world__logger_8h.html" title=" " alt="" coords="211,79,317,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="129,225,197,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="207,5,385,31"/>
+<area shape="rect" id="node2" href="$world_8h.html" title=" " alt="" coords="211,79,274,104"/>
+<area shape="rect" id="node9" href="$world__logger_8h.html" title=" " alt="" coords="313,79,418,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="278,225,346,251"/>
 <area shape="rect" id="node4" href="$system_8h.html" title=" " alt="" coords="5,152,80,177"/>
-<area shape="rect" id="node6" href="$resource_8h.html" title=" " alt="" coords="155,152,237,177"/>
-<area shape="rect" id="node7" href="$entity_8h.html" title=" " alt="" coords="262,152,325,177"/>
+<area shape="rect" id="node6" href="$resource_8h.html" title=" " alt="" coords="104,152,187,177"/>
+<area shape="rect" id="node7" href="$entity_8h.html" title=" " alt="" coords="211,152,274,177"/>
 <area shape="rect" id="node5" title=" " alt="" coords="5,225,80,251"/>
-<area shape="rect" id="node8" href="$component_8h.html" title=" " alt="" coords="245,225,341,251"/>
+<area shape="rect" id="node8" href="$component_8h.html" title=" " alt="" coords="157,225,253,251"/>
+<area shape="rect" id="node10" title=" " alt="" coords="350,152,410,177"/>
 </map>
