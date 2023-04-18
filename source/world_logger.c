@@ -83,6 +83,8 @@ int world_log(enum world_log_level level, const char *filename, int line, const 
     va_list args;
     int rvalue = 0;
 
+    if (file == NULL)
+        return -1;
     print_log_time();
     print_log_level(level);
     fprintf(file, "%s:%d\t", filename, line);
