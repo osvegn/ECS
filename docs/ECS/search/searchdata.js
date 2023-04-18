@@ -1,13 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "acdeirstw",
+  0: "acdefilrstw",
   1: "cersw",
   2: "cersw",
   3: "cew",
-  4: "acdeirst",
+  4: "acdefirst",
   5: "cersw",
   6: "w",
-  7: "w"
+  7: "w",
+  8: "l"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "variables",
   5: "typedefs",
   6: "enums",
-  7: "enumvalues"
+  7: "enumvalues",
+  8: "defines"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "Variables",
   5: "Typedefs",
   6: "Enumerations",
-  7: "Enumerator"
+  7: "Enumerator",
+  8: "Macros"
 };
 

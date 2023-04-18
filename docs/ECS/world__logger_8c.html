@@ -92,7 +92,8 @@ $(document).ready(function(){initNavTree('world__logger_8c.html',''); initResiza
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">world_logger.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -121,14 +122,21 @@ Include dependency graph for world_logger.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0e69dbf4ee5f4e9352dc8f092dbe0a98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__logger_8c.html#a0e69dbf4ee5f4e9352dc8f092dbe0a98">world_log_init</a> (void)</td></tr>
-<tr class="separator:a0e69dbf4ee5f4e9352dc8f092dbe0a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73d5883f35b707247a91601a506980ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__logger_8c.html#a73d5883f35b707247a91601a506980ea">world_log</a> (enum <a class="el" href="world__logger_8h.html#a5d7ee46be4a5c8a58876b97c497f2738">world_log_level</a> level, const char *fmt,...)</td></tr>
-<tr class="separator:a73d5883f35b707247a91601a506980ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34af02d4a590ad432e3355c149941a88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__logger_8c.html#a34af02d4a590ad432e3355c149941a88">world_log_init</a> (FILE *f)</td></tr>
+<tr class="separator:a34af02d4a590ad432e3355c149941a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7472095fa238acfee648af9075ff66e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__logger_8c.html#af7472095fa238acfee648af9075ff66e">world_log</a> (enum <a class="el" href="world__logger_8h.html#a5d7ee46be4a5c8a58876b97c497f2738">world_log_level</a> level, const char *filename, int line, const char *fmt,...)</td></tr>
+<tr class="separator:af7472095fa238acfee648af9075ff66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652cdb629ae44951644415f04b464031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__logger_8c.html#a652cdb629ae44951644415f04b464031">world_log_destroy</a> (void)</td></tr>
+<tr class="separator:a652cdb629ae44951644415f04b464031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a702945180aa732857b380a007a7e2a21"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__logger_8c.html#a702945180aa732857b380a007a7e2a21">file</a> = NULL</td></tr>
+<tr class="separator:a702945180aa732857b380a007a7e2a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a73d5883f35b707247a91601a506980ea" name="a73d5883f35b707247a91601a506980ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73d5883f35b707247a91601a506980ea">&#9670;&#160;</a></span>world_log()</h2>
+<a id="af7472095fa238acfee648af9075ff66e" name="af7472095fa238acfee648af9075ff66e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7472095fa238acfee648af9075ff66e">&#9670;&#160;</a></span>world_log()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,6 +146,18 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">enum <a class="el" href="world__logger_8h.html#a5d7ee46be4a5c8a58876b97c497f2738">world_log_level</a>&#160;</td>
           <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -161,8 +181,8 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="world__logger_8c_a73d5883f35b707247a91601a506980ea_icgraph.png" border="0" usemap="#aworld__logger_8c_a73d5883f35b707247a91601a506980ea_icgraph" alt=""/></div>
-<map name="aworld__logger_8c_a73d5883f35b707247a91601a506980ea_icgraph" id="aworld__logger_8c_a73d5883f35b707247a91601a506980ea_icgraph">
+<div class="center"><img src="world__logger_8c_af7472095fa238acfee648af9075ff66e_icgraph.png" border="0" usemap="#aworld__logger_8c_af7472095fa238acfee648af9075ff66e_icgraph" alt=""/></div>
+<map name="aworld__logger_8c_af7472095fa238acfee648af9075ff66e_icgraph" id="aworld__logger_8c_af7472095fa238acfee648af9075ff66e_icgraph">
 <area shape="rect" title=" " alt="" coords="411,211,488,236"/>
 <area shape="rect" href="component__destructor_8c.html#add272a74ff3c9845d811fabebbf6c94a" title="Free the data of a component." alt="" coords="197,5,348,31"/>
 <area shape="rect" href="entity__component_8c.html#ae9c4710107a012ef60c252072a5dd5b9" title="Add a component to an entity." alt="" coords="197,55,349,80"/>
@@ -180,14 +200,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a0e69dbf4ee5f4e9352dc8f092dbe0a98" name="a0e69dbf4ee5f4e9352dc8f092dbe0a98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e69dbf4ee5f4e9352dc8f092dbe0a98">&#9670;&#160;</a></span>world_log_init()</h2>
+<a id="a652cdb629ae44951644415f04b464031" name="a652cdb629ae44951644415f04b464031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652cdb629ae44951644415f04b464031">&#9670;&#160;</a></span>world_log_destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int world_log_init </td>
+          <td class="memname">void world_log_destroy </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -195,15 +215,48 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34af02d4a590ad432e3355c149941a88" name="a34af02d4a590ad432e3355c149941a88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34af02d4a590ad432e3355c149941a88">&#9670;&#160;</a></span>world_log_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int world_log_init </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="world__logger_8c_a0e69dbf4ee5f4e9352dc8f092dbe0a98_icgraph.png" border="0" usemap="#aworld__logger_8c_a0e69dbf4ee5f4e9352dc8f092dbe0a98_icgraph" alt=""/></div>
-<map name="aworld__logger_8c_a0e69dbf4ee5f4e9352dc8f092dbe0a98_icgraph" id="aworld__logger_8c_a0e69dbf4ee5f4e9352dc8f092dbe0a98_icgraph">
+<div class="center"><img src="world__logger_8c_a34af02d4a590ad432e3355c149941a88_icgraph.png" border="0" usemap="#aworld__logger_8c_a34af02d4a590ad432e3355c149941a88_icgraph" alt=""/></div>
+<map name="aworld__logger_8c_a34af02d4a590ad432e3355c149941a88_icgraph" id="aworld__logger_8c_a34af02d4a590ad432e3355c149941a88_icgraph">
 <area shape="rect" title=" " alt="" coords="172,5,273,31"/>
 <area shape="rect" href="world__constructor_8c.html#a58a55676e9106f803d354dcd7f0d4db3" title="It calls the destructor of each of the three lists in the world." alt="" coords="5,5,124,31"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a702945180aa732857b380a007a7e2a21" name="a702945180aa732857b380a007a7e2a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a702945180aa732857b380a007a7e2a21">&#9670;&#160;</a></span>file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* file = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_0',['type',['../structcomponent__s.html#a4bfea42429249a1f65204f0c0f34704a',1,'component_s::type()'],['../structresource__s.html#a4bfea42429249a1f65204f0c0f34704a',1,'resource_s::type()'],['../structsystem__s.html#a4bfea42429249a1f65204f0c0f34704a',1,'system_s::type()']]]
+  ['system_5flist_0',['system_list',['../structworld__s.html#a9e4d6505733ba081c6216e9519a0f5fe',1,'world_s']]]
 ];
