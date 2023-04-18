@@ -9,11 +9,10 @@
 
 #include "world_logger.h"
 #include <stdarg.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <unistd.h>
 #include <sys/stat.h>
+#include <unistd.h>
 
 FILE *file = NULL;
 
@@ -22,17 +21,22 @@ int world_log_init(FILE *f)
     char buffer[26] = {0};
     time_t now = time(NULL);
     struct tm *t = localtime(&now);
+    char filename[40] = {0};
 
-    if (access("log", F_OK) == -1) {
-        if (mkdir("log", 0777) == -1) {
-            return -1;
+    if (f != NULL) {
+        file = f;
+    } else {
+        if (access("log", F_OK) == -1) {
+            if (mkdir("log", 0777) == -1) {
+                return -1;
+            }
         }
+        strftime(buffer, 26, "%Y-%m-%d %H:%M:%S", t);
+        sprintf(filename, "log/world-%s.log", buffer);
+        file = fopen(filename, "a");
+        if (file == NULL)
+            return -1;
     }
-    strftime(buffer, 26, "%Y-%m-%d %H:%M:%S", t);
-    sprintf(filename, "log/world-%s.log", buffer);
-    file = fopen(filename, "a");
-    if (file == NULL)
-        return -1;
     return 0;
 }
 
@@ -43,7 +47,7 @@ static int print_log_time(void)
     struct tm *t = localtime(&now);
 
     strftime(buffer, 26, "%Y-%m-%d %H:%M:%S\t", t);
-    fprintf(file, buffer);
+    fprintf(file, "%s", buffer);
     fflush(file);
     return 0;
 }
@@ -81,6 +85,7 @@ int world_log(enum world_log_level level, const char *filename, int line, const 
 
     print_log_time();
     print_log_level(level);
+    fprintf(file, "%s:%d\t", filename, line);
     va_start(args, fmt);
     rvalue = vfprintf(file, fmt, args);
     fprintf(file, "\n");

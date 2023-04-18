@@ -10,6 +10,8 @@
 #ifndef WORLD_LOGGER_H
 #define WORLD_LOGGER_H
 
+#include <stdio.h>
+
 enum world_log_level {
     WORLD_LOG_LEVEL_DEBUG,
     WORLD_LOG_LEVEL_INFO,
