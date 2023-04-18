@@ -24,7 +24,7 @@ int world_constructor(world_t *world)
     if (rvalue < 0) {
         return -1;
     }
-    world_log(WORLD_LOG_LEVEL_DEBUG, "World created");
+    log_debug("World created");
     return 0;
 }
 
@@ -51,5 +51,5 @@ void world_destructor(world_t *world)
         world->resource_list.pop_back(&world->resource_list);
     }
     world->resource_list.destructor(&world->resource_list);
-    world_log_init();
+    world_log_init(0);
 }
