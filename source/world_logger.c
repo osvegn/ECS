@@ -15,12 +15,11 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-static char filename[40] = {0};
+FILE *file = NULL;
 
-int world_log_init(void)
+int world_log_init(FILE *f)
 {
     char buffer[26] = {0};
-    FILE *file = NULL;
     time_t now = time(NULL);
     struct tm *t = localtime(&now);
 
@@ -34,11 +33,10 @@ int world_log_init(void)
     file = fopen(filename, "a");
     if (file == NULL)
         return -1;
-    fclose(file);
     return 0;
 }
 
-static int print_log_time(FILE *file)
+static int print_log_time(void)
 {
     char buffer[26] = {0};
     time_t now = time(NULL);
@@ -50,7 +48,7 @@ static int print_log_time(FILE *file)
     return 0;
 }
 
-static int print_log_level(FILE *file, enum world_log_level level)
+static int print_log_level(enum world_log_level level)
 {
     switch (level) {
     case WORLD_LOG_LEVEL_DEBUG:
@@ -76,21 +74,23 @@ static int print_log_level(FILE *file, enum world_log_level level)
     return 0;
 }
 
-int world_log(enum world_log_level level, const char *fmt, ...)
+int world_log(enum world_log_level level, const char *filename, int line, const char *fmt, ...)
 {
     va_list args;
     int rvalue = 0;
-    FILE *file = fopen(filename, "a");
 
-    if (file == NULL)
-        return -1;
-    print_log_time(file);
-    print_log_level(file, level);
+    print_log_time();
+    print_log_level(level);
     va_start(args, fmt);
     rvalue = vfprintf(file, fmt, args);
     fprintf(file, "\n");
     va_end(args);
     fflush(file);
-    fclose(file);
     return rvalue;
+}
+
+void world_log_destroy(void)
+{
+    if (file)
+        fclose(file);
 }
