@@ -31,10 +31,8 @@ bool entity_contains_component(entity_t *entity, component_t *component)
     unsigned int index = find_component(entity, component);
 
     if (index < entity->components.size(&entity->components)) {
-        log_info("Component found (type: %d) in entity (type: %d))", component->type, entity->id);
         return true;
     }
-    log_info("Component not found (type: %d) in entity (type: %d))", component->type, entity->id);
     return false;
 }
 
@@ -44,10 +42,8 @@ bool entity_contains_component_by_type(entity_t *entity, unsigned int type)
     unsigned int index = find_component(entity, &component);
 
     if (index < entity->components.size(&entity->components)) {
-        log_info("Component found (type: %d) in entity (type: %d))", type, entity->id);
         return true;
     }
-    log_info("Component not found (type: %d) in entity (type: %d))", type, entity->id);
     return false;
 }
 
@@ -56,10 +52,9 @@ int entity_add_component(entity_t *entity, component_t *component)
     unsigned int index = find_component(entity, component);
 
     if (index < entity->components.size(&entity->components)) {
-        log_warn("Component already exists (type: %d) in entity (type: %d))", component->type, entity->id);
+        log_error("Entity already contains component of type %d", component->type);
         return -1;
     }
-    log_info("Component added (type: %d) in entity (type: %d))", component->type, entity->id);
     entity->components.emplace_back(&entity->components, component);
     return 0;
 }
@@ -70,26 +65,24 @@ int entity_remove_component(entity_t *entity, component_t *component)
 
     if (index < entity->components.size(&entity->components)) {
         entity->components.erase(&entity->components, index);
-        log_info("Component removed (type: %d) in entity (type: %d))", component->type, entity->id);
         return 0;
     }
-    log_warn("Component not found (type: %d) in entity (type: %d))", component->type, entity->id);
+    log_error("Entity does not contain component of type %d", component->type);
     return -1;
 }
 
 component_t *entity_get_component(entity_t *entity, unsigned int type)
 {
     if (entity->components.size(&entity->components) <= 0) {
-        log_warn("Entity (%d) has no components", entity->id);
+        log_error("Entity does not contain any components");
         return 0;
     }
     for (unsigned int index = 0; index < entity->components.size(&entity->components); index++) {
         if (((component_t *)entity->components.at(&entity->components, index))->type == type) {
-            log_info("Component found (type: %d) in entity (type: %d))", type, entity->id);
             return entity->components.at(&entity->components, index);
         }
     }
-    log_warn("Component not found (type: %d) in entity (type: %d))", type, entity->id);
+    log_error("Entity does not contain component of type %d", type);
     return 0;
 }
 

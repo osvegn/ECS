@@ -17,5 +17,4 @@ void component_destructor(component_t *c)
     if (c->data)
         free(c->data);
     c->data = 0;
-    log_debug("Component %d destroyed", c->type);
 }
