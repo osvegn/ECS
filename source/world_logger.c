@@ -82,13 +82,20 @@ int world_log(enum world_log_level level, const char *filename, int line, const 
 {
     va_list args;
     int rvalue = 0;
+    char *buf = NULL;
 
     if (file == NULL)
         return -1;
     print_log_time();
     print_log_level(level);
-    fprintf(file, "%s\t", getcwd(NULL, 0));
-    fprintf(file, "%s:%d\t", filename, line);
+    if (getcwd(buf, 0) == NULL)
+        return -1;
+    buf = strstr(filename, buf);
+    if (buf != NULL) {
+        fprintf(file, "{cwd}%s:%d\t", buf + strlen(buf), line);
+    } else {
+        fprintf(file, "%s:%d\t", filename, line);
+    }
     va_start(args, fmt);
     rvalue = vfprintf(file, fmt, args);
     fprintf(file, "\n");
