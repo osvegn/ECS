@@ -13,6 +13,7 @@
 #include <time.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <string.h>
 
 FILE *file = NULL;
 
