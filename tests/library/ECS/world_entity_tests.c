@@ -87,7 +87,7 @@ Test(world_world_contains_entity, world_world_contains_entity_success)
     entity_t entity;
 
     entity.id = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     world_add_entity(&world, &entity);
     cr_assert_eq(world_contains_entity(&world, &entity), true);
 }
@@ -98,7 +98,7 @@ Test(world_world_contains_entity, world_world_contains_entity_failure)
     entity_t entity;
 
     entity.id = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     cr_assert_eq(world_contains_entity(&world, &entity), false);
 }
 
@@ -109,7 +109,7 @@ Test(world_world_join_entities, world_world_join_entities_1)
     vector_t vector;
     component_t component = {.type=1, .data=0};
 
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     entity_constructor(&entity);
     entity_add_component(&entity, &component);
     world_add_entity(&world, &entity);
@@ -121,7 +121,7 @@ Test(world_world_join_entities, world_world_join_entities_2)
     world_t world;
     vector_t vector;
 
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     cr_assert_eq(world_join_entities(&world, &vector, 0), -1);
 }
 
@@ -133,7 +133,7 @@ Test(world_world_join_entities, world_world_join_entities_3)
     int expected_value = 2;
     component_t component = {.type=1, .data=0};
 
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     entity_constructor(&entity);
     entity_add_component(&entity, &component);
     world_add_entity(&world, &entity);
@@ -150,7 +150,7 @@ Test(world_world_join_entities, world_world_join_entities_4)
     entity_t entity;
     component_t component = {.type=1, .data=0};
 
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     entity_constructor(&entity);
     entity_add_component(&entity, &component);
     world_add_entity(&world, &entity);
@@ -168,7 +168,7 @@ Test(world_world_join_entities, world_world_join_entities_5)
     entity_t entity;
     component_t component = {.type=1, .data=0};
 
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     entity_constructor(&entity);
     entity_add_component(&entity, &component);
     component.type = 2;
@@ -185,7 +185,7 @@ Test(world_world_join_entities, world_world_join_entities_6)
     vector_t *components;
     component_t component = {.type=1, .data=0};
 
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     entity_constructor(&entity);
     entity_add_component(&entity, &component);
     world_add_entity(&world, &entity);
@@ -203,7 +203,7 @@ Test(world_world_join_entities, world_world_join_entities_7)
     vector_t *components;
     component_t component = {.type=1, .data=0};
 
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     entity_constructor(&entity);
     entity_add_component(&entity, &component);
     world_add_entity(&world, &entity);

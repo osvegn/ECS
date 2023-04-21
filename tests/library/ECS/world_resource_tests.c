@@ -111,7 +111,7 @@ Test(world_world_contains_resource, world_world_contains_resource_success)
     resource_t resource;
 
     resource.type = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     world_add_resource(&world, &resource);
     cr_assert_eq(world_contains_resource(&world, &resource), true);
 }
@@ -122,7 +122,7 @@ Test(world_world_contains_resource, world_world_contains_resource_failure)
     resource_t resource;
 
     resource.type = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     cr_assert_eq(world_contains_resource(&world, &resource), false);
 }
 
@@ -132,7 +132,7 @@ Test(world_world_contains_resource, world_world_contains_resource_by_type_succes
     resource_t resource;
 
     resource.type = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     world_add_resource(&world, &resource);
     cr_assert_eq(world_contains_resource_by_type(&world, 0), true);
 }
@@ -143,7 +143,7 @@ Test(world_world_contains_resource, world_world_contains_resource_by_type_failur
     resource_t resource;
 
     resource.type = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     world_add_resource(&world, &resource);
     cr_assert_eq(world_contains_resource_by_type(&world, 1), false);
 }
@@ -154,7 +154,7 @@ Test(world_world_get_resource, world_world_get_resource_success)
     resource_t resource;
 
     resource.type = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     world_add_resource(&world, &resource);
     cr_assert_neq(world_get_resource(&world, &resource), 0);
 }
@@ -165,7 +165,7 @@ Test(world_world_get_resource, world_world_get_resource_failure)
     resource_t resource;
 
     resource.type = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     world_add_resource(&world, &resource);
     resource.type = 1;
     cr_assert_eq(world_get_resource(&world, &resource), 0);
@@ -177,7 +177,7 @@ Test(world_world_get_resource, world_world_get_resource_by_id_success)
     resource_t resource;
 
     resource.type = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     world_add_resource(&world, &resource);
     cr_assert_neq(world_get_resource_by_type(&world, 0), 0);
 }
@@ -188,7 +188,7 @@ Test(world_world_get_resource, world_world_get_resource_by_id_failure)
     resource_t resource;
 
     resource.type = 0;
-    world_constructor(&world);
+    world_constructor(&world, stdout);
     world_add_resource(&world, &resource);
     cr_assert_eq(world_get_resource_by_type(&world, 1), 0);
 }

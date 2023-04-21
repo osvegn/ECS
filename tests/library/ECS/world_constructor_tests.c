@@ -14,6 +14,6 @@ Test(world_constructor, world_constructor)
 {
     world_t world;
 
-    cr_assert_eq(world_constructor(&world), 0);
+    cr_assert_eq(world_constructor(&world, stdout), 0);
     world_destructor(&world);
 }

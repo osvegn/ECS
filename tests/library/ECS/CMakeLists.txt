@@ -6,6 +6,7 @@ set(SOURCE
     ${ECS_TESTS_ROOT}/world_system_tests.c
     ${ECS_TESTS_ROOT}/world_constructor_tests.c
     ${ECS_TESTS_ROOT}/entity_component_tests.c
+    ${ECS_TESTS_ROOT}/world_logger_tests.c
 )
 
 add_executable(${TARGET} ${SOURCE})

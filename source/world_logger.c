@@ -85,16 +85,17 @@ int world_log(enum world_log_level level, const char *filename, int line, const 
     int rvalue = 0;
     char *buf = NULL;
 
-    if (file == NULL)
+    if (file == NULL || filename == NULL || fmt == NULL)
         return -1;
     print_log_time();
     print_log_level(level);
     buf = getcwd(NULL, 0);
-    if (buf == NULL)
-        return -1;
     if (buf != NULL) {
         buf = strstr(filename, buf);
-        fprintf(file, "{cwd}%s:%d\t", buf + strlen(buf), line);
+        if (buf != NULL)
+            fprintf(file, "{cwd}%s:%d\t", buf + strlen(buf), line);
+        else
+            fprintf(file, "%s:%d\t", filename, line);
     } else {
         fprintf(file, "%s:%d\t", filename, line);
     }

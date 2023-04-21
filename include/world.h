@@ -10,6 +10,7 @@
 #ifndef WORLD_H_
 #define WORLD_H_
 
+#include <stdio.h>
 #include "vector.h"
 #include "system.h"
 #include "resource.h"
@@ -34,6 +35,7 @@ typedef struct world_s {
 /// @brief It creates a new world by creating a new resource list, entity list, and system
 /// list
 /// @param world a pointer to the world_t struct
+/// @param log_file the file where the logs will be written, or NULL to create a new file
 /// @return 0, or -1 on failure
 /// @details **Example**
 /// @code
@@ -41,13 +43,13 @@ typedef struct world_s {
 ///        world_t world;
 ///        int rvalue = 0;
 ///
-///        rvalue = world_constructor(&world);
+///        rvalue = world_constructor(&world, 0);
 ///        if (rvalue < 0)
 ///            return -1;
 ///        return 0;
 ///    }
 /// @endcode
-int world_constructor(world_t *world);
+int world_constructor(world_t *world, FILE *log_file);
 
 /// @brief It calls the destructor of each of the three lists in the world
 /// @param world The world to be destructed.
