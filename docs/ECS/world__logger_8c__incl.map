@@ -1,11 +1,10 @@
 <map id="source/world_logger.c" name="source/world_logger.c">
-<area shape="rect" id="node1" title=" " alt="" coords="268,5,416,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="228,5,376,31"/>
 <area shape="rect" id="node2" href="$world__logger_8h.html" title=" " alt="" coords="5,79,111,104"/>
 <area shape="rect" id="node4" title=" " alt="" coords="135,79,203,104"/>
 <area shape="rect" id="node5" title=" " alt="" coords="227,79,289,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="313,79,371,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="395,79,473,104"/>
-<area shape="rect" id="node8" title=" " alt="" coords="498,79,565,104"/>
-<area shape="rect" id="node9" title=" " alt="" coords="589,79,653,104"/>
+<area shape="rect" id="node6" title=" " alt="" coords="314,79,378,104"/>
+<area shape="rect" id="node7" title=" " alt="" coords="403,79,481,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="505,79,563,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="28,152,88,177"/>
 </map>
