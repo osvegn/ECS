@@ -10,10 +10,12 @@
 #include "world_logger.h"
 #include <stdarg.h>
 #include <stdlib.h>
-#include <time.h>
-#include <sys/stat.h>
-#include <unistd.h>
 #include <string.h>
+#include <sys/stat.h>
+#include <time.h>
+#ifdef __linux__
+#include <unistd.h>
+#endif
 
 FILE *file = NULL;
 
@@ -26,7 +28,9 @@ int world_log_init(FILE *f)
 
     if (f != NULL) {
         file = f;
-    } else {
+    }
+    else {
+        #ifdef __linux__
         if (access("log", F_OK) == -1) {
             if (mkdir("log", 0777) == -1) {
                 return -1;
@@ -37,6 +41,9 @@ int world_log_init(FILE *f)
         file = fopen(filename, "a");
         if (file == NULL)
             return -1;
+        #else
+        return -1;
+        #endif
     }
     return 0;
 }
@@ -88,14 +95,17 @@ int world_log(enum world_log_level level, const char *filename, int line, const 
         return -1;
     print_log_time();
     print_log_level(level);
-    buf = getcwd(NULL, 0);
+    #ifdef __linux__
+        buf = getcwd(NULL, 0);
+    #endif
     if (buf != NULL) {
         buf = strstr(filename, buf);
         if (buf != NULL)
             fprintf(file, "{cwd}%s:%d\t", buf + strlen(buf), line);
         else
             fprintf(file, "%s:%d\t", filename, line);
-    } else {
+    }
+    else {
         fprintf(file, "%s:%d\t", filename, line);
     }
     va_start(args, fmt);

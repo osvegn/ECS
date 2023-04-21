@@ -27,6 +27,17 @@ jobs:
           cmake -B build
           cmake --build build
 
+  build-windows:
+    runs-on: windows-2019
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: |
+          cmake -B build
+          cmake --build build
+
   tests-linux:
     runs-on: ubuntu-22.04
     needs: build-linux
