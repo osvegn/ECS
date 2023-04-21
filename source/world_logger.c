@@ -82,7 +82,6 @@ static int print_log_level(enum world_log_level level)
 int world_log(enum world_log_level level, const char *filename, int line, const char *fmt, ...)
 {
     va_list args;
-    int rvalue = 0;
     char *buf = NULL;
 
     if (file == NULL || filename == NULL || fmt == NULL)
@@ -100,11 +99,11 @@ int world_log(enum world_log_level level, const char *filename, int line, const 
         fprintf(file, "%s:%d\t", filename, line);
     }
     va_start(args, fmt);
-    rvalue = vfprintf(file, fmt, args);
+    vfprintf(file, fmt, args);
     fprintf(file, "\n");
     va_end(args);
     fflush(file);
-    return rvalue;
+    return 0;
 }
 
 void world_log_destroy(void)

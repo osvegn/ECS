@@ -19,7 +19,7 @@ int world_run_systems(world_t *world)
 
     for (unsigned int i = 0; i < size; i++) {
         system = ptr->at(ptr, i);
-        if (system)
+        if (system && system->run)
             rvalue = system->run((void *)world);
         else
             return -1;
