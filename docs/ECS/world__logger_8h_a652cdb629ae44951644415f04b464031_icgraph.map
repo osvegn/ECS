@@ -1,0 +1,4 @@
+<map id="world_log_destroy" name="world_log_destroy">
+<area shape="rect" id="node1" title=" " alt="" coords="172,5,299,31"/>
+<area shape="rect" id="node2" href="$world__constructor_8c.html#a58a55676e9106f803d354dcd7f0d4db3" title="It calls the destructor of each of the three lists in the world." alt="" coords="5,5,124,31"/>
+</map>

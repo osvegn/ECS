@@ -1,11 +1,12 @@
 <map id="source/world_entity.c" name="source/world_entity.c">
-<area shape="rect" id="node1" title=" " alt="" coords="291,5,435,31"/>
-<area shape="rect" id="node2" href="$world_8h.html" title=" " alt="" coords="193,79,255,104"/>
-<area shape="rect" id="node8" href="$component_8h.html" title=" " alt="" coords="307,225,403,251"/>
-<area shape="rect" id="node9" title=" " alt="" coords="401,79,469,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="198,225,266,251"/>
-<area shape="rect" id="node4" href="$system_8h.html" title=" " alt="" coords="5,152,80,177"/>
-<area shape="rect" id="node6" href="$resource_8h.html" title=" " alt="" coords="104,152,187,177"/>
-<area shape="rect" id="node7" href="$entity_8h.html" title=" " alt="" coords="262,152,325,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,225,80,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="375,5,519,31"/>
+<area shape="rect" id="node2" href="$world_8h.html" title=" " alt="" coords="214,79,277,104"/>
+<area shape="rect" id="node9" href="$component_8h.html" title=" " alt="" coords="311,225,407,251"/>
+<area shape="rect" id="node10" title=" " alt="" coords="485,79,553,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="349,152,409,177"/>
+<area shape="rect" id="node4" title=" " alt="" coords="194,225,262,251"/>
+<area shape="rect" id="node5" href="$system_8h.html" title=" " alt="" coords="5,152,80,177"/>
+<area shape="rect" id="node7" href="$resource_8h.html" title=" " alt="" coords="155,152,237,177"/>
+<area shape="rect" id="node8" href="$entity_8h.html" title=" " alt="" coords="262,152,325,177"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,225,80,251"/>
 </map>

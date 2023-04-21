@@ -98,7 +98,8 @@ $(document).ready(function(){initNavTree('world_8h.html',''); initResizable(); }
   <div class="headertitle"><div class="title">world.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;vector.h&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;vector.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="system_8h_source.html">system.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="resource_8h_source.html">resource.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="entity_8h_source.html">entity.h</a>&quot;</code><br />
@@ -107,13 +108,14 @@ Include dependency graph for world.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="world_8h__incl.png" border="0" usemap="#ainclude_2world_8h" alt=""/></div>
 <map name="ainclude_2world_8h" id="ainclude_2world_8h">
-<area shape="rect" title=" " alt="" coords="102,5,210,31"/>
-<area shape="rect" title=" " alt="" coords="129,152,197,177"/>
-<area shape="rect" href="system_8h.html" title=" " alt="" coords="5,79,80,104"/>
-<area shape="rect" href="resource_8h.html" title=" " alt="" coords="155,79,237,104"/>
-<area shape="rect" href="entity_8h.html" title=" " alt="" coords="262,79,325,104"/>
-<area shape="rect" title=" " alt="" coords="5,152,80,177"/>
-<area shape="rect" href="component_8h.html" title=" " alt="" coords="245,152,341,177"/>
+<area shape="rect" title=" " alt="" coords="148,5,256,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,65,104"/>
+<area shape="rect" title=" " alt="" coords="213,152,281,177"/>
+<area shape="rect" href="system_8h.html" title=" " alt="" coords="90,79,165,104"/>
+<area shape="rect" href="resource_8h.html" title=" " alt="" coords="239,79,322,104"/>
+<area shape="rect" href="entity_8h.html" title=" " alt="" coords="347,79,409,104"/>
+<area shape="rect" title=" " alt="" coords="90,152,165,177"/>
+<area shape="rect" href="component_8h.html" title=" " alt="" coords="330,152,426,177"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -149,9 +151,9 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad0a0383db69c03fbebb354f9361a8716"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world_8h.html#ad0a0383db69c03fbebb354f9361a8716">world_constructor</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world)</td></tr>
-<tr class="memdesc:ad0a0383db69c03fbebb354f9361a8716"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new world by creating a new resource list, entity list, and system list.  <a href="world_8h.html#ad0a0383db69c03fbebb354f9361a8716">More...</a><br /></td></tr>
-<tr class="separator:ad0a0383db69c03fbebb354f9361a8716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab329739a6935e48a2524a4d6702be4b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world_8h.html#ab329739a6935e48a2524a4d6702be4b7">world_constructor</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, FILE *log_file)</td></tr>
+<tr class="memdesc:ab329739a6935e48a2524a4d6702be4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new world by creating a new resource list, entity list, and system list.  <a href="world_8h.html#ab329739a6935e48a2524a4d6702be4b7">More...</a><br /></td></tr>
+<tr class="separator:ab329739a6935e48a2524a4d6702be4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a55676e9106f803d354dcd7f0d4db3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world_8h.html#a58a55676e9106f803d354dcd7f0d4db3">world_destructor</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world)</td></tr>
 <tr class="memdesc:a58a55676e9106f803d354dcd7f0d4db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">It calls the destructor of each of the three lists in the world.  <a href="world_8h.html#a58a55676e9106f803d354dcd7f0d4db3">More...</a><br /></td></tr>
 <tr class="separator:a58a55676e9106f803d354dcd7f0d4db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,8 +177,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ad0a0383db69c03fbebb354f9361a8716" name="ad0a0383db69c03fbebb354f9361a8716"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0a0383db69c03fbebb354f9361a8716">&#9670;&#160;</a></span>world_constructor()</h2>
+<a id="ab329739a6935e48a2524a4d6702be4b7" name="ab329739a6935e48a2524a4d6702be4b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab329739a6935e48a2524a4d6702be4b7">&#9670;&#160;</a></span>world_constructor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,8 +187,18 @@ Functions</h2></td></tr>
           <td class="memname">int world_constructor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *&#160;</td>
-          <td class="paramname"><em>world</em></td><td>)</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>log_file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -195,6 +207,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td>a pointer to the world_t struct </td></tr>
+    <tr><td class="paramname">log_file</td><td>the file where the logs will be written, or NULL to create a new file </td></tr>
   </table>
   </dd>
 </dl>
@@ -203,18 +216,18 @@ Functions</h2></td></tr>
 <div class="line">    <a class="code hl_struct" href="structworld__s.html">world_t</a> world;</div>
 <div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
 <div class="line"> </div>
-<div class="line">    rvalue = <a class="code hl_function" href="world__constructor_8c.html#ad0a0383db69c03fbebb354f9361a8716">world_constructor</a>(&amp;world);</div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__constructor_8c.html#ab329739a6935e48a2524a4d6702be4b7">world_constructor</a>(&amp;world, 0);</div>
 <div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0)</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="astructworld__s_html"><div class="ttname"><a href="structworld__s.html">world_s</a></div><div class="ttdoc">It's the structure of a world. A world contains a list of systems, a list of resources,...</div><div class="ttdef"><b>Definition:</b> world.h:22</div></div>
-<div class="ttc" id="aworld__constructor_8c_html_ad0a0383db69c03fbebb354f9361a8716"><div class="ttname"><a href="world__constructor_8c.html#ad0a0383db69c03fbebb354f9361a8716">world_constructor</a></div><div class="ttdeci">int world_constructor(world_t *world)</div><div class="ttdoc">It creates a new world by creating a new resource list, entity list, and system list.</div><div class="ttdef"><b>Definition:</b> world_constructor.c:13</div></div>
+<div class="ttc" id="astructworld__s_html"><div class="ttname"><a href="structworld__s.html">world_s</a></div><div class="ttdoc">It's the structure of a world. A world contains a list of systems, a list of resources,...</div><div class="ttdef"><b>Definition:</b> world.h:23</div></div>
+<div class="ttc" id="aworld__constructor_8c_html_ab329739a6935e48a2524a4d6702be4b7"><div class="ttname"><a href="world__constructor_8c.html#ab329739a6935e48a2524a4d6702be4b7">world_constructor</a></div><div class="ttdeci">int world_constructor(world_t *world, FILE *log_file)</div><div class="ttdoc">It creates a new world by creating a new resource list, entity list, and system list.</div><div class="ttdef"><b>Definition:</b> world_constructor.c:13</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="world_8h_ad0a0383db69c03fbebb354f9361a8716_cgraph.png" border="0" usemap="#aworld_8h_ad0a0383db69c03fbebb354f9361a8716_cgraph" alt=""/></div>
-<map name="aworld_8h_ad0a0383db69c03fbebb354f9361a8716_cgraph" id="aworld_8h_ad0a0383db69c03fbebb354f9361a8716_cgraph">
+<div class="center"><img src="world_8h_ab329739a6935e48a2524a4d6702be4b7_cgraph.png" border="0" usemap="#aworld_8h_ab329739a6935e48a2524a4d6702be4b7_cgraph" alt=""/></div>
+<map name="aworld_8h_ab329739a6935e48a2524a4d6702be4b7_cgraph" id="aworld_8h_ab329739a6935e48a2524a4d6702be4b7_cgraph">
 <area shape="rect" title="It creates a new world by creating a new resource list, entity list, and system list." alt="" coords="5,5,131,31"/>
 <area shape="rect" href="world__logger_8c.html#a34af02d4a590ad432e3355c149941a88" title=" " alt="" coords="179,5,280,31"/>
 </map>
@@ -249,7 +262,7 @@ Here is the call graph for this function:</div>
 <div class="line">    <a class="code hl_struct" href="structworld__s.html">world_t</a> world;</div>
 <div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
 <div class="line"> </div>
-<div class="line">    rvalue = <a class="code hl_function" href="world__constructor_8c.html#ad0a0383db69c03fbebb354f9361a8716">world_constructor</a>(&amp;world);</div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__constructor_8c.html#ab329739a6935e48a2524a4d6702be4b7">world_constructor</a>(&amp;world);</div>
 <div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0)</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
 <div class="line">    <a class="code hl_function" href="world__constructor_8c.html#a58a55676e9106f803d354dcd7f0d4db3">world_destructor</a>(&amp;world);</div>
@@ -261,8 +274,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="world_8h_a58a55676e9106f803d354dcd7f0d4db3_cgraph.png" border="0" usemap="#aworld_8h_a58a55676e9106f803d354dcd7f0d4db3_cgraph" alt=""/></div>
 <map name="aworld_8h_a58a55676e9106f803d354dcd7f0d4db3_cgraph" id="aworld_8h_a58a55676e9106f803d354dcd7f0d4db3_cgraph">
-<area shape="rect" title="It calls the destructor of each of the three lists in the world." alt="" coords="5,5,124,31"/>
+<area shape="rect" title="It calls the destructor of each of the three lists in the world." alt="" coords="5,31,124,56"/>
 <area shape="rect" href="component__destructor_8c.html#add272a74ff3c9845d811fabebbf6c94a" title="Free the data of a component." alt="" coords="172,5,323,31"/>
+<area shape="rect" href="world__logger_8c.html#a652cdb629ae44951644415f04b464031" title=" " alt="" coords="184,55,311,80"/>
 </map>
 </div>
 
