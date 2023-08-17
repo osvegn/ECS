@@ -1,10 +1,10 @@
 /*
- * Filename: /home/osvegn/Documents/Repositories/ECS/tests/library/ECS/world_logger_tests.c
- * Path: /home/osvegn/Documents/Repositories/ECS/tests/library/ECS
+ * Filename: world_logger_tests.c
+ * Path: tests/library/ECS
  * Created Date: Tuesday, April 18th 2023, 8:34:03 pm
  * Author: osvegn
- * 
- * Copyright (c) 2023 Your Company
+ *
+ * Copyright (c) 2023 ECS
  */
 
 #include <criterion/criterion.h>

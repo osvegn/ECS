@@ -1,10 +1,10 @@
 /*
- * Filename: /workspaces/our_rpg/lib/ECS/include/system.h
- * Path: /workspaces/our_rpg/lib/ECS/include
+ * Filename: system.h
+ * Path: include
  * Created Date: Monday, December 19th 2022, 12:26:14 pm
  * Author: osvegn
- * 
- * Copyright (c) 2023 our_rpg
+ *
+ * Copyright (c) 2023 ECS
  */
 
 #ifndef SYSTEM_H_

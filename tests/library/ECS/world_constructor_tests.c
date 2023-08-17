@@ -1,10 +1,10 @@
 /*
- * Filename: /workspaces/our_rpg/tests/library/ECS/world_constructor_tests.c
- * Path: /workspaces/our_rpg/tests/library/ECS
+ * Filename: world_constructor_tests.c
+ * Path: tests/library/ECS
  * Created Date: Monday, January 2nd 2023, 2:38:37 pm
  * Author: osvegn
- * 
- * Copyright (c) 2023 our_rpg
+ *
+ * Copyright (c) 2023 ECS
  */
 
 #include <criterion/criterion.h>

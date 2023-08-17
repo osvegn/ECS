@@ -1,11 +1,10 @@
 /*
- * Filename:
- * source/component_destructor.c
+ * Filename: component_destructor.c
  * Path: source
  * Created Date: Sunday, February 12th 2023, 5:21:14 pm
- * Author: Thomas
+ * Author: osvegn
  *
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 ECS
  */
 
 #include "component.h"

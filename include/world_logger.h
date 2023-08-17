@@ -1,10 +1,10 @@
 /*
- * Filename: include/world_logger.h
+ * Filename: world_logger.h
  * Path: include
  * Created Date: Monday, April 17th 2023, 11:33:09 pm
- * Author: Thomas
+ * Author: osvegn
  *
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 ECS
  */
 
 #ifndef WORLD_LOGGER_H

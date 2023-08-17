@@ -1,10 +1,10 @@
 /*
- * Filename: /workspaces/our_rpg/lib/vector/source/vector.c
- * Path: /workspaces/our_rpg/lib/vector/source
+ * Filename: vector.c
+ * Path: lib/vector/source
  * Created Date: Thursday, December 29th 2022, 10:41:19 pm
  * Author: osvegn
- * 
- * Copyright (c) 2023 our_rpg
+ *
+ * Copyright (c) 2023 ECS
  */
 
 #include "vector.h"

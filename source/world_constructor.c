@@ -1,10 +1,10 @@
 /*
- * Filename: source/world_constructor.c
+ * Filename: world_constructor.c
  * Path: source
  * Created Date: Monday, January 2nd 2023, 2:38:37 pm
  * Author: osvegn
  *
- * Copyright (c) 2023 our_rpg
+ * Copyright (c) 2023 ECS
  */
 
 #include "world.h"

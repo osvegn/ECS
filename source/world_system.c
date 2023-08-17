@@ -1,10 +1,10 @@
 /*
- * Filename: /workspaces/our_rpg/lib/ECS/source/world_system.c
- * Path: /workspaces/our_rpg/lib/ECS/source
+ * Filename: world_system.c
+ * Path: source
  * Created Date: Sunday, January 15th 2023, 3:59:16 pm
  * Author: osvegn
- * 
- * Copyright (c) 2023 our_rpg
+ *
+ * Copyright (c) 2023 ECS
  */
 
 #include "world.h"

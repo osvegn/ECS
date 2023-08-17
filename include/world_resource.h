@@ -1,10 +1,10 @@
 /*
- * Filename: /home/thomas/Documents/Perso/our_rpg/lib/ECS/include/world_resource.h
- * Path: /home/thomas/Documents/Perso/our_rpg/lib/ECS/include
+ * Filename: world_resource.h
+ * Path: include
  * Created Date: Wednesday, March 8th 2023, 11:06:07 pm
- * Author: Thomas
+ * Author: osvegn
  *
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 ECS
  */
 
 #ifndef WORLD_RESOURCE_H_

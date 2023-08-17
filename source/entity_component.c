@@ -1,10 +1,10 @@
 /*
- * Filename: source/entity_component.c
+ * Filename: entity_component.c
  * Path: source
  * Created Date: Sunday, January 15th 2023, 3:59:16 pm
  * Author: osvegn
  *
- * Copyright (c) 2023 our_rpg
+ * Copyright (c) 2023 ECS
  */
 
 #include "entity.h"

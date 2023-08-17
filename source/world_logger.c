@@ -1,10 +1,10 @@
 /*
- * Filename: source/world_logger.c
+ * Filename: world_logger.c
  * Path: source
  * Created Date: Monday, April 17th 2023, 11:32:33 pm
- * Author: Thomas
+ * Author: osvegn
  *
- * Copyright (c) 2023 Your Company
+ * Copyright (c) 2023 ECS
  */
 
 #include "world_logger.h"

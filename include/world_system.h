@@ -1,10 +1,10 @@
 /*
- * Filename: /home/thomas/Documents/Perso/our_rpg/lib/ECS/include/world_system.h
- * Path: /home/thomas/Documents/Perso/our_rpg/lib/ECS/include
+ * Filename: world_system.h
+ * Path: include
  * Created Date: Wednesday, March 8th 2023, 11:04:33 pm
- * Author: Thomas
- * 
- * Copyright (c) 2023 Your Company
+ * Author: osvegn
+ *
+ * Copyright (c) 2023 ECS
  */
 
 #ifndef WORLD_SYSTEM_H_

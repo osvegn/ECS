@@ -1,10 +1,10 @@
 /*
- * Filename: /workspaces/our_rpg/tests/library/ECS/entity_component_tests.c
- * Path: /workspaces/our_rpg/tests/library/ECS
+ * Filename: entity_component_tests.c
+ * Path: tests/library/ECS
  * Created Date: Sunday, January 15th 2023, 3:59:16 pm
  * Author: osvegn
- * 
- * Copyright (c) 2023 our_rpg
+ *
+ * Copyright (c) 2023 ECS
  */
 
 #include <criterion/criterion.h>

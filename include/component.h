@@ -1,10 +1,10 @@
 /*
- * Filename: /workspaces/our_rpg/lib/ECS/include/component.h
- * Path: /workspaces/our_rpg/lib/ECS/include
+ * Filename: component.h
+ * Path: include
  * Created Date: Monday, December 19th 2022, 12:26:14 pm
  * Author: osvegn
- * 
- * Copyright (c) 2023 our_rpg
+ *
+ * Copyright (c) 2023 ECS
  */
 
 #ifndef COMPONENT_H_
