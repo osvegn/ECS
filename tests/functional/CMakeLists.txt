@@ -1,21 +1,25 @@
 set(ECS_FUNCTIONAL_TESTS_ROOT ${PROJECT_SOURCE_DIR}/tests/functional)
 
-set(TARGET ecs_functional_tests)
-set(SOURCE
-    ${ECS_FUNCTIONAL_TESTS_ROOT}/main.c
-)
+function (create_test)
+    set (test_name TEST_NAME)
+    set (test_src TEST_SRC TEST_DEPS TEST_INCLUDE)
+    cmake_parse_arguments(create_test "" "${test_name}" "${test_src}" ${ARGN})
 
-add_executable(${TARGET} ${SOURCE})
+    if (NOT DEFINED create_test_TEST_NAME)
+        message (FATAL_ERROR "create_test: TEST_NAME not defined")
+    endif()
+    if (NOT DEFINED create_test_TEST_SRC)
+        message (FATAL_ERROR "create_test: TEST_SRC not defined")
+    endif()
 
-target_link_libraries(${TARGET}
-    ecs
-)
+    set (SRC "${create_test_TEST_SRC}")
+    set (TEST_NAME "${create_test_TEST_NAME}")
+    set (TEST_DEPS "${create_test_TEST_DEPS}")
+    set (TEST_INCLUDE "${create_test_TEST_INCLUDE}")
+    add_executable(${TEST_NAME} ${SRC})
+    target_include_directories(${TEST_NAME} PRIVATE ${TEST_INCLUDE})
+    target_link_libraries(${TEST_NAME} ${TEST_DEPS} criterion)
+    add_test(${TEST_NAME} ${TEST_NAME})
+endfunction()
 
-target_include_directories(${TARGET}
-    PRIVATE ${VECTOR_INCLUDE_ROOT}
-)
-
-# set_target_properties(${TARGET}
-#     PROPERTIES
-#     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/
-# )
+add_subdirectory(world)

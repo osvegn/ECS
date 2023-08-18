@@ -4,6 +4,9 @@ project(ECS)
 set(ECS_SOURCE_ROOT ${PROJECT_SOURCE_DIR}/source)
 set(ECS_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/include)
 set(VECTOR_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/submodules/vector/include)
+
+set(VECTOR_LIB ${PROJECT_SOURCE_DIR}/submodules/vector/bin/libvector.a)
+
 set(TARGET ecs)
 
 execute_process(COMMAND git submodule update --init --recursive --remote)
@@ -41,5 +44,5 @@ target_include_directories(${TARGET}
 )
 
 target_link_libraries(${TARGET}
-    ${PROJECT_SOURCE_DIR}/submodules/vector/bin/libvector.a
+    ${VECTOR_LIB}
 )
