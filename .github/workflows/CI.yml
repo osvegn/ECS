@@ -12,23 +12,20 @@ permissions:
   contents: write
 
 jobs:
-  build-linux:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Install dependencies
-        run: |
-          sudo apt-get update -y && sudo apt-get upgrade
-
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Build
-        run: |
-          cmake -B build
-          cmake --build build
-
-  build-windows:
-    runs-on: windows-2019
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, windows-2019, macos-11.0]
+        include:
+          - os: ubuntu-22.04
+            compiler: gcc
+          - os: ubuntu-22.04
+            compiler: clang
+          - os: windows-2019
+            compiler: msvc
+          - os: macos-11.0
+            compiler: clang
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -40,37 +37,22 @@ jobs:
 
   tests-linux:
     runs-on: ubuntu-22.04
-    needs: build-linux
+    needs: build
     steps:
-      - name: Install dependencies
-        run: |
-          sudo apt-get update -y && sudo apt-get upgrade
-
-      - name: Install criterion
-        run: |
-          sudo apt-get install gcovr
-          sudo apt-get install meson
-          git clone --recursive https://github.com/Snaipe/Criterion Criterion
-          cd Criterion
-          meson build
-          ninja -C build
-          sudo ninja -C build install
-
-      - name: Make Criterion available
-        run: |
-          cd Criterion
-          sudo ldconfig
-
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+
+      - name: Build submodules
+        run: |
+          ./build_submodules.sh TESTING
+
       - name: Run tests
         run: |
-          cmake -B build -DTESTING=ON
-          cmake --build build
-          cd build
-          ctest --output-on-failure
-          cd ..
+          ./run_tests.sh
 
       - name: Coverage report
         run: |
