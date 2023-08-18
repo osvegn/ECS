@@ -19,6 +19,7 @@ target_link_libraries(${TARGET}
 
 target_include_directories(${TARGET}
     PRIVATE ${VECTOR_INCLUDE_ROOT}
+    PRIVATE ${CRITERION_INCLUDE_ROOT}
 )
 
 add_test(${TARGET} ${TARGET})

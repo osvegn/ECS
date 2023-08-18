@@ -7,6 +7,9 @@
  * Copyright (c) 2023 ECS
  */
 
+#include <unistd.h>
+#include <sys/types.h>
+#include <signal.h>
 #include "world.h"
 
 int test_world_destructor_with_entity(void)
@@ -48,16 +51,45 @@ int (*tests [])(void) = {
     0
 };
 
+static void sig_handler(int signo)
+{
+    printf("Catching: %i\n", signo);
+    exit(signo);
+}
+
+int run_subprocess(int (*test)(void))
+{
+    pid_t pid = fork();
+    int status = 0;
+
+    if (pid < 0) {
+        return -1;
+    } else if (pid == 0) {
+        if (signal(SIGSEGV, sig_handler) == SIG_ERR) {
+            printf("\nCan't catch SIGSEGV\n");
+            exit(1);
+        }
+        exit(test());
+    }
+    wait(&status);
+    return status;
+}
+
 int main(void)
 {
     int res = 0;
+    int failure = 0;
+    int i = 0;
 
     printf("Start functional tests:\n");
-    for (int i = 0; tests[i]; i++) {
+    for (i = 0; tests[i]; i++) {
         printf("Launch functional tests: %i\n", i);
-        res = tests[i]();
+        res = run_subprocess(tests[i]);
+        if (res)
+            failure++;
         printf("Test %i: %s\n", i, (res) ? "Failure" : "Success");
     }
     printf("End functional tests:\n");
+    printf("%i/%i failure.\n", failure, i);
     return 0;
 }

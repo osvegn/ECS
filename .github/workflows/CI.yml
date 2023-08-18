@@ -48,6 +48,7 @@ jobs:
 
       - name: Build submodules
         run: |
+          sudo apt-get install -y meson gcovr
           ./build_submodules.sh TESTING
 
       - name: Run tests
