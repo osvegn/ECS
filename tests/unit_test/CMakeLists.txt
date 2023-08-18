@@ -14,7 +14,7 @@ add_executable(${TARGET} ${SOURCE})
 
 target_link_libraries(${TARGET}
     ecs
-    ${PROJECT_SOURCE_DIR}/submodules/Criterion/build/src/libcriterion.so
+    ${CRITERION_LIB}
 )
 
 target_include_directories(${TARGET}

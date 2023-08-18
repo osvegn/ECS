@@ -18,7 +18,7 @@ function (create_test)
     set (TEST_INCLUDE "${create_test_TEST_INCLUDE}")
     add_executable(${TEST_NAME} ${SRC})
     target_include_directories(${TEST_NAME} PRIVATE ${TEST_INCLUDE})
-    target_link_libraries(${TEST_NAME} ${TEST_DEPS} criterion)
+    target_link_libraries(${TEST_NAME} ${TEST_DEPS} ${CRITERION_LIB})
     add_test(${TEST_NAME} ${TEST_NAME})
 endfunction()
 

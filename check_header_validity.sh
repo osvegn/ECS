@@ -1,6 +1,6 @@
 #!/bin/bash
 
-c_files=$(find . -name "*.c" && find . -name "*.h")
+c_files=$(find ./source -name "*.c" && find ./include -name "*.h")
 
 for file in $c_files
 do

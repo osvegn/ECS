@@ -6,6 +6,7 @@ set(ECS_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/include)
 set(VECTOR_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/submodules/vector/include)
 
 set(VECTOR_LIB ${PROJECT_SOURCE_DIR}/submodules/vector/bin/libvector.a)
+set(CRITERION_LIB ${PROJECT_SOURCE_DIR}/submodules/Criterion/build/src/libcriterion.so)
 
 set(TARGET ecs)
 
