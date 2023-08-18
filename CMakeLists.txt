@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 project(ECS)
 
-add_subdirectory(lib/vector)
-
 set(ECS_SOURCE_ROOT ${PROJECT_SOURCE_DIR}/source)
 set(ECS_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/include)
+set(LIB_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/lib/include)
 set(TARGET ecs)
 
 option(TESTING OFF)
@@ -31,8 +30,9 @@ add_library(${TARGET} ${SOURCE})
 
 target_include_directories(${TARGET}
     PUBLIC ${ECS_INCLUDE_ROOT}
+    PRIVATE ${LIB_INCLUDE_ROOT}
 )
 
 target_link_libraries(${TARGET}
-    vector
+    lib/libvector.a
 )

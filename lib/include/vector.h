@@ -1,10 +1,10 @@
 /*
  * Filename: vector.h
- * Path: lib/vector/include
+ * Path: include
  * Created Date: Thursday, December 29th 2022, 10:41:19 pm
  * Author: osvegn
  *
- * Copyright (c) 2023 ECS
+ * Copyright (c) 2023 Vector
  */
 
 #ifndef VECTOR_H_
