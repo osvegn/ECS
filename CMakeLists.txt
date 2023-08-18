@@ -3,8 +3,11 @@ project(ECS)
 
 set(ECS_SOURCE_ROOT ${PROJECT_SOURCE_DIR}/source)
 set(ECS_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/include)
-set(LIB_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/lib/include)
+set(VECTOR_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/submodules/vector/include)
 set(TARGET ecs)
+
+execute_process(COMMAND git submodule update --init --recursive --remote)
+execute_process(COMMAND cmake -S submodules/vector -B submodules/vector/build COMMAND CMAKE --build submodules/vector/build)
 
 option(TESTING OFF)
 if(TESTING)
@@ -26,13 +29,18 @@ set(SOURCE
 )
 set_property(GLOBAL PROPERTY VECTOR_SOURCE ${VECTOR_SOURCE})
 
-add_library(${TARGET} ${SOURCE})
+option(SHARED OFF)
+if(SHARED)
+    add_library(${TARGET} SHARED ${SOURCE})
+else()
+    add_library(${TARGET} ${SOURCE})
+endif()
 
 target_include_directories(${TARGET}
     PUBLIC ${ECS_INCLUDE_ROOT}
-    PRIVATE ${LIB_INCLUDE_ROOT}
+    PRIVATE ${VECTOR_INCLUDE_ROOT}
 )
 
 target_link_libraries(${TARGET}
-    lib/libvector.a
+    submodules/vector/bin/libvector.a
 )
