@@ -118,6 +118,6 @@ int world_log(enum world_log_level level, const char *filename, int line, const 
 
 void world_log_destroy(void)
 {
-    if (file)
+    if (file && file != stdout && file != stdin && file != stderr)
         fclose(file);
 }

@@ -32,6 +32,7 @@ int world_constructor(world_t *world, FILE *log_file)
 void world_destructor(world_t *world)
 {
     entity_t *entity = 0;
+    resource_t *resource = 0;
 
     while (world->entity_list.size(&world->entity_list)) {
         entity = world->entity_list.back(&world->entity_list);
@@ -45,10 +46,9 @@ void world_destructor(world_t *world)
     world->entity_list.destructor(&world->entity_list);
     world->system_list.destructor(&world->system_list);
     while (world->resource_list.size(&world->resource_list)) {
-        (resource_t *)
-        {
-            world->resource_list.back(&world->resource_list)
-            } -> destructor(world->resource_list.back(&world->resource_list));
+        resource = world->resource_list.back(&world->resource_list);
+        if (resource->destructor)
+            resource->destructor(resource);
         world->resource_list.pop_back(&world->resource_list);
     }
     world->resource_list.destructor(&world->resource_list);

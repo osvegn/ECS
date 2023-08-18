@@ -7,13 +7,12 @@ set(VECTOR_INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/submodules/vector/include)
 set(TARGET ecs)
 
 execute_process(COMMAND git submodule update --init --recursive --remote)
-execute_process(COMMAND cmake -S submodules/vector -B submodules/vector/build COMMAND CMAKE --build submodules/vector/build)
 
 option(TESTING OFF)
 if(TESTING)
     enable_testing()
-    add_compile_options("-lcriterion" "--coverage" "-fprofile-arcs" "-ftest-coverage")
-    add_link_options("-lcriterion" "--coverage" "-fprofile-arcs" "-ftest-coverage")
+    add_compile_options("--coverage" "-fprofile-arcs" "-ftest-coverage")
+    add_link_options("--coverage" "-fprofile-arcs" "-ftest-coverage")
     add_subdirectory(tests)
 endif()
 
@@ -42,5 +41,5 @@ target_include_directories(${TARGET}
 )
 
 target_link_libraries(${TARGET}
-    submodules/vector/bin/libvector.a
+    ${PROJECT_SOURCE_DIR}/submodules/vector/bin/libvector.a
 )
