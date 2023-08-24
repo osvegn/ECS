@@ -115,14 +115,35 @@ bool entity_contains_component_by_type(entity_t *entity, unsigned int type);
 ///
 ///        component.type = 0;
 ///        entity_constructor(&entity);
-///        entity_add_component(&entity, component);
-///        if (entity_remove_component(&entity, component) == -1)
+///        entity_add_component(&entity, &component);
+///        if (entity_remove_component(&entity, &component) == -1)
 ///            return 1;
 ///        entity_destructor(&entity);
 ///        return 0;
 ///    }
 /// @endcode
 int entity_remove_component(entity_t *entity, component_t *component);
+
+/// @brief Remove a component from an entity
+/// @param entity The entity to remove the component from
+/// @param type The component type to remove
+/// @return 0 on success, -1 on failure
+/// @details **Example**
+/// @code
+///    int main(void) {
+///        entity_t entity;
+///        component_t component;
+///
+///        component.type = 0;
+///        entity_constructor(&entity);
+///        entity_add_component(&entity, &component);
+///        if (entity_remove_component_by_type(&entity, component.type) == -1)
+///            return 1;
+///        entity_destructor(&entity);
+///        return 0;
+///    }
+/// @endcode
+int entity_remove_component_by_type(entity_t *entity, unsigned int type);
 
 /// @brief Add a component to an entity
 /// @param entity The entity to add the component to
@@ -136,7 +157,7 @@ int entity_remove_component(entity_t *entity, component_t *component);
 ///
 ///        component.type = 0;
 ///        entity_constructor(&entity);
-///        if (entity_add_component(&entity, component) == -1)
+///        if (entity_add_component(&entity, &component) == -1)
 ///            return 1;
 ///        entity_destructor(&entity);
 ///        return 0;
@@ -157,14 +178,37 @@ int entity_add_component(entity_t *entity, component_t *component);
 ///
 ///        component.type = 0;
 ///        entity_constructor(&entity);
-///        entity_add_component(&entity, component);
-///        component2 = entity_get_component(&entity, 0);
+///        entity_add_component(&entity, &component);
+///        component2 = entity_get_component(&entity, &component);
 ///        if (component2 == 0)
 ///            return 1;
 ///        entity_destructor(&entity);
 ///        return 0;
 ///    }
 /// @endcode
-component_t *entity_get_component(entity_t *entity, unsigned int type);
+component_t *entity_get_component(entity_t *entity, component_t *component);
+
+/// @brief Get a component from an entity
+/// @param entity The entity to get the component from
+/// @param type The type of the component to get
+/// @return The component if found, NULL if not found
+/// @details **Example**
+/// @code
+///    int main(void) {
+///        entity_t entity;
+///        component_t component;
+///        component_t *component2;
+///
+///        component.type = 0;
+///        entity_constructor(&entity);
+///        entity_add_component(&entity, &component);
+///        component2 = entity_get_component_by_type(&entity, 0);
+///        if (component2 == 0)
+///            return 1;
+///        entity_destructor(&entity);
+///        return 0;
+///    }
+/// @endcode
+component_t *entity_get_component_by_type(entity_t *entity, unsigned int type);
 
 #endif /* !ENTITY_H_ */

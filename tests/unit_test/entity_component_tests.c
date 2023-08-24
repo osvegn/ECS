@@ -93,7 +93,7 @@ Test(entity_get_component, test_entity_entity_get_component_success)
 
     entity_constructor(&entity);
     entity_add_component(&entity, &component);
-    cr_assert_neq(entity_get_component(&entity, component.type), NULL);
+    cr_assert_neq(entity_get_component_by_type(&entity, component.type), NULL);
     entity_destructor(&entity);
 }
 
@@ -105,7 +105,7 @@ Test(entity_get_component, test_entity_entity_get_component_failure)
     entity_constructor(&entity);
     entity_add_component(&entity, &component);
     component.type = 1;
-    cr_assert_eq(entity_get_component(&entity, component.type), NULL);
+    cr_assert_eq(entity_get_component_by_type(&entity, component.type), NULL);
     entity_destructor(&entity);
 }
 
@@ -115,6 +115,6 @@ Test(entity_get_component, test_entity_entity_get_component_without_component)
     component_t component = {.type = 0, .data = 0};
 
     entity_constructor(&entity);
-    cr_assert_eq(entity_get_component(&entity, component.type), NULL);
+    cr_assert_eq(entity_get_component_by_type(&entity, component.type), NULL);
     entity_destructor(&entity);
 }
