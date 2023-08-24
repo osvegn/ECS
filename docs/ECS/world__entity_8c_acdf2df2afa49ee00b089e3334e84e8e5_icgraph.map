@@ -1,0 +1,4 @@
+<map id="world_contains_entity_by_id" name="world_contains_entity_by_id">
+<area shape="rect" id="node1" title="It returns true if the entity is in the world, false otherwise." alt="" coords="200,5,347,45"/>
+<area shape="rect" id="node2" href="$world__entity_8c.html#a76248669a6b79823d4741754f2e4a41a" title="It returns true if the entity is in the world, false otherwise." alt="" coords="5,13,152,38"/>
+</map>

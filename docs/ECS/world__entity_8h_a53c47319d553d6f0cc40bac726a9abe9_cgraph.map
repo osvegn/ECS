@@ -1,0 +1,4 @@
+<map id="world_remove_entity" name="world_remove_entity">
+<area shape="rect" id="node1" title="It removes an entity from the world." alt="" coords="5,13,147,38"/>
+<area shape="rect" id="node2" href="$world__entity_8c.html#a018f4fc9652790fe22ba4d75f91d6f30" title="It removes an entity from the world." alt="" coords="195,5,336,45"/>
+</map>

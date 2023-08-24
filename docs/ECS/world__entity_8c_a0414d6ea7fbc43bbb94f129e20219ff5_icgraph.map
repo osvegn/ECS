@@ -1,0 +1,4 @@
+<map id="world_get_entity_by_id" name="world_get_entity_by_id">
+<area shape="rect" id="node1" title="Get an entity from the world entity list by his id." alt="" coords="169,5,323,31"/>
+<area shape="rect" id="node2" href="$world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f" title=" " alt="" coords="5,5,121,31"/>
+</map>
