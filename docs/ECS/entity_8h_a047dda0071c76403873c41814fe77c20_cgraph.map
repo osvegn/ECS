@@ -1,0 +1,4 @@
+<map id="entity_contains_component" name="entity_contains_component">
+<area shape="rect" id="node1" title="Check if an entity contains a component." alt="" coords="5,13,185,38"/>
+<area shape="rect" id="node2" href="$entity__component_8c.html#a0fc2f14b15d533482f2180f149afc72b" title="Check if an entity contains a component type." alt="" coords="233,5,413,45"/>
+</map>

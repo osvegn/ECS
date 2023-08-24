@@ -1,0 +1,4 @@
+<map id="entity_remove_component_by_type" name="entity_remove_component_by_type">
+<area shape="rect" id="node1" title="Remove a component from an entity." alt="" coords="228,5,403,45"/>
+<area shape="rect" id="node2" href="$entity__component_8c.html#ac0e9402cb9be7aa3d6e10cb7e81c3124" title="Remove a component from an entity." alt="" coords="5,13,180,38"/>
+</map>
