@@ -95,6 +95,7 @@ int world_log(enum world_log_level level, const char *filename, int line, const 
         return -1;
     print_log_time();
     print_log_level(level);
+    /// memory leak near
     #ifdef __linux__
         buf = getcwd(NULL, 0);
     #endif

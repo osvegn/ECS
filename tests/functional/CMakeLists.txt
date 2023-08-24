@@ -22,4 +22,21 @@ function (create_test)
     add_test(${TEST_NAME} ${TEST_NAME})
 endfunction()
 
+function (create_tests_from_sources)
+    foreach(SOURCE ${SRC})
+    string(REPLACE "/" ";" SOURCE_LIST ${SOURCE})
+    list(GET SOURCE_LIST -1 F_NAME)
+    string(REPLACE "." ";" T_NAME ${F_NAME})
+    list(GET T_NAME 0 NAME)
+
+    create_test(
+        TEST_NAME ${NAME}
+        TEST_SRC ${SOURCE}
+        TEST_DEPS ecs
+        TEST_INCLUDE ${VECTOR_INCLUDE_ROOT}
+    )
+
+    endforeach()
+endfunction()
+
 add_subdirectory(world)
