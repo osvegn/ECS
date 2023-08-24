@@ -12,19 +12,17 @@
 
 int world_run_systems(world_t *world)
 {
-    vector_t *ptr = &world->system_list;
+    vector_t *systems = &world->system_list;
     system_t *system = NULL;
-    unsigned int size = ptr->size(ptr);
+    unsigned int size = systems->size(systems);
     int rvalue = 0;
 
-    for (unsigned int i = 0; i < size; i++) {
-        system = ptr->at(ptr, i);
+    for (unsigned int i = 0; i < size && rvalue == 0; i++) {
+        system = systems->at(systems, i);
         if (system && system->run)
             rvalue = system->run((void *)world);
         else
-            return -1;
-        if (rvalue)
-            return rvalue;
+            rvalue = -1;
     }
-    return 0;
+    return rvalue;
 }
