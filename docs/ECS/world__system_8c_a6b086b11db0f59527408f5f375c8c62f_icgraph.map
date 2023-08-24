@@ -1,0 +1,4 @@
+<map id="world_remove_system_by_type" name="world_remove_system_by_type">
+<area shape="rect" id="node1" title="It removes a system from the world." alt="" coords="205,5,357,45"/>
+<area shape="rect" id="node2" href="$world__system_8c.html#a287e88615dcc2de7912d72c64b587b61" title="It removes a system from the world." alt="" coords="5,13,157,38"/>
+</map>

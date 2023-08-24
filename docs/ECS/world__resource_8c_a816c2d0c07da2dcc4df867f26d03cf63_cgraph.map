@@ -1,0 +1,4 @@
+<map id="world_contains_resource" name="world_contains_resource">
+<area shape="rect" id="node1" title="It returns true if the resource is in the world&#39;s resource list." alt="" coords="5,13,172,38"/>
+<area shape="rect" id="node2" href="$world__resource_8c.html#a1560e18899fbe4e54d1802330b3d1948" title="It returns if the resource is in the world&#39;s resource list or not." alt="" coords="220,5,387,45"/>
+</map>

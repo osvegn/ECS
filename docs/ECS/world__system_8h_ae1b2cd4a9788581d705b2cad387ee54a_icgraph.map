@@ -1,0 +1,4 @@
+<map id="world_contains_system_by_type" name="world_contains_system_by_type">
+<area shape="rect" id="node1" title="It checks if a system type exists in the system list of the world." alt="" coords="212,5,371,45"/>
+<area shape="rect" id="node2" href="$world__system_8c.html#aa37f89ca543aef0b3fce616b98035a43" title="It returns true if the world contains the system, false otherwise." alt="" coords="5,13,164,38"/>
+</map>

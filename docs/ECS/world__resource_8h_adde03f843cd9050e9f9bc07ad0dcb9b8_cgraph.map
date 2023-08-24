@@ -1,0 +1,4 @@
+<map id="world_remove_resource" name="world_remove_resource">
+<area shape="rect" id="node1" title="It removes a resource from the world&#39;s resource list." alt="" coords="5,13,165,38"/>
+<area shape="rect" id="node2" href="$world__resource_8c.html#ae57c22040339251932b15a4eaa7a8888" title="It removes a resource from the world&#39;s resource list." alt="" coords="213,5,373,45"/>
+</map>

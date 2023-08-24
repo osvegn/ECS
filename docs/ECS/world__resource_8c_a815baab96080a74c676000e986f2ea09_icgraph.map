@@ -1,0 +1,4 @@
+<map id="world_get_resource_by_type" name="world_get_resource_by_type">
+<area shape="rect" id="node1" title="It returns the resource contained in the world corresponding on the resource type passed as parameter..." alt="" coords="188,5,323,45"/>
+<area shape="rect" id="node2" href="$world__resource_8c.html#a85e7b1294385ca7dd73582e73f085793" title="It returns the resource contained in the world corresponding on the resource passed as parameter." alt="" coords="5,13,140,38"/>
+</map>

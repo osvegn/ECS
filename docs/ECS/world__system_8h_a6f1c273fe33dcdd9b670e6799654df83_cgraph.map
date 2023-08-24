@@ -1,0 +1,4 @@
+<map id="world_get_system" name="world_get_system">
+<area shape="rect" id="node1" title="It gets a system from the system list of the world." alt="" coords="5,5,132,31"/>
+<area shape="rect" id="node2" href="$world__system_8c.html#a999c462b06edb9772125a6ae974b0224" title="It gets a system from the system list of the world." alt="" coords="180,5,359,31"/>
+</map>
