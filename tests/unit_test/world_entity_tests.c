@@ -225,5 +225,4 @@ Test(world_get_entity, world_get_entity)
     entity_constructor(&entity);
     world_add_entity(&world, &entity);
     cr_assert_eq(((entity_t *)world_get_entity(&world, &entity))->id, entity.id);
-    world_destructor(&world);
 }
