@@ -215,3 +215,15 @@ Test(world_world_join_entities, world_world_join_entities_7)
     components = &(*(entity_t **)vector.at(&vector, 0))->components;
     cr_assert_eq(components->size(components), 2);
 }
+
+Test(world_get_entity, world_get_entity)
+{
+    world_t world;
+    entity_t entity;
+
+    world_constructor(&world, stdout);
+    entity_constructor(&entity);
+    world_add_entity(&world, &entity);
+    cr_assert_eq(((entity_t *)world_get_entity(&world, &entity))->id, entity.id);
+    world_destructor(&world);
+}

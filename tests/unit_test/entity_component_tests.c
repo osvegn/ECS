@@ -86,7 +86,7 @@ Test(entity_contains_component, test_entity_entity_contains_component_failure)
     entity_destructor(&entity);
 }
 
-Test(entity_get_component, test_entity_entity_get_component_success)
+Test(entity_get_component, test_entity_entity_get_component_by_type_success)
 {
     entity_t entity;
     component_t component = {.type = 0, .data = 0};
@@ -97,7 +97,7 @@ Test(entity_get_component, test_entity_entity_get_component_success)
     entity_destructor(&entity);
 }
 
-Test(entity_get_component, test_entity_entity_get_component_failure)
+Test(entity_get_component, test_entity_entity_get_component_by_type_failure)
 {
     entity_t entity;
     component_t component = {.type = 0, .data = 0};
@@ -109,12 +109,24 @@ Test(entity_get_component, test_entity_entity_get_component_failure)
     entity_destructor(&entity);
 }
 
-Test(entity_get_component, test_entity_entity_get_component_without_component)
+Test(entity_get_component, test_entity_entity_get_component_by_type_without_component)
 {
     entity_t entity;
     component_t component = {.type = 0, .data = 0};
 
     entity_constructor(&entity);
     cr_assert_eq(entity_get_component_by_type(&entity, component.type), NULL);
+    entity_destructor(&entity);
+}
+
+
+Test(entity_get_component, test_entity_entity_get_component_success)
+{
+    entity_t entity;
+    component_t component = {.type = 0, .data = 0};
+
+    entity_constructor(&entity);
+    entity_add_component(&entity, &component);
+    cr_assert_neq(entity_get_component(&entity, &component), NULL);
     entity_destructor(&entity);
 }
