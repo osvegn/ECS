@@ -30,7 +30,7 @@ function (create_tests_from_sources)
     list(GET T_NAME 0 NAME)
 
     create_test(
-        TEST_NAME ${NAME}
+        TEST_NAME test_${NAME}
         TEST_SRC ${SOURCE}
         TEST_DEPS ecs
         TEST_INCLUDE ${VECTOR_INCLUDE_ROOT}
