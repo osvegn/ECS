@@ -137,6 +137,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0414d6ea7fbc43bbb94f129e20219ff5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8h.html#a0414d6ea7fbc43bbb94f129e20219ff5">world_get_entity_by_id</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, unsigned int id)</td></tr>
 <tr class="memdesc:a0414d6ea7fbc43bbb94f129e20219ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an entity from the world entity list by his id.  <a href="world__entity_8h.html#a0414d6ea7fbc43bbb94f129e20219ff5">More...</a><br /></td></tr>
 <tr class="separator:a0414d6ea7fbc43bbb94f129e20219ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d4123ccc3b0d9c783b9cc4cdfd802f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8h.html#a56d4123ccc3b0d9c783b9cc4cdfd802f">world_get_entity</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, <a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *entity)</td></tr>
+<tr class="memdesc:a56d4123ccc3b0d9c783b9cc4cdfd802f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an entity from the world entity list by his id.  <a href="world__entity_8h.html#a56d4123ccc3b0d9c783b9cc4cdfd802f">More...</a><br /></td></tr>
+<tr class="separator:a56d4123ccc3b0d9c783b9cc4cdfd802f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7ff0b58102c05b45a6722f11c9a3d2b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8h.html#ab7ff0b58102c05b45a6722f11c9a3d2b">world_join_entities</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, vector_t *entities, unsigned int type,...)</td></tr>
 <tr class="memdesc:ab7ff0b58102c05b45a6722f11c9a3d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize entities vector with entities which contain all components types asked.  <a href="world__entity_8h.html#ab7ff0b58102c05b45a6722f11c9a3d2b">More...</a><br /></td></tr>
 <tr class="separator:ab7ff0b58102c05b45a6722f11c9a3d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,6 +319,65 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a56d4123ccc3b0d9c783b9cc4cdfd802f" name="a56d4123ccc3b0d9c783b9cc4cdfd802f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d4123ccc3b0d9c783b9cc4cdfd802f">&#9670;&#160;</a></span>world_get_entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> * world_get_entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get an entity from the world entity list by his id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>The world on which find the entity. </td></tr>
+    <tr><td class="paramname">entity</td><td>The entity to find. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the entity, 0 otherwise.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> example(<a class="code hl_struct" href="structworld__s.html">world_t</a> *world, <a class="code hl_struct" href="structentity__s.html">entity_t</a> *e)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="structentity__s.html">entity_t</a> *entity = 0;</div>
+<div class="line"> </div>
+<div class="line">    entity = <a class="code hl_function" href="world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f">world_get_entity</a>(world, e);</div>
+<div class="line">    <span class="keywordflow">if</span> (entity == 0) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_get_entity_by_id() failed: entity not found\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aworld__entity_8c_html_a56d4123ccc3b0d9c783b9cc4cdfd802f"><div class="ttname"><a href="world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f">world_get_entity</a></div><div class="ttdeci">entity_t * world_get_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">Get an entity from the world entity list by his id.</div><div class="ttdef"><b>Definition:</b> world_entity.c:79</div></div>
+</div><!-- fragment --> <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="world__entity_8h_a56d4123ccc3b0d9c783b9cc4cdfd802f_cgraph.png" border="0" usemap="#aworld__entity_8h_a56d4123ccc3b0d9c783b9cc4cdfd802f_cgraph" alt=""/></div>
+<map name="aworld__entity_8h_a56d4123ccc3b0d9c783b9cc4cdfd802f_cgraph" id="aworld__entity_8h_a56d4123ccc3b0d9c783b9cc4cdfd802f_cgraph">
+<area shape="rect" title="Get an entity from the world entity list by his id." alt="" coords="5,5,121,31"/>
+<area shape="rect" href="world__entity_8c.html#a0414d6ea7fbc43bbb94f129e20219ff5" title="Get an entity from the world entity list by his id." alt="" coords="169,5,323,31"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a0414d6ea7fbc43bbb94f129e20219ff5" name="a0414d6ea7fbc43bbb94f129e20219ff5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0414d6ea7fbc43bbb94f129e20219ff5">&#9670;&#160;</a></span>world_get_entity_by_id()</h2>
 
@@ -369,7 +431,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="world__entity_8h_a0414d6ea7fbc43bbb94f129e20219ff5_icgraph.png" border="0" usemap="#aworld__entity_8h_a0414d6ea7fbc43bbb94f129e20219ff5_icgraph" alt=""/></div>
 <map name="aworld__entity_8h_a0414d6ea7fbc43bbb94f129e20219ff5_icgraph" id="aworld__entity_8h_a0414d6ea7fbc43bbb94f129e20219ff5_icgraph">
 <area shape="rect" title="Get an entity from the world entity list by his id." alt="" coords="169,5,323,31"/>
-<area shape="rect" href="world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f" title=" " alt="" coords="5,5,121,31"/>
+<area shape="rect" href="world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f" title="Get an entity from the world entity list by his id." alt="" coords="5,5,121,31"/>
 </map>
 </div>
 
