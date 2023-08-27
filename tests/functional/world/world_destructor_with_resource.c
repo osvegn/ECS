@@ -8,6 +8,7 @@
  */
 
 #include "world.h"
+#include "world_resource.h"
 
 int test_world_destructor_with_resource(void)
 {

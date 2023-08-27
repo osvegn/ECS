@@ -138,6 +138,26 @@ bool world_contains_entity_by_id(world_t *world, unsigned int id);
 /// @endcode
 entity_t *world_get_entity_by_id(world_t *world, unsigned int id);
 
+/// @brief Get an entity from the world entity list by his id.
+/// @param world The world on which find the entity.
+/// @param entity The entity to find.
+/// @return A pointer to the entity, 0 otherwise.
+/// @details **Example:**
+/// @code
+///    int example(world_t *world, entity_t *e)
+///    {
+///        entity_t *entity = 0;
+///
+///        entity = world_get_entity(world, e);
+///        if (entity == 0) {
+///            fprintf(stderr, "Error: world_get_entity_by_id() failed: entity not found\n");
+///            return -1;
+///        }
+///        return 0;
+///    }
+/// @endcode
+entity_t *world_get_entity(world_t *world, entity_t *entity);
+
 /// @brief Initialize entities vector with entities which contain all components types asked.
 /// @param world The world on which find entities.
 /// @param entities The vector to store entities found.

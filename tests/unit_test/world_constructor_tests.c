@@ -9,6 +9,7 @@
 
 #include <criterion/criterion.h>
 #include "world.h"
+#include "world_resource.h"
 
 Test(world_constructor, world_constructor)
 {
