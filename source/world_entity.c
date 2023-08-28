@@ -81,37 +81,45 @@ entity_t *world_get_entity(world_t *world, entity_t *entity)
     return world_get_entity_by_id(world, entity->id);
 }
 
-int world_join_entities(world_t *world, vector_t *entities, unsigned int type, ...)
+int world_join_entities_from_vector(world_t *world, vector_t *entities, vector_t *args)
 {
-    va_list argptr;
-    int component;
-    bool first_element = true;
-    void *ptr;
+    int c_type = 0;
+    int count = 0;
+    entity_t *e = 0;
 
-    vector_constructor(entities, sizeof(entity_t *), 0);
-    va_start(argptr, type);
-    for (unsigned index = 0; index < type; index++) {
-        component = va_arg(argptr, int);
-        if (first_element) {
-            for (unsigned int i = 0; i < world->entity_list.size(&world->entity_list); i++) {
-                if (entity_contains_component_by_type(world->entity_list.at(&world->entity_list, i), component)) {
-                    ptr = world->entity_list.at(&world->entity_list, i);
-                    entities->emplace_back(entities, &ptr);
-                }
-            }
-            first_element = false;
-        } else {
-            for (unsigned int i = 0; i < entities->size(entities); i++) {
-                if (!entity_contains_component_by_type(*(entity_t **)entities->at(entities, i), component)) {
-                    entities->erase(entities, i);
-                    i--;
-                }
-            }
-            entities->shrink_to_fit(entities);
-        }
-    }
-    va_end(argptr);
-    if (first_element)
+    if (vector_constructor(entities, sizeof(vector_t *), 0) < 0)
         return -1;
+    for (unsigned int index = 0; index < world->entity_list.size(&world->entity_list); index++) {
+        for (unsigned int i = 0; i < args->size(args); i++) {
+            e = world->entity_list.at(&world->entity_list, index);
+            if (entity_contains_component_by_type(e, CAST(unsigned int, args->at(args, i)))) {
+                count++;
+            }
+        }
+        if (count == args->size(args))
+            entities->emplace_back(entities, &e);
+        count = 0;
+    }
     return entities->size(entities);
+}
+
+int world_join_entities(world_t *world, vector_t *entities, unsigned int count, ...)
+{
+    va_list arg_ptr;
+    int c_type = 0;
+    int r_value = 0;
+    vector_t args;
+
+    if (vector_constructor(&args, sizeof(int), count) < 0)
+        return -1;
+    va_start(arg_ptr, count);
+    for (unsigned int i = 0; i < count; i++) {
+        c_type = va_arg(arg_ptr, int);
+        if (args.emplace_back(&args, &c_type) < 0)
+            return -1;
+    }
+    va_end(arg_ptr);
+    r_value = world_join_entities_from_vector(world, entities, &args);
+    args.destructor(&args);
+    return r_value;
 }

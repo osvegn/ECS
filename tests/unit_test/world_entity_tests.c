@@ -122,7 +122,7 @@ Test(world_world_join_entities, world_world_join_entities_2)
     vector_t vector;
 
     world_constructor(&world, stdout);
-    cr_assert_eq(world_join_entities(&world, &vector, 0), -1);
+    cr_assert_eq(world_join_entities(&world, &vector, 0), 0);
 }
 
 Test(world_world_join_entities, world_world_join_entities_3)
