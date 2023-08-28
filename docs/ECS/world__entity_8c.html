@@ -140,9 +140,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a56d4123ccc3b0d9c783b9cc4cdfd802f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f">world_get_entity</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, <a class="el" href="entity_8h.html#ad0c3149de5542539dcb5c9251c68fbd2">entity_t</a> *entity)</td></tr>
 <tr class="memdesc:a56d4123ccc3b0d9c783b9cc4cdfd802f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an entity from the world entity list by his id.  <a href="world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f">More...</a><br /></td></tr>
 <tr class="separator:a56d4123ccc3b0d9c783b9cc4cdfd802f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7ff0b58102c05b45a6722f11c9a3d2b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b">world_join_entities</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, vector_t *entities, unsigned int type,...)</td></tr>
-<tr class="memdesc:ab7ff0b58102c05b45a6722f11c9a3d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize entities vector with entities which contain all components types asked.  <a href="world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b">More...</a><br /></td></tr>
-<tr class="separator:ab7ff0b58102c05b45a6722f11c9a3d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a541ece15b3178b5eeeb8aaf07c17a099"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8c.html#a541ece15b3178b5eeeb8aaf07c17a099">world_join_entities_from_vector</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, vector_t *entities, vector_t *args)</td></tr>
+<tr class="separator:a541ece15b3178b5eeeb8aaf07c17a099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c805abd44a11cabaa36d40ecde3577"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577">world_join_entities</a> (<a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *world, vector_t *entities, unsigned int count,...)</td></tr>
+<tr class="memdesc:ac4c805abd44a11cabaa36d40ecde3577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize entities vector with entities which contain all components types asked.  <a href="world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577">More...</a><br /></td></tr>
+<tr class="separator:ac4c805abd44a11cabaa36d40ecde3577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae769993c3f5d70f3d8edc10073495cd3" name="ae769993c3f5d70f3d8edc10073495cd3"></a>
@@ -437,8 +439,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ab7ff0b58102c05b45a6722f11c9a3d2b" name="ab7ff0b58102c05b45a6722f11c9a3d2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7ff0b58102c05b45a6722f11c9a3d2b">&#9670;&#160;</a></span>world_join_entities()</h2>
+<a id="ac4c805abd44a11cabaa36d40ecde3577" name="ac4c805abd44a11cabaa36d40ecde3577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c805abd44a11cabaa36d40ecde3577">&#9670;&#160;</a></span>world_join_entities()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -490,21 +492,74 @@ Here is the caller graph for this function:</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
 <div class="line"> </div>
-<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b">world_join_entities</a>(world, entities, 2, COMPONENT_EXAMPLE_1, COMPONENT_EXAMPLE_2);</div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577">world_join_entities</a>(world, entities, 2, COMPONENT_EXAMPLE_1, COMPONENT_EXAMPLE_2);</div>
 <div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0) {</div>
 <div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_join_entities() failed: no entity found\n&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__entity_8c_html_ab7ff0b58102c05b45a6722f11c9a3d2b"><div class="ttname"><a href="world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b">world_join_entities</a></div><div class="ttdeci">int world_join_entities(world_t *world, vector_t *entities, unsigned int type,...)</div><div class="ttdoc">Initialize entities vector with entities which contain all components types asked.</div><div class="ttdef"><b>Definition:</b> world_entity.c:84</div></div>
+<div class="ttc" id="aworld__entity_8c_html_ac4c805abd44a11cabaa36d40ecde3577"><div class="ttname"><a href="world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577">world_join_entities</a></div><div class="ttdeci">int world_join_entities(world_t *world, vector_t *entities, unsigned int count,...)</div><div class="ttdoc">Initialize entities vector with entities which contain all components types asked.</div><div class="ttdef"><b>Definition:</b> world_entity.c:106</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="world__entity_8c_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph.png" border="0" usemap="#aworld__entity_8c_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph" alt=""/></div>
-<map name="aworld__entity_8c_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph" id="aworld__entity_8c_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph">
+<div class="center"><img src="world__entity_8c_ac4c805abd44a11cabaa36d40ecde3577_cgraph.png" border="0" usemap="#aworld__entity_8c_ac4c805abd44a11cabaa36d40ecde3577_cgraph" alt=""/></div>
+<map name="aworld__entity_8c_ac4c805abd44a11cabaa36d40ecde3577_cgraph" id="aworld__entity_8c_ac4c805abd44a11cabaa36d40ecde3577_cgraph">
 <area shape="rect" title="Initialize entities vector with entities which contain all components types asked." alt="" coords="5,13,135,38"/>
+<area shape="rect" href="world__entity_8c.html#a541ece15b3178b5eeeb8aaf07c17a099" title=" " alt="" coords="183,5,312,45"/>
+<area shape="rect" href="entity__component_8c.html#a0fc2f14b15d533482f2180f149afc72b" title="Check if an entity contains a component type." alt="" coords="360,5,540,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a541ece15b3178b5eeeb8aaf07c17a099" name="a541ece15b3178b5eeeb8aaf07c17a099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a541ece15b3178b5eeeb8aaf07c17a099">&#9670;&#160;</a></span>world_join_entities_from_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int world_join_entities_from_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="world_8h.html#ad55869c5e54f717062ec699d20fa8886">world_t</a> *&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector_t *&#160;</td>
+          <td class="paramname"><em>entities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector_t *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="world__entity_8c_a541ece15b3178b5eeeb8aaf07c17a099_cgraph.png" border="0" usemap="#aworld__entity_8c_a541ece15b3178b5eeeb8aaf07c17a099_cgraph" alt=""/></div>
+<map name="aworld__entity_8c_a541ece15b3178b5eeeb8aaf07c17a099_cgraph" id="aworld__entity_8c_a541ece15b3178b5eeeb8aaf07c17a099_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,135,45"/>
 <area shape="rect" href="entity__component_8c.html#a0fc2f14b15d533482f2180f149afc72b" title="Check if an entity contains a component type." alt="" coords="183,5,363,45"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="world__entity_8c_a541ece15b3178b5eeeb8aaf07c17a099_icgraph.png" border="0" usemap="#aworld__entity_8c_a541ece15b3178b5eeeb8aaf07c17a099_icgraph" alt=""/></div>
+<map name="aworld__entity_8c_a541ece15b3178b5eeeb8aaf07c17a099_icgraph" id="aworld__entity_8c_a541ece15b3178b5eeeb8aaf07c17a099_icgraph">
+<area shape="rect" title=" " alt="" coords="183,5,312,45"/>
+<area shape="rect" href="world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577" title="Initialize entities vector with entities which contain all components types asked." alt="" coords="5,13,135,38"/>
 </map>
 </div>
 

@@ -5,7 +5,8 @@ var world__entity_8c =
     [ "world_contains_entity_by_id", "world__entity_8c.html#acdf2df2afa49ee00b089e3334e84e8e5", null ],
     [ "world_get_entity", "world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f", null ],
     [ "world_get_entity_by_id", "world__entity_8c.html#a0414d6ea7fbc43bbb94f129e20219ff5", null ],
-    [ "world_join_entities", "world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b", null ],
+    [ "world_join_entities", "world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577", null ],
+    [ "world_join_entities_from_vector", "world__entity_8c.html#a541ece15b3178b5eeeb8aaf07c17a099", null ],
     [ "world_remove_entity", "world__entity_8c.html#a53c47319d553d6f0cc40bac726a9abe9", null ],
     [ "world_remove_entity_by_id", "world__entity_8c.html#a018f4fc9652790fe22ba4d75f91d6f30", null ]
 ];

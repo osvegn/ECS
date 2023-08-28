@@ -490,21 +490,22 @@ Here is the caller graph for this function:</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> rvalue = 0;</div>
 <div class="line"> </div>
-<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b">world_join_entities</a>(world, entities, 2, COMPONENT_EXAMPLE_1, COMPONENT_EXAMPLE_2);</div>
+<div class="line">    rvalue = <a class="code hl_function" href="world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577">world_join_entities</a>(world, entities, 2, COMPONENT_EXAMPLE_1, COMPONENT_EXAMPLE_2);</div>
 <div class="line">    <span class="keywordflow">if</span> (rvalue &lt; 0) {</div>
 <div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Error: world_join_entities() failed: no entity found\n&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__entity_8c_html_ab7ff0b58102c05b45a6722f11c9a3d2b"><div class="ttname"><a href="world__entity_8c.html#ab7ff0b58102c05b45a6722f11c9a3d2b">world_join_entities</a></div><div class="ttdeci">int world_join_entities(world_t *world, vector_t *entities, unsigned int type,...)</div><div class="ttdoc">Initialize entities vector with entities which contain all components types asked.</div><div class="ttdef"><b>Definition:</b> world_entity.c:84</div></div>
+<div class="ttc" id="aworld__entity_8c_html_ac4c805abd44a11cabaa36d40ecde3577"><div class="ttname"><a href="world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577">world_join_entities</a></div><div class="ttdeci">int world_join_entities(world_t *world, vector_t *entities, unsigned int count,...)</div><div class="ttdoc">Initialize entities vector with entities which contain all components types asked.</div><div class="ttdef"><b>Definition:</b> world_entity.c:106</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="world__entity_8h_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph.png" border="0" usemap="#aworld__entity_8h_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph" alt=""/></div>
 <map name="aworld__entity_8h_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph" id="aworld__entity_8h_ab7ff0b58102c05b45a6722f11c9a3d2b_cgraph">
 <area shape="rect" title="Initialize entities vector with entities which contain all components types asked." alt="" coords="5,13,135,38"/>
-<area shape="rect" href="entity__component_8c.html#a0fc2f14b15d533482f2180f149afc72b" title="Check if an entity contains a component type." alt="" coords="183,5,363,45"/>
+<area shape="rect" href="world__entity_8c.html#a541ece15b3178b5eeeb8aaf07c17a099" title=" " alt="" coords="183,5,312,45"/>
+<area shape="rect" href="entity__component_8c.html#a0fc2f14b15d533482f2180f149afc72b" title="Check if an entity contains a component type." alt="" coords="360,5,540,45"/>
 </map>
 </div>
 
