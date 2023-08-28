@@ -180,8 +180,9 @@ Test(world_world_join_entities, world_world_join_entities_5)
 Test(world_world_join_entities, world_world_join_entities_6)
 {
     world_t world;
-    vector_t vector;
+    vector_t entities;
     entity_t entity;
+    entity_t *e;
     vector_t *components;
     component_t component = {.type=1, .data=0};
     component_t *c = 0;
@@ -190,11 +191,12 @@ Test(world_world_join_entities, world_world_join_entities_6)
     entity_constructor(&entity);
     entity_add_component(&entity, &component);
     world_add_entity(&world, &entity);
-    world_join_entities(&world, &vector, 1, 1);
-    components = &(*(entity_t **)vector.at(&vector, 0))->components;
-    ((component_t *)components->at(components, 0))->data = (void *)1;
+    world_join_entities(&world, &entities, 1, 1);
+    e = CAST(entity_t *, entities.at(&entities, 0));
+    c = (component_t *)entity_get_component_by_type(e, 1);
+    c->data = (void *)1;
     c = (component_t *)entity.components.at(&entity.components, 0);
-    cr_assert_eq(CAST(int, c->data), 1);
+    cr_assert_eq(c->data, (void *)1);
 }
 
 Test(world_world_join_entities, world_world_join_entities_7)
