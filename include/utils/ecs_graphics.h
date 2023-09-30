@@ -27,16 +27,16 @@ typedef struct shape_s {
 int shape_constructor(shape_t *shape, int point_number);
 int shape_destructor(shape_t *shape);
 
-int set_color(shape_t *shape, ecs_color_t *color, shape_color_t type);
-ecs_color_t *get_color(shape_t *shape, shape_color_t type);
+int set_shape_color(shape_t *shape, ecs_color_t *color, shape_color_t type);
+ecs_color_t *get_shape_color(shape_t *shape, shape_color_t type);
 
-int set_thickness(shape_t *shape, float value);
-float get_thickness(shape_t *shape);
+int set_shape_thickness(shape_t *shape, float value);
+float get_shape_thickness(shape_t *shape);
 
-int set_is_filled(shape_t *shape, bool value);
-bool get_is_filled(shape_t *shape);
+int set_shape_is_filled(shape_t *shape, bool value);
+bool get_shape_is_filled(shape_t *shape);
 
-int set_points(shape_t *shape, vector_t *points);
-int set_point(shape_t *shape, ecs_vector2f_t *point, int index);
+int set_shape_points(shape_t *shape, vector_t *points);
+int set_shape_point(shape_t *shape, ecs_vector2f_t *point, int index);
 
 void draw_shape(shape_t *shape);

@@ -9,7 +9,7 @@
 
 #include "utils/ecs_graphics.h"
 
-int set_color(shape_t *shape, ecs_color_t *color, shape_color_t type)
+int set_shape_color(shape_t *shape, ecs_color_t *color, shape_color_t type)
 {
     if (!shape || !color)
         return -1;
@@ -17,14 +17,14 @@ int set_color(shape_t *shape, ecs_color_t *color, shape_color_t type)
     return 0;
 }
 
-ecs_color_t *get_color(shape_t *shape, shape_color_t type)
+ecs_color_t *get_shape_color(shape_t *shape, shape_color_t type)
 {
     if (!shape)
         return 0;
     return &shape->color[type];
 }
 
-int set_thickness(shape_t *shape, float value)
+int set_shape_thickness(shape_t *shape, float value)
 {
     if (!shape)
         return -1;
@@ -32,14 +32,14 @@ int set_thickness(shape_t *shape, float value)
     return 0;
 }
 
-float get_thickness(shape_t *shape)
+float get_shape_thickness(shape_t *shape)
 {
     if (!shape)
         return -1;
     return shape->thickness;
 }
 
-int set_is_filled(shape_t *shape, bool value)
+int set_shape_is_filled(shape_t *shape, bool value)
 {
     if (!shape)
         return -1;
@@ -47,7 +47,7 @@ int set_is_filled(shape_t *shape, bool value)
     return 0;
 }
 
-bool get_is_filled(shape_t *shape)
+bool get_shape_is_filled(shape_t *shape)
 {
     return shape->is_filled;
 }
@@ -68,7 +68,7 @@ int shape_destructor(shape_t *shape)
     return 0;
 }
 
-int set_points(shape_t *shape, vector_t *points)
+int set_shape_points(shape_t *shape, vector_t *points)
 {
     if (!shape || !points)
         return -1;
@@ -76,7 +76,7 @@ int set_points(shape_t *shape, vector_t *points)
     return 0;
 }
 
-int set_point(shape_t *shape, ecs_vector2f_t *point, int index)
+int set_shape_point(shape_t *shape, ecs_vector2f_t *point, int index)
 {
     if (!shape || !point)
         return -1;
