@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_0',['x',['../structecs__vector2i__s.html#a6150e0515f7202e2fb518f7206ed97dc',1,'ecs_vector2i_s::x()'],['../structecs__vector3i__s.html#a6150e0515f7202e2fb518f7206ed97dc',1,'ecs_vector3i_s::x()'],['../structecs__vector2f__s.html#ad0da36b2558901e21e7a30f6c227a45e',1,'ecs_vector2f_s::x()'],['../structecs__vector3f__s.html#ad0da36b2558901e21e7a30f6c227a45e',1,'ecs_vector3f_s::x()']]]
+  ['thickness_0',['thickness',['../structshape__s.html#a9bddad7a0f5d61aefe107acf47f09549',1,'shape_s']]],
+  ['type_1',['type',['../structcomponent__s.html#a4bfea42429249a1f65204f0c0f34704a',1,'component_s::type()'],['../structresource__s.html#a4bfea42429249a1f65204f0c0f34704a',1,'resource_s::type()'],['../structsystem__s.html#a4bfea42429249a1f65204f0c0f34704a',1,'system_s::type()']]]
 ];

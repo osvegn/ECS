@@ -8,6 +8,7 @@ var annotated_dup =
     [ "ecs_vector3i_s", "structecs__vector3i__s.html", "structecs__vector3i__s" ],
     [ "entity_s", "structentity__s.html", "structentity__s" ],
     [ "resource_s", "structresource__s.html", "structresource__s" ],
+    [ "shape_s", "structshape__s.html", "structshape__s" ],
     [ "system_s", "structsystem__s.html", "structsystem__s" ],
     [ "world_s", "structworld__s.html", "structworld__s" ]
 ];
