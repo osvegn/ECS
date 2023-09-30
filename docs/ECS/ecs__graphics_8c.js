@@ -1,13 +1,13 @@
 var ecs__graphics_8c =
 [
-    [ "get_color", "ecs__graphics_8c.html#a5b0daaedef200cf137cebd86ededd25f", null ],
-    [ "get_is_filled", "ecs__graphics_8c.html#ab6bf006d6eaf4624abb5d98c0b69c2a7", null ],
-    [ "get_thickness", "ecs__graphics_8c.html#ae3a6c1d36628f2456755eec27fed3ad1", null ],
-    [ "set_color", "ecs__graphics_8c.html#ad1d17214c13e07d2bb95ed5d2662966e", null ],
-    [ "set_is_filled", "ecs__graphics_8c.html#ae2a62f64a3547f553f13ed14e044a306", null ],
-    [ "set_point", "ecs__graphics_8c.html#a379009b87cabbbe648ba9163a393c9ae", null ],
-    [ "set_points", "ecs__graphics_8c.html#a92b76173b085bc0346df0afd3e754f6d", null ],
-    [ "set_thickness", "ecs__graphics_8c.html#a27a97b14bc933dbf5fd65ba011d71afb", null ],
+    [ "get_shape_color", "ecs__graphics_8c.html#a3214befec180067f7d3ffb52ed6a5bc4", null ],
+    [ "get_shape_is_filled", "ecs__graphics_8c.html#af535e533ca47ed8fd6b8fbe0382dfd28", null ],
+    [ "get_shape_thickness", "ecs__graphics_8c.html#a84da7638864621911145907e11834e70", null ],
+    [ "set_shape_color", "ecs__graphics_8c.html#aac9d0dea1fd210bc5bc0ad14537e38c2", null ],
+    [ "set_shape_is_filled", "ecs__graphics_8c.html#a793b5a5967e0be2eab386987144b6081", null ],
+    [ "set_shape_point", "ecs__graphics_8c.html#aa5fc1c62f41570a9b42006d2930cf39e", null ],
+    [ "set_shape_points", "ecs__graphics_8c.html#a0b1acb2676d2312d7dc1fd0a0b33c40d", null ],
+    [ "set_shape_thickness", "ecs__graphics_8c.html#ad727ca75c4d3372080817d88cb6f0755", null ],
     [ "shape_constructor", "ecs__graphics_8c.html#aeb51a823536b7b559d06267801d8af93", null ],
     [ "shape_destructor", "ecs__graphics_8c.html#af9b7505de609df80e42e613daf956155", null ]
 ];
