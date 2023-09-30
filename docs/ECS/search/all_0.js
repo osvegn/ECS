@@ -1,4 +1,13 @@
 var searchData=
 [
-  ['active_0',['active',['../structsystem__s.html#a03c996f9fcf0e10baeb3e700be0c409a',1,'system_s']]]
+  ['a_0',['a',['../structecs__color__s.html#ac4b9d51a5d2ecc82aa55bff73e6c088d',1,'ecs_color_s']]],
+  ['active_1',['active',['../structsystem__s.html#a03c996f9fcf0e10baeb3e700be0c409a',1,'system_s']]],
+  ['add_5fvector2f_2',['add_vector2f',['../ecs__vector_8c.html#a881660c0156cc548d3a62326d5e9cfa1',1,'add_vector2f(ecs_vector2f_t *a, ecs_vector2f_t *b):&#160;ecs_vector.c'],['../ecs__vector_8h.html#a881660c0156cc548d3a62326d5e9cfa1',1,'add_vector2f(ecs_vector2f_t *a, ecs_vector2f_t *b):&#160;ecs_vector.c']]],
+  ['add_5fvector2f_5fvalue_3',['add_vector2f_value',['../ecs__vector_8c.html#ae4a8ed9ba2947260706a64fd7b253012',1,'add_vector2f_value(ecs_vector2f_t *a, float value):&#160;ecs_vector.c'],['../ecs__vector_8h.html#ae4a8ed9ba2947260706a64fd7b253012',1,'add_vector2f_value(ecs_vector2f_t *a, float value):&#160;ecs_vector.c']]],
+  ['add_5fvector2i_4',['add_vector2i',['../ecs__vector_8c.html#a0b8d5e43329b515cd78feb098699b542',1,'add_vector2i(ecs_vector2i_t *a, ecs_vector2i_t *b):&#160;ecs_vector.c'],['../ecs__vector_8h.html#a0b8d5e43329b515cd78feb098699b542',1,'add_vector2i(ecs_vector2i_t *a, ecs_vector2i_t *b):&#160;ecs_vector.c']]],
+  ['add_5fvector2i_5fvalue_5',['add_vector2i_value',['../ecs__vector_8h.html#ac69d7fc50ff92711651c74f02249a458',1,'add_vector2i_value(ecs_vector2i_t *a, int value):&#160;ecs_vector.c'],['../ecs__vector_8c.html#ac69d7fc50ff92711651c74f02249a458',1,'add_vector2i_value(ecs_vector2i_t *a, int value):&#160;ecs_vector.c']]],
+  ['add_5fvector3f_6',['add_vector3f',['../ecs__vector_8c.html#afaf4a2f3875f3498e82e901d9d2ed5b5',1,'add_vector3f(ecs_vector3f_t *a, ecs_vector3f_t *b):&#160;ecs_vector.c'],['../ecs__vector_8h.html#afaf4a2f3875f3498e82e901d9d2ed5b5',1,'add_vector3f(ecs_vector3f_t *a, ecs_vector3f_t *b):&#160;ecs_vector.c']]],
+  ['add_5fvector3f_5fvalue_7',['add_vector3f_value',['../ecs__vector_8c.html#a64cd1c57e4e136e788b927ba4e4ed200',1,'add_vector3f_value(ecs_vector3f_t *a, float value):&#160;ecs_vector.c'],['../ecs__vector_8h.html#a64cd1c57e4e136e788b927ba4e4ed200',1,'add_vector3f_value(ecs_vector3f_t *a, float value):&#160;ecs_vector.c']]],
+  ['add_5fvector3i_8',['add_vector3i',['../ecs__vector_8c.html#a2c90e10c11210ef7605d675bb8413092',1,'add_vector3i(ecs_vector3i_t *a, ecs_vector3i_t *b):&#160;ecs_vector.c'],['../ecs__vector_8h.html#a2c90e10c11210ef7605d675bb8413092',1,'add_vector3i(ecs_vector3i_t *a, ecs_vector3i_t *b):&#160;ecs_vector.c']]],
+  ['add_5fvector3i_5fvalue_9',['add_vector3i_value',['../ecs__vector_8c.html#a833be81640f650f5a95d6152cd388502',1,'add_vector3i_value(ecs_vector3i_t *a, int value):&#160;ecs_vector.c'],['../ecs__vector_8h.html#a833be81640f650f5a95d6152cd388502',1,'add_vector3i_value(ecs_vector3i_t *a, int value):&#160;ecs_vector.c']]]
 ];

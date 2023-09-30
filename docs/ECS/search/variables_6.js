@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['resource_5flist_0',['resource_list',['../structworld__s.html#a9a7dc8247e93d9d8a33d97f85b98bbba',1,'world_s']]],
-  ['run_1',['run',['../structsystem__s.html#aed5ef4aad149706719e84699af3b73c7',1,'system_s']]]
+  ['g_0',['g',['../structecs__color__s.html#a33fc8a286048ddc401f94310eeeee25f',1,'ecs_color_s']]]
 ];

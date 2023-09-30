@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['components_0',['components',['../structentity__s.html#a1c5495aeb63828da3855840f0136aa13',1,'entity_s']]]
+  ['b_0',['b',['../structecs__color__s.html#a1257f1682341fca1120d6d2d6955bd7f',1,'ecs_color_s']]]
 ];

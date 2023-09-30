@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['system_2eh_0',['system.h',['../system_8h.html',1,'']]],
-  ['system_5flist_1',['system_list',['../structworld__s.html#a9e4d6505733ba081c6216e9519a0f5fe',1,'world_s']]],
-  ['system_5fs_2',['system_s',['../structsystem__s.html',1,'']]],
-  ['system_5ft_3',['system_t',['../system_8h.html#af17ed4468ac83da27ed95def058a7aec',1,'system.h']]]
+  ['log_5fdebug_0',['log_debug',['../world__logger_8h.html#aa77e596ef13d2f0f75d0ac9540ed358d',1,'world_logger.h']]],
+  ['log_5ferror_1',['log_error',['../world__logger_8h.html#a6ae72553ea9805dd87a463d6f710364d',1,'world_logger.h']]],
+  ['log_5ffatal_2',['log_fatal',['../world__logger_8h.html#a704a43b1e2ff3bb554aff101efdbeecf',1,'world_logger.h']]],
+  ['log_5finfo_3',['log_info',['../world__logger_8h.html#aa1cfe5444875c8eca0ea6f6993977d6d',1,'world_logger.h']]],
+  ['log_5fwarn_4',['log_warn',['../world__logger_8h.html#a04af09851c431d178f16b24fa1aac1e9',1,'world_logger.h']]]
 ];
