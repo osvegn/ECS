@@ -8,8 +8,8 @@
  */
 
 #include "vector.h"
-#include "ecs_color.h"
-#include "ecs_vector.h"
+#include "utils/ecs_color.h"
+#include "utils/ecs_vector.h"
 
 typedef enum shape_color_e {
     FILL,
