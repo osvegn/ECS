@@ -41,7 +41,7 @@ endif()
 
 target_include_directories(${TARGET}
     PUBLIC ${ECS_INCLUDE_ROOT}
-    PRIVATE ${VECTOR_INCLUDE_ROOT}
+    PUBLIC ${VECTOR_INCLUDE_ROOT}
 )
 
 target_link_libraries(${TARGET}
