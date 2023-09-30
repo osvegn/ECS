@@ -16,8 +16,8 @@ Test(component_destructor, test_component_destructor)
 
     component.type = 1;
     component.data = malloc(sizeof(char) * 2);
-    component.data[0] = 'i';
-    component.data[1] = '\0';
+    ((char *)component.data)[0] = 'i';
+    ((char *)component.data)[1] = '\0';
     cr_assert_neq(component.data, 0);
     component_destructor(&component);
     cr_assert_eq(component.data, 0);

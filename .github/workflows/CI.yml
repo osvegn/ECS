@@ -12,7 +12,24 @@ permissions:
   contents: write
 
 jobs:
+  linter:
+    runs-on: unbuntu-22.04
+    steps:
+      - name: Headers
+        run: ${GITHUB_WORKSPACE}/check_header_validity.sh
+
+      - name: Linter
+        uses: cpp-linter/cpp-linter-action@v2
+        id: linter
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          style: file
+          extensions: 'c,h'
+          extra-args: '-I include -I submodules/vector/include'
+
   build:
+    needs: linter
     strategy:
       matrix:
         os: [ubuntu-22.04, windows-2019, macos-11.0]

@@ -10,6 +10,7 @@
 #include <criterion/criterion.h>
 #include "world.h"
 #include "world_system.h"
+#include "world_resource.h"
 
 Test(world, world_run_systems_success)
 {
@@ -59,3 +60,31 @@ Test(world, world_run_systems_failure_3)
     world_destructor(&world);
 }
 
+Test(world_destructor, world_destructor_without_resource_destructor)
+{
+    world_t world;
+    resource_t resource = {.data=0, .destructor=0, .type=1};
+
+    world_constructor(&world, stdout);
+    world_add_resource(&world, &resource);
+    world_destructor(&world);
+    cr_assert_eq(1, 1);
+}
+
+static int r_destructor(resource_t *data)
+{
+    if (data->data)
+        free(data->data);
+    return 0;
+}
+
+Test(world_destructor, world_destructor_with_resource_destructor)
+{
+    world_t world;
+    resource_t resource = {.data=0, .destructor=&r_destructor, .type=1};
+
+    world_constructor(&world, stdout);
+    world_add_resource(&world, &resource);
+    world_destructor(&world);
+    cr_assert_eq(1, 1);
+}

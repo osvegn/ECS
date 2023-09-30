@@ -1,6 +1,7 @@
 set(ECS_TESTS_ROOT ${PROJECT_SOURCE_DIR}/tests/unit_test)
 set(TARGET ecs_tests)
 set(SOURCE
+    ${ECS_TESTS_ROOT}/component_destructor_tests.c
     ${ECS_TESTS_ROOT}/world_entity_tests.c
     ${ECS_TESTS_ROOT}/world_resource_tests.c
     ${ECS_TESTS_ROOT}/world_system_tests.c
