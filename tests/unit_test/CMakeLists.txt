@@ -9,6 +9,8 @@ set(SOURCE
     ${ECS_TESTS_ROOT}/entity_component_tests.c
     ${ECS_TESTS_ROOT}/world_logger_tests.c
     ${ECS_TESTS_ROOT}/world_tests.c
+    ${ECS_TESTS_ROOT}/ecs_color_tests.c
+    ${ECS_TESTS_ROOT}/ecs_vector_tests.c
 )
 
 add_executable(${TARGET} ${SOURCE})

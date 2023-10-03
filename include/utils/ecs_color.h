@@ -16,6 +16,10 @@ typedef struct ecs_color_s {
     uchar a;
 } ecs_color_t;
 
+#define RED (ecs_color_t){255, 0, 0, 255}
+#define BLUE (ecs_color_t){0, 0, 255, 255}
+#define GREEN (ecs_color_t){0, 255, 0, 255}
+
 void copy_color(ecs_color_t *dest, ecs_color_t *src);
 void set_color(ecs_color_t *color, uchar r, uchar g, uchar b);
 void set_alpha(ecs_color_t *color, uchar alpha);
