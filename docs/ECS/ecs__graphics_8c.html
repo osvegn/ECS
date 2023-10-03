@@ -132,6 +132,14 @@ Functions</h2></td></tr>
 <tr class="separator:a0b1acb2676d2312d7dc1fd0a0b33c40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5fc1c62f41570a9b42006d2930cf39e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ecs__graphics_8c.html#aa5fc1c62f41570a9b42006d2930cf39e">set_shape_point</a> (<a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *shape, <a class="el" href="ecs__vector_8h.html#a317aa2111a18eefe9fde4b7cd14aac9f">ecs_vector2f_t</a> *point, int index)</td></tr>
 <tr class="separator:aa5fc1c62f41570a9b42006d2930cf39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf9f756c6681b2529738281bd35e6c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ecs__graphics_8c.html#a5bf9f756c6681b2529738281bd35e6c4">set_texture_filename</a> (<a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *shape, char *filename)</td></tr>
+<tr class="separator:a5bf9f756c6681b2529738281bd35e6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb79bc5d5f130dffab68abb8664a92b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ecs__graphics_8c.html#a7eb79bc5d5f130dffab68abb8664a92b">get_texture_filename</a> (<a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *shape)</td></tr>
+<tr class="separator:a7eb79bc5d5f130dffab68abb8664a92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08a0eaf893c72d054b04a560ade1346a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ecs__graphics_8c.html#a08a0eaf893c72d054b04a560ade1346a">set_texture</a> (<a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *shape, void *texture)</td></tr>
+<tr class="separator:a08a0eaf893c72d054b04a560ade1346a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af770b4f70347149a7facb81f519a3b1a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ecs__graphics_8c.html#af770b4f70347149a7facb81f519a3b1a">get_texture</a> (<a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *shape)</td></tr>
+<tr class="separator:af770b4f70347149a7facb81f519a3b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a3214befec180067f7d3ffb52ed6a5bc4" name="a3214befec180067f7d3ffb52ed6a5bc4"></a>
@@ -188,6 +196,42 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float get_shape_thickness </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *&#160;</td>
+          <td class="paramname"><em>shape</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af770b4f70347149a7facb81f519a3b1a" name="af770b4f70347149a7facb81f519a3b1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af770b4f70347149a7facb81f519a3b1a">&#9670;&#160;</a></span>get_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * get_texture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *&#160;</td>
+          <td class="paramname"><em>shape</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7eb79bc5d5f130dffab68abb8664a92b" name="a7eb79bc5d5f130dffab68abb8664a92b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb79bc5d5f130dffab68abb8664a92b">&#9670;&#160;</a></span>get_texture_filename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * get_texture_filename </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *&#160;</td>
           <td class="paramname"><em>shape</em></td><td>)</td>
@@ -339,6 +383,62 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08a0eaf893c72d054b04a560ade1346a" name="a08a0eaf893c72d054b04a560ade1346a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a0eaf893c72d054b04a560ade1346a">&#9670;&#160;</a></span>set_texture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int set_texture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>texture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bf9f756c6681b2529738281bd35e6c4" name="a5bf9f756c6681b2529738281bd35e6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf9f756c6681b2529738281bd35e6c4">&#9670;&#160;</a></span>set_texture_filename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int set_texture_filename </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ecs__graphics_8h.html#a7ef0d870b9b52aac5f57502cd195506d">shape_t</a> *&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
