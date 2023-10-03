@@ -8,6 +8,8 @@
  */
 
 #include "utils/ecs_graphics.h"
+#include <stdlib.h>
+#include <string.h>
 
 int set_shape_color(shape_t *shape, ecs_color_t *color, shape_color_t type)
 {
