@@ -4,7 +4,7 @@
  * Created Date: Saturday, September 30th 2023, 5:01:43 pm
  * Author: osvegn
  * 
- * Copyright (c) 2023 ecs
+ * Copyright (c) 2023 ECS
  */
 
 #include "utils/ecs_graphics.h"

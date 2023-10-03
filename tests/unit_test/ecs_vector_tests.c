@@ -4,7 +4,7 @@
  * Created Date: Tuesday, October 3rd 2023, 3:44:53 pm
  * Author: osvegn
  * 
- * Copyright (c) 2023 ecs
+ * Copyright (c) 2023 ECS
  */
 
 #include "utils/ecs_vector.h"

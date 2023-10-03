@@ -4,7 +4,7 @@
  * Created Date: Saturday, September 30th 2023, 6:42:38 pm
  * Author: osvegn
  * 
- * Copyright (c) 2023 ecs
+ * Copyright (c) 2023 ECS
  */
 
 #include "utils/ecs_color.h"

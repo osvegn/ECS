@@ -4,7 +4,7 @@
  * Created Date: Saturday, September 30th 2023, 6:20:54 pm
  * Author: osvegn
  * 
- * Copyright (c) 2023 ecs
+ * Copyright (c) 2023 ECS
  */
 
 typedef struct ecs_vector2i_s {
