@@ -1,6 +1,8 @@
 <map id="source/utils/ecs_graphics.c" name="source/utils/ecs_graphics.c">
-<area shape="rect" id="node1" title=" " alt="" coords="65,5,245,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="189,5,369,31"/>
 <area shape="rect" id="node2" href="$ecs__graphics_8h.html" title=" " alt="" coords="87,79,224,104"/>
+<area shape="rect" id="node6" title=" " alt="" coords="248,79,311,104"/>
+<area shape="rect" id="node7" title=" " alt="" coords="335,79,399,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,152,73,177"/>
 <area shape="rect" id="node4" href="$ecs__color_8h.html" title=" " alt="" coords="97,152,213,177"/>
 <area shape="rect" id="node5" href="$ecs__vector_8h.html" title=" " alt="" coords="237,152,361,177"/>
