@@ -29,6 +29,9 @@ set(SOURCE
     ${ECS_SOURCE_ROOT}/entity_component.c
     ${ECS_SOURCE_ROOT}/component_destructor.c
     ${ECS_SOURCE_ROOT}/world_logger.c
+    ${ECS_SOURCE_ROOT}/utils/ecs_color.c
+    ${ECS_SOURCE_ROOT}/utils/ecs_graphics.c
+    ${ECS_SOURCE_ROOT}/utils/ecs_vector.c
 )
 set_property(GLOBAL PROPERTY VECTOR_SOURCE ${VECTOR_SOURCE})
 

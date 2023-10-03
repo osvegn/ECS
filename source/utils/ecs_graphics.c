@@ -65,6 +65,8 @@ int shape_constructor(shape_t *shape, int point_number)
 int shape_destructor(shape_t *shape)
 {
     shape->points.destructor(&shape->points);
+    if (shape->texture_filename)
+        free(shape->texture_filename);
     return 0;
 }
 
@@ -82,4 +84,34 @@ int set_shape_point(shape_t *shape, ecs_vector2f_t *point, int index)
         return -1;
     shape->points.emplace(&shape->points, point, index);
     return 0;
+}
+
+int set_texture_filename(shape_t *shape, char *filename)
+{
+    if (!shape || !filename)
+        return -1;
+    shape->texture_filename = strdup(filename);
+    return 0;
+}
+
+char *get_texture_filename(shape_t *shape)
+{
+    if (!shape)
+        return 0;
+    return shape->texture_filename;
+}
+
+int set_texture(shape_t *shape, void *texture)
+{
+    if (!shape || !texture)
+        return -1;
+    shape->texture = texture;
+    return 0;
+}
+
+void *get_texture(shape_t *shape)
+{
+    if (!shape)
+        return 0;
+    return shape->texture;
 }

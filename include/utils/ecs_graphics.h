@@ -22,6 +22,8 @@ typedef struct shape_s {
     ecs_color_t color[MAX];
     float thickness;
     bool is_filled;
+    void *texture;
+    char *texture_filename;
 } shape_t;
 
 int shape_constructor(shape_t *shape, int point_number);
@@ -39,4 +41,11 @@ bool get_shape_is_filled(shape_t *shape);
 int set_shape_points(shape_t *shape, vector_t *points);
 int set_shape_point(shape_t *shape, ecs_vector2f_t *point, int index);
 
-void draw_shape(shape_t *shape);
+int set_texture_filename(shape_t *shape, char *filename);
+char *get_texture_filename(shape_t *shape);
+
+int set_texture(shape_t *shape, void *texture);
+void *get_texture(shape_t *shape);
+
+int load_texture(shape_t *shape, char *filename);
+int draw_shape(shape_t *shape);
