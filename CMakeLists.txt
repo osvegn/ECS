@@ -50,3 +50,5 @@ target_include_directories(${TARGET}
 target_link_libraries(${TARGET}
     ${VECTOR_LIB}
 )
+
+add_subdirectory(submodules/vector)
