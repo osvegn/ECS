@@ -78,8 +78,8 @@ jobs:
       - name: Coverage report
         run: |
           mkdir -p coverage
-          gcovr -e tests --html-details coverage/index.html
-          gcovr -e tests --xml coverage.xml
+          gcovr -e tests -e submodules --html-details coverage/index.html
+          gcovr -e tests -e submodules --xml coverage.xml
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v3
