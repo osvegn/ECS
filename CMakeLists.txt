@@ -51,4 +51,5 @@ target_link_libraries(${TARGET}
     ${VECTOR_LIB}
 )
 
+set(TESTING OFF)
 add_subdirectory(submodules/vector)
