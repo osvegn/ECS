@@ -148,7 +148,7 @@ ecs_vector3i_t *div_vector3i_value(ecs_vector3i_t *a, int value)
 
 /// ecs_vector2f
 
-void set_vector2f(ecs_vector2f_t *vector, float x, float y)
+void set_vector2f(ecs_vector2f_t *vector, double x, double y)
 {
     vector->x = x;
     vector->y = y;
@@ -161,7 +161,7 @@ ecs_vector2f_t *add_vector2f(ecs_vector2f_t *a, ecs_vector2f_t *b)
     return a;
 }
 
-ecs_vector2f_t *add_vector2f_value(ecs_vector2f_t *a, float value)
+ecs_vector2f_t *add_vector2f_value(ecs_vector2f_t *a, double value)
 {
     a->x += value;
     a->y += value;
@@ -175,7 +175,7 @@ ecs_vector2f_t *sub_vector2f(ecs_vector2f_t *a, ecs_vector2f_t *b)
     return a;
 }
 
-ecs_vector2f_t *sub_vector2f_value(ecs_vector2f_t *a, float value)
+ecs_vector2f_t *sub_vector2f_value(ecs_vector2f_t *a, double value)
 {
     a->x -= value;
     a->y -= value;
@@ -189,7 +189,7 @@ ecs_vector2f_t *mul_vector2f(ecs_vector2f_t *a, ecs_vector2f_t *b)
     return a;
 }
 
-ecs_vector2f_t *mul_vector2f_value(ecs_vector2f_t *a, float value)
+ecs_vector2f_t *mul_vector2f_value(ecs_vector2f_t *a, double value)
 {
     a->x *= value;
     a->y *= value;
@@ -203,7 +203,7 @@ ecs_vector2f_t *div_vector2f(ecs_vector2f_t *a, ecs_vector2f_t *b)
     return a;
 }
 
-ecs_vector2f_t *div_vector2f_value(ecs_vector2f_t *a, float value)
+ecs_vector2f_t *div_vector2f_value(ecs_vector2f_t *a, double value)
 {
     a->x /= value;
     a->y /= value;
@@ -212,7 +212,7 @@ ecs_vector2f_t *div_vector2f_value(ecs_vector2f_t *a, float value)
 
 /// ecs_vector3f
 
-void set_vector3f(ecs_vector3f_t *vector, float x, float y, float z)
+void set_vector3f(ecs_vector3f_t *vector, double x, double y, double z)
 {
     vector->x = x;
     vector->y = y;
@@ -227,7 +227,7 @@ ecs_vector3f_t *add_vector3f(ecs_vector3f_t *a, ecs_vector3f_t *b)
     return a;
 }
 
-ecs_vector3f_t *add_vector3f_value(ecs_vector3f_t *a, float value)
+ecs_vector3f_t *add_vector3f_value(ecs_vector3f_t *a, double value)
 {
     a->x += value;
     a->y += value;
@@ -243,7 +243,7 @@ ecs_vector3f_t *sub_vector3f(ecs_vector3f_t *a, ecs_vector3f_t *b)
     return a;
 }
 
-ecs_vector3f_t *sub_vector3f_value(ecs_vector3f_t *a, float value)
+ecs_vector3f_t *sub_vector3f_value(ecs_vector3f_t *a, double value)
 {
     a->x -= value;
     a->y -= value;
@@ -259,7 +259,7 @@ ecs_vector3f_t *mul_vector3f(ecs_vector3f_t *a, ecs_vector3f_t *b)
     return a;
 }
 
-ecs_vector3f_t *mul_vector3f_value(ecs_vector3f_t *a, float value)
+ecs_vector3f_t *mul_vector3f_value(ecs_vector3f_t *a, double value)
 {
     a->x *= value;
     a->y *= value;
@@ -275,7 +275,7 @@ ecs_vector3f_t *div_vector3f(ecs_vector3f_t *a, ecs_vector3f_t *b)
     return a;
 }
 
-ecs_vector3f_t *div_vector3f_value(ecs_vector3f_t *a, float value)
+ecs_vector3f_t *div_vector3f_value(ecs_vector3f_t *a, double value)
 {
     a->x /= value;
     a->y /= value;
