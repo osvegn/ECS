@@ -1,5 +1,5 @@
 var structecs__vector2f__s =
 [
-    [ "x", "structecs__vector2f__s.html#ad0da36b2558901e21e7a30f6c227a45e", null ],
-    [ "y", "structecs__vector2f__s.html#aa4f0d3eebc3c443f9be81bf48561a217", null ]
+    [ "x", "structecs__vector2f__s.html#af88b946fb90d5f08b5fb740c70e98c10", null ],
+    [ "y", "structecs__vector2f__s.html#ab927965981178aa1fba979a37168db2a", null ]
 ];
