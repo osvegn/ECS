@@ -59,6 +59,7 @@ int shape_constructor(shape_t *shape, int point_number)
     for (unsigned int i = 0; i < MAX; i++) {
         shape->color[i] = (ecs_color_t){0, 0, 0, 0};
     }
+    shape->texture_filename = 0;
     shape->thickness = 1.0f;
     shape->is_filled = true;
     return vector_constructor(&shape->points, sizeof(ecs_vector2f_t), point_number);
