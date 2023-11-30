@@ -32,6 +32,7 @@ set(SOURCE
     ${ECS_SOURCE_ROOT}/utils/ecs_color.c
     ${ECS_SOURCE_ROOT}/utils/ecs_graphics.c
     ${ECS_SOURCE_ROOT}/utils/ecs_vector.c
+    ${ECS_SOURCE_ROOT}/utils/ecs_window.c
 )
 set_property(GLOBAL PROPERTY VECTOR_SOURCE ${VECTOR_SOURCE})
 
