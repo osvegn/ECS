@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['points_0',['points',['../structshape__s.html#abb492f408e04c51ff09ec9395a3738e4',1,'shape_s']]]
+  ['name_0',['name',['../structecs__window__s.html#a5ac083a645d964373f022d03df4849c8',1,'ecs_window_s']]]
 ];

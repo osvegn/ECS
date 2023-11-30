@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z_0',['z',['../structecs__vector3i__s.html#a14f94e529dff0b8bfba8e16fbe9755d6',1,'ecs_vector3i_s::z()'],['../structecs__vector3f__s.html#ab3e6ed577a7c669c19de1f9c1b46c872',1,'ecs_vector3f_s::z()']]]
+  ['width_0',['width',['../structecs__window__s.html#aca34d28e3d8bcbcadb8edb4e3af24f8c',1,'ecs_window_s']]]
 ];
