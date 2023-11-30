@@ -12,6 +12,7 @@ set(SOURCE
     ${ECS_TESTS_ROOT}/ecs_color_tests.c
     ${ECS_TESTS_ROOT}/ecs_vector_tests.c
     ${ECS_TESTS_ROOT}/ecs_graphics_tests.c
+    ${ECS_TESTS_ROOT}/ecs_event_tests.c
 )
 
 add_executable(${TARGET} ${SOURCE})
