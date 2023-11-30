@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outline_0',['OUTLINE',['../ecs__graphics_8h.html#acb9c9cc68358d7e15c3895140ac000bea6e6262f8d11e39222f4b1e5a68489f94',1,'ecs_graphics.h']]]
+  ['name_0',['name',['../structecs__window__s.html#a5ac083a645d964373f022d03df4849c8',1,'ecs_window_s']]]
 ];
