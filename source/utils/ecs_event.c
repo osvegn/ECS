@@ -1,6 +1,11 @@
-//
-// Created by osvegn on 11/30/23.
-//
+/*
+* Filename: ecs_event.c
+* Path: source/utils
+* Created Date: Thursday, November 30th 2023, 5:39 pm
+* Author: osvegn
+*
+* Copyright (c) 2023 ECS
+ */
 
 #include "utils/ecs_event.h"
 

@@ -1,14 +1,14 @@
-//
-// Created by osvegn on 11/30/23.
-//
+/*
+* Filename: ecs_event_tests.c
+* Path: tests/unit_test
+* Created Date: Thursday, November 30th 2023, 5:39 pm
+* Author: osvegn
+*
+* Copyright (c) 2023 ECS
+*/
 
 #include <criterion/criterion.h>
 #include "utils/ecs_event.h"
-
-//Test(test, test)
-//{
-//    cr_assert_eq(1, 1);
-//}
 
 Test(ecs_event_constructor, ecs_event_constructor)
 {
