@@ -97,23 +97,24 @@ $(document).ready(function(){initNavTree('world__entity_8c.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="world_8h_source.html">world.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="component_8h_source.html">component.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="world__logger_8h_source.html">world_logger.h</a>&quot;</code><br />
 <code>#include &lt;stdarg.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for world_entity.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="world__entity_8c__incl.png" border="0" usemap="#asource_2world__entity_8c" alt=""/></div>
 <map name="asource_2world__entity_8c" id="asource_2world__entity_8c">
-<area shape="rect" title=" " alt="" coords="375,5,519,31"/>
-<area shape="rect" href="world_8h.html" title=" " alt="" coords="214,79,277,104"/>
-<area shape="rect" href="component_8h.html" title=" " alt="" coords="311,225,407,251"/>
-<area shape="rect" title=" " alt="" coords="485,79,553,104"/>
-<area shape="rect" title=" " alt="" coords="349,152,409,177"/>
-<area shape="rect" title=" " alt="" coords="194,225,262,251"/>
-<area shape="rect" href="system_8h.html" title=" " alt="" coords="5,152,80,177"/>
-<area shape="rect" href="resource_8h.html" title=" " alt="" coords="155,152,237,177"/>
-<area shape="rect" href="entity_8h.html" title=" " alt="" coords="262,152,325,177"/>
-<area shape="rect" title=" " alt="" coords="5,225,80,251"/>
+<area shape="rect" title=" " alt="" coords="135,5,279,31"/>
+<area shape="rect" href="world_8h.html" title=" " alt="" coords="176,79,239,104"/>
+<area shape="rect" href="world__logger_8h.html" title=" " alt="" coords="25,79,131,104"/>
+<area shape="rect" title=" " alt="" coords="263,79,331,104"/>
+<area shape="rect" title=" " alt="" coords="5,152,65,177"/>
+<area shape="rect" title=" " alt="" coords="363,225,431,251"/>
+<area shape="rect" href="system_8h.html" title=" " alt="" coords="90,152,165,177"/>
+<area shape="rect" href="resource_8h.html" title=" " alt="" coords="189,152,271,177"/>
+<area shape="rect" href="entity_8h.html" title=" " alt="" coords="296,152,359,177"/>
+<area shape="rect" title=" " alt="" coords="90,225,165,251"/>
+<area shape="rect" href="component_8h.html" title=" " alt="" coords="242,225,338,251"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -248,7 +249,7 @@ Functions</h2></td></tr>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__entity_8c_html_a76248669a6b79823d4741754f2e4a41a"><div class="ttname"><a href="world__entity_8c.html#a76248669a6b79823d4741754f2e4a41a">world_contains_entity</a></div><div class="ttdeci">bool world_contains_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">It returns true if the entity is in the world, false otherwise.</div><div class="ttdef"><b>Definition:</b> world_entity.c:67</div></div>
+<div class="ttc" id="aworld__entity_8c_html_a76248669a6b79823d4741754f2e4a41a"><div class="ttname"><a href="world__entity_8c.html#a76248669a6b79823d4741754f2e4a41a">world_contains_entity</a></div><div class="ttdeci">bool world_contains_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">It returns true if the entity is in the world, false otherwise.</div><div class="ttdef"><b>Definition:</b> world_entity.c:69</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -308,7 +309,7 @@ Here is the call graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__entity_8c_html_acdf2df2afa49ee00b089e3334e84e8e5"><div class="ttname"><a href="world__entity_8c.html#acdf2df2afa49ee00b089e3334e84e8e5">world_contains_entity_by_id</a></div><div class="ttdeci">bool world_contains_entity_by_id(world_t *world, unsigned int id)</div><div class="ttdoc">It returns true if the entity is in the world, false otherwise.</div><div class="ttdef"><b>Definition:</b> world_entity.c:59</div></div>
+<div class="ttc" id="aworld__entity_8c_html_acdf2df2afa49ee00b089e3334e84e8e5"><div class="ttname"><a href="world__entity_8c.html#acdf2df2afa49ee00b089e3334e84e8e5">world_contains_entity_by_id</a></div><div class="ttdeci">bool world_contains_entity_by_id(world_t *world, unsigned int id)</div><div class="ttdoc">It returns true if the entity is in the world, false otherwise.</div><div class="ttdef"><b>Definition:</b> world_entity.c:61</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -367,7 +368,7 @@ Here is the caller graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__entity_8c_html_a56d4123ccc3b0d9c783b9cc4cdfd802f"><div class="ttname"><a href="world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f">world_get_entity</a></div><div class="ttdeci">entity_t * world_get_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">Get an entity from the world entity list by his id.</div><div class="ttdef"><b>Definition:</b> world_entity.c:79</div></div>
+<div class="ttc" id="aworld__entity_8c_html_a56d4123ccc3b0d9c783b9cc4cdfd802f"><div class="ttname"><a href="world__entity_8c.html#a56d4123ccc3b0d9c783b9cc4cdfd802f">world_get_entity</a></div><div class="ttdeci">entity_t * world_get_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">Get an entity from the world entity list by his id.</div><div class="ttdef"><b>Definition:</b> world_entity.c:81</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -426,7 +427,7 @@ Here is the call graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__entity_8c_html_a0414d6ea7fbc43bbb94f129e20219ff5"><div class="ttname"><a href="world__entity_8c.html#a0414d6ea7fbc43bbb94f129e20219ff5">world_get_entity_by_id</a></div><div class="ttdeci">entity_t * world_get_entity_by_id(world_t *world, unsigned int id)</div><div class="ttdoc">Get an entity from the world entity list by his id.</div><div class="ttdef"><b>Definition:</b> world_entity.c:72</div></div>
+<div class="ttc" id="aworld__entity_8c_html_a0414d6ea7fbc43bbb94f129e20219ff5"><div class="ttname"><a href="world__entity_8c.html#a0414d6ea7fbc43bbb94f129e20219ff5">world_get_entity_by_id</a></div><div class="ttdeci">entity_t * world_get_entity_by_id(world_t *world, unsigned int id)</div><div class="ttdoc">Get an entity from the world entity list by his id.</div><div class="ttdef"><b>Definition:</b> world_entity.c:74</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -499,7 +500,7 @@ Here is the caller graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__entity_8c_html_ac4c805abd44a11cabaa36d40ecde3577"><div class="ttname"><a href="world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577">world_join_entities</a></div><div class="ttdeci">int world_join_entities(world_t *world, vector_t *entities, unsigned int count,...)</div><div class="ttdoc">Initialize entities vector with entities which contain all components types asked.</div><div class="ttdef"><b>Definition:</b> world_entity.c:106</div></div>
+<div class="ttc" id="aworld__entity_8c_html_ac4c805abd44a11cabaa36d40ecde3577"><div class="ttname"><a href="world__entity_8c.html#ac4c805abd44a11cabaa36d40ecde3577">world_join_entities</a></div><div class="ttdeci">int world_join_entities(world_t *world, vector_t *entities, unsigned int count,...)</div><div class="ttdoc">Initialize entities vector with entities which contain all components types asked.</div><div class="ttdef"><b>Definition:</b> world_entity.c:110</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -612,7 +613,7 @@ Here is the caller graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__entity_8c_html_a53c47319d553d6f0cc40bac726a9abe9"><div class="ttname"><a href="world__entity_8c.html#a53c47319d553d6f0cc40bac726a9abe9">world_remove_entity</a></div><div class="ttdeci">int world_remove_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">It removes an entity from the world.</div><div class="ttdef"><b>Definition:</b> world_entity.c:54</div></div>
+<div class="ttc" id="aworld__entity_8c_html_a53c47319d553d6f0cc40bac726a9abe9"><div class="ttname"><a href="world__entity_8c.html#a53c47319d553d6f0cc40bac726a9abe9">world_remove_entity</a></div><div class="ttdeci">int world_remove_entity(world_t *world, entity_t *entity)</div><div class="ttdoc">It removes an entity from the world.</div><div class="ttdef"><b>Definition:</b> world_entity.c:56</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -671,7 +672,7 @@ Here is the call graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__entity_8c_html_a018f4fc9652790fe22ba4d75f91d6f30"><div class="ttname"><a href="world__entity_8c.html#a018f4fc9652790fe22ba4d75f91d6f30">world_remove_entity_by_id</a></div><div class="ttdeci">int world_remove_entity_by_id(world_t *world, unsigned int id)</div><div class="ttdoc">It removes an entity from the world.</div><div class="ttdef"><b>Definition:</b> world_entity.c:44</div></div>
+<div class="ttc" id="aworld__entity_8c_html_a018f4fc9652790fe22ba4d75f91d6f30"><div class="ttname"><a href="world__entity_8c.html#a018f4fc9652790fe22ba4d75f91d6f30">world_remove_entity_by_id</a></div><div class="ttdeci">int world_remove_entity_by_id(world_t *world, unsigned int id)</div><div class="ttdoc">It removes an entity from the world.</div><div class="ttdef"><b>Definition:</b> world_entity.c:45</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

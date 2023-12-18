@@ -1,5 +1,7 @@
 <map id="source/utils/ecs_event.c" name="source/utils/ecs_event.c">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,168,31"/>
-<area shape="rect" id="node2" href="$ecs__event_8h.html" title=" " alt="" coords="27,79,147,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="53,152,121,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="52,5,215,31"/>
+<area shape="rect" id="node2" href="$ecs__event_8h.html" title=" " alt="" coords="5,79,125,104"/>
+<area shape="rect" id="node4" href="$world__logger_8h.html" title=" " alt="" coords="150,79,255,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="31,152,99,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="173,152,233,177"/>
 </map>

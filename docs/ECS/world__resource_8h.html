@@ -192,7 +192,7 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="astructresource__s_html"><div class="ttname"><a href="structresource__s.html">resource_s</a></div><div class="ttdoc">It's the structure of a resource. All resources are contained in the world. A resource is a data usef...</div><div class="ttdef"><b>Definition:</b> resource.h:22</div></div>
 <div class="ttc" id="astructworld__s_html"><div class="ttname"><a href="structworld__s.html">world_s</a></div><div class="ttdoc">It's the structure of a world. A world contains a list of systems, a list of resources,...</div><div class="ttdef"><b>Definition:</b> world.h:23</div></div>
-<div class="ttc" id="aworld__resource_8c_html_a9eb5a28740432c44a88c0f18c712ffbb"><div class="ttname"><a href="world__resource_8c.html#a9eb5a28740432c44a88c0f18c712ffbb">world_add_resource</a></div><div class="ttdeci">int world_add_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It adds a resource to the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:35</div></div>
+<div class="ttc" id="aworld__resource_8c_html_a9eb5a28740432c44a88c0f18c712ffbb"><div class="ttname"><a href="world__resource_8c.html#a9eb5a28740432c44a88c0f18c712ffbb">world_add_resource</a></div><div class="ttdeci">int world_add_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It adds a resource to the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:36</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -243,7 +243,7 @@ Functions</h2></td></tr>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__resource_8c_html_a816c2d0c07da2dcc4df867f26d03cf63"><div class="ttname"><a href="world__resource_8c.html#a816c2d0c07da2dcc4df867f26d03cf63">world_contains_resource</a></div><div class="ttdeci">bool world_contains_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It returns true if the resource is in the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:68</div></div>
+<div class="ttc" id="aworld__resource_8c_html_a816c2d0c07da2dcc4df867f26d03cf63"><div class="ttname"><a href="world__resource_8c.html#a816c2d0c07da2dcc4df867f26d03cf63">world_contains_resource</a></div><div class="ttdeci">bool world_contains_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It returns true if the resource is in the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:71</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -300,7 +300,7 @@ Here is the call graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__resource_8c_html_a1560e18899fbe4e54d1802330b3d1948"><div class="ttname"><a href="world__resource_8c.html#a1560e18899fbe4e54d1802330b3d1948">world_contains_resource_by_type</a></div><div class="ttdeci">bool world_contains_resource_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It returns if the resource is in the world's resource list or not.</div><div class="ttdef"><b>Definition:</b> world_resource.c:60</div></div>
+<div class="ttc" id="aworld__resource_8c_html_a1560e18899fbe4e54d1802330b3d1948"><div class="ttname"><a href="world__resource_8c.html#a1560e18899fbe4e54d1802330b3d1948">world_contains_resource_by_type</a></div><div class="ttdeci">bool world_contains_resource_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It returns if the resource is in the world's resource list or not.</div><div class="ttdef"><b>Definition:</b> world_resource.c:63</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -361,7 +361,7 @@ Here is the caller graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__resource_8c_html_a85e7b1294385ca7dd73582e73f085793"><div class="ttname"><a href="world__resource_8c.html#a85e7b1294385ca7dd73582e73f085793">world_get_resource</a></div><div class="ttdeci">resource_t * world_get_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It returns the resource contained in the world corresponding on the resource passed as parameter.</div><div class="ttdef"><b>Definition:</b> world_resource.c:80</div></div>
+<div class="ttc" id="aworld__resource_8c_html_a85e7b1294385ca7dd73582e73f085793"><div class="ttname"><a href="world__resource_8c.html#a85e7b1294385ca7dd73582e73f085793">world_get_resource</a></div><div class="ttdeci">resource_t * world_get_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It returns the resource contained in the world corresponding on the resource passed as parameter.</div><div class="ttdef"><b>Definition:</b> world_resource.c:83</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -420,7 +420,7 @@ Here is the call graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__resource_8c_html_a815baab96080a74c676000e986f2ea09"><div class="ttname"><a href="world__resource_8c.html#a815baab96080a74c676000e986f2ea09">world_get_resource_by_type</a></div><div class="ttdeci">resource_t * world_get_resource_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It returns the resource contained in the world corresponding on the resource type passed as parameter...</div><div class="ttdef"><b>Definition:</b> world_resource.c:73</div></div>
+<div class="ttc" id="aworld__resource_8c_html_a815baab96080a74c676000e986f2ea09"><div class="ttname"><a href="world__resource_8c.html#a815baab96080a74c676000e986f2ea09">world_get_resource_by_type</a></div><div class="ttdeci">resource_t * world_get_resource_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It returns the resource contained in the world corresponding on the resource type passed as parameter...</div><div class="ttdef"><b>Definition:</b> world_resource.c:76</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -481,7 +481,7 @@ Here is the caller graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__resource_8c_html_adde03f843cd9050e9f9bc07ad0dcb9b8"><div class="ttname"><a href="world__resource_8c.html#adde03f843cd9050e9f9bc07ad0dcb9b8">world_remove_resource</a></div><div class="ttdeci">int world_remove_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It removes a resource from the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:55</div></div>
+<div class="ttc" id="aworld__resource_8c_html_adde03f843cd9050e9f9bc07ad0dcb9b8"><div class="ttname"><a href="world__resource_8c.html#adde03f843cd9050e9f9bc07ad0dcb9b8">world_remove_resource</a></div><div class="ttdeci">int world_remove_resource(world_t *world, resource_t *resource)</div><div class="ttdoc">It removes a resource from the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:58</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -540,7 +540,7 @@ Here is the call graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__resource_8c_html_ae57c22040339251932b15a4eaa7a8888"><div class="ttname"><a href="world__resource_8c.html#ae57c22040339251932b15a4eaa7a8888">world_remove_resource_by_type</a></div><div class="ttdeci">int world_remove_resource_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It removes a resource from the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:45</div></div>
+<div class="ttc" id="aworld__resource_8c_html_ae57c22040339251932b15a4eaa7a8888"><div class="ttname"><a href="world__resource_8c.html#ae57c22040339251932b15a4eaa7a8888">world_remove_resource_by_type</a></div><div class="ttdeci">int world_remove_resource_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It removes a resource from the world's resource list.</div><div class="ttdef"><b>Definition:</b> world_resource.c:47</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

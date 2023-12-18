@@ -199,7 +199,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructsystem__s_html_a4bfea42429249a1f65204f0c0f34704a"><div class="ttname"><a href="structsystem__s.html#a4bfea42429249a1f65204f0c0f34704a">system_s::type</a></div><div class="ttdeci">unsigned int type</div><div class="ttdoc">The type of the system. It is used to know if a system already exists.</div><div class="ttdef"><b>Definition:</b> system.h:27</div></div>
 <div class="ttc" id="astructsystem__s_html_aed5ef4aad149706719e84699af3b73c7"><div class="ttname"><a href="structsystem__s.html#aed5ef4aad149706719e84699af3b73c7">system_s::run</a></div><div class="ttdeci">int(* run)(void *world)</div><div class="ttdoc">The run function pointer is used to know which function must be called to run this system.</div><div class="ttdef"><b>Definition:</b> system.h:36</div></div>
 <div class="ttc" id="astructworld__s_html"><div class="ttname"><a href="structworld__s.html">world_s</a></div><div class="ttdoc">It's the structure of a world. A world contains a list of systems, a list of resources,...</div><div class="ttdef"><b>Definition:</b> world.h:23</div></div>
-<div class="ttc" id="aworld__system_8c_html_a2028fbc7082a547a093271cb02d5b20e"><div class="ttname"><a href="world__system_8c.html#a2028fbc7082a547a093271cb02d5b20e">world_add_system</a></div><div class="ttdeci">int world_add_system(world_t *world, system_t *system)</div><div class="ttdoc">It adds a system to the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:31</div></div>
+<div class="ttc" id="aworld__system_8c_html_a2028fbc7082a547a093271cb02d5b20e"><div class="ttname"><a href="world__system_8c.html#a2028fbc7082a547a093271cb02d5b20e">world_add_system</a></div><div class="ttdeci">int world_add_system(world_t *world, system_t *system)</div><div class="ttdoc">It adds a system to the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:32</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -253,7 +253,7 @@ Functions</h2></td></tr>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__system_8c_html_aa37f89ca543aef0b3fce616b98035a43"><div class="ttname"><a href="world__system_8c.html#aa37f89ca543aef0b3fce616b98035a43">world_contains_system</a></div><div class="ttdeci">bool world_contains_system(world_t *world, system_t *system)</div><div class="ttdoc">It returns true if the world contains the system, false otherwise.</div><div class="ttdef"><b>Definition:</b> world_system.c:63</div></div>
+<div class="ttc" id="aworld__system_8c_html_aa37f89ca543aef0b3fce616b98035a43"><div class="ttname"><a href="world__system_8c.html#aa37f89ca543aef0b3fce616b98035a43">world_contains_system</a></div><div class="ttdeci">bool world_contains_system(world_t *world, system_t *system)</div><div class="ttdoc">It returns true if the world contains the system, false otherwise.</div><div class="ttdef"><b>Definition:</b> world_system.c:65</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -309,7 +309,7 @@ Here is the call graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__system_8c_html_ae1b2cd4a9788581d705b2cad387ee54a"><div class="ttname"><a href="world__system_8c.html#ae1b2cd4a9788581d705b2cad387ee54a">world_contains_system_by_type</a></div><div class="ttdeci">bool world_contains_system_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It checks if a system type exists in the system list of the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:55</div></div>
+<div class="ttc" id="aworld__system_8c_html_ae1b2cd4a9788581d705b2cad387ee54a"><div class="ttname"><a href="world__system_8c.html#ae1b2cd4a9788581d705b2cad387ee54a">world_contains_system_by_type</a></div><div class="ttdeci">bool world_contains_system_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It checks if a system type exists in the system list of the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:57</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -374,7 +374,7 @@ Here is the caller graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__system_8c_html_a6f1c273fe33dcdd9b670e6799654df83"><div class="ttname"><a href="world__system_8c.html#a6f1c273fe33dcdd9b670e6799654df83">world_get_system</a></div><div class="ttdeci">system_t * world_get_system(world_t *world, system_t *system)</div><div class="ttdoc">It gets a system from the system list of the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:75</div></div>
+<div class="ttc" id="aworld__system_8c_html_a6f1c273fe33dcdd9b670e6799654df83"><div class="ttname"><a href="world__system_8c.html#a6f1c273fe33dcdd9b670e6799654df83">world_get_system</a></div><div class="ttdeci">system_t * world_get_system(world_t *world, system_t *system)</div><div class="ttdoc">It gets a system from the system list of the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:77</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -433,7 +433,7 @@ Here is the call graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__system_8c_html_a999c462b06edb9772125a6ae974b0224"><div class="ttname"><a href="world__system_8c.html#a999c462b06edb9772125a6ae974b0224">world_get_system_by_type</a></div><div class="ttdeci">system_t * world_get_system_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It gets a system from the system list of the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:68</div></div>
+<div class="ttc" id="aworld__system_8c_html_a999c462b06edb9772125a6ae974b0224"><div class="ttname"><a href="world__system_8c.html#a999c462b06edb9772125a6ae974b0224">world_get_system_by_type</a></div><div class="ttdeci">system_t * world_get_system_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It gets a system from the system list of the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:70</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -493,7 +493,7 @@ Here is the caller graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__system_8c_html_a287e88615dcc2de7912d72c64b587b61"><div class="ttname"><a href="world__system_8c.html#a287e88615dcc2de7912d72c64b587b61">world_remove_system</a></div><div class="ttdeci">int world_remove_system(world_t *world, system_t *system)</div><div class="ttdoc">It removes a system from the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:50</div></div>
+<div class="ttc" id="aworld__system_8c_html_a287e88615dcc2de7912d72c64b587b61"><div class="ttname"><a href="world__system_8c.html#a287e88615dcc2de7912d72c64b587b61">world_remove_system</a></div><div class="ttdeci">int world_remove_system(world_t *world, system_t *system)</div><div class="ttdoc">It removes a system from the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:52</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -551,7 +551,7 @@ Here is the call graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld__system_8c_html_a6b086b11db0f59527408f5f375c8c62f"><div class="ttname"><a href="world__system_8c.html#a6b086b11db0f59527408f5f375c8c62f">world_remove_system_by_type</a></div><div class="ttdeci">int world_remove_system_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It removes a system from the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:42</div></div>
+<div class="ttc" id="aworld__system_8c_html_a6b086b11db0f59527408f5f375c8c62f"><div class="ttname"><a href="world__system_8c.html#a6b086b11db0f59527408f5f375c8c62f">world_remove_system_by_type</a></div><div class="ttdeci">int world_remove_system_by_type(world_t *world, unsigned int type)</div><div class="ttdoc">It removes a system from the world.</div><div class="ttdef"><b>Definition:</b> world_system.c:44</div></div>
 </div><!-- fragment --> <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -599,7 +599,7 @@ Here is the caller graph for this function:</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aworld_8c_html_a4f80ba9c85a499aa8ca8a778abeda990"><div class="ttname"><a href="world_8c.html#a4f80ba9c85a499aa8ca8a778abeda990">world_run_systems</a></div><div class="ttdeci">int world_run_systems(world_t *world)</div><div class="ttdoc">It runs all systems which exists in the world.</div><div class="ttdef"><b>Definition:</b> world.c:13</div></div>
+<div class="ttc" id="aworld_8c_html_a4f80ba9c85a499aa8ca8a778abeda990"><div class="ttname"><a href="world_8c.html#a4f80ba9c85a499aa8ca8a778abeda990">world_run_systems</a></div><div class="ttdeci">int world_run_systems(world_t *world)</div><div class="ttdoc">It runs all systems which exists in the world.</div><div class="ttdef"><b>Definition:</b> world.c:14</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
