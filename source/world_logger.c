@@ -9,7 +9,6 @@
 
 #include "world_logger.h"
 #include <stdarg.h>
-#include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <time.h>
@@ -18,6 +17,7 @@
 #endif
 
 FILE *file = NULL;
+static enum world_log_level level = WORLD_LOG_LEVEL_ERROR;
 
 int world_log_init(FILE *f)
 {
@@ -93,6 +93,8 @@ int world_log(enum world_log_level level, const char *filename, int line, const 
 
     if (file == NULL || filename == NULL || fmt == NULL)
         return -1;
+    if (level < get_world_log_level())
+        return 0;
     print_log_time();
     print_log_level(level);
     /// memory leak near
@@ -121,4 +123,14 @@ void world_log_destroy(void)
 {
     if (file && file != stdout && file != stdin && file != stderr)
         fclose(file);
+}
+
+void set_world_log_level(enum world_log_level l)
+{
+    level = l;
+}
+
+enum world_log_level get_world_log_level(void)
+{
+    return level;
 }

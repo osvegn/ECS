@@ -111,3 +111,10 @@ Test(world_log, unknown_log_level)
     cr_assert_eq(world_log(10, "test", 0, "test"), 0);
     world_log_destroy();
 }
+
+Test(world_log, set_log_level)
+{
+    cr_assert_eq(get_world_log_level(), WORLD_LOG_LEVEL_ERROR);
+    set_world_log_level(WORLD_LOG_LEVEL_DEBUG);
+    cr_assert_eq(get_world_log_level(), WORLD_LOG_LEVEL_DEBUG);
+}
