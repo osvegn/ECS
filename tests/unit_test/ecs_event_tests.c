@@ -90,25 +90,23 @@ Test(ecs_event_add_key_and_mouse_event, ecs_event_add_key_and_mouse_event_with_t
 
 Test(ecs_event_get_event, ecs_event_get_event)
 {
-    event_t event;
+    ecs_event_t event;
 
     event_queue_constructor();
     add_key_event(KEY_0, 1, 0);
     add_mouse_event(RIGHT_CLICK, 1, 0);
     cr_assert_eq(event_queue_size(), 2);
     get_event(&event);
-    cr_assert_eq(event.key, KEY_0);
-    cr_assert_eq(event.mouse, MOUSE_UNDEFINED);
+    cr_assert_eq(event.input.key, KEY_0);
     cr_assert_eq(event.value, 1);
     cr_assert_eq(event.device_id, 0);
-    cr_assert_eq(event.controller, CONTROLLER_UNDEFINED);
+    cr_assert_eq(event.type, EVENT_KEYBOARD);
     cr_assert_eq(event_queue_size(), 1);
     get_event(&event);
-    cr_assert_eq(event.key, KEYBOARD_UNDEFINED);
-    cr_assert_eq(event.mouse, RIGHT_CLICK);
+    cr_assert_eq(event.input.mouse, RIGHT_CLICK);
+    cr_assert_eq(event.type, EVENT_MOUSE);
     cr_assert_eq(event.value, 1);
     cr_assert_eq(event.device_id, 0);
-    cr_assert_eq(event.controller, CONTROLLER_UNDEFINED);
     cr_assert_eq(event_queue_size(), 0);
     event_queue_destructor();
 }

@@ -3,3 +3,6 @@ docs
 ecs_tests
 vector_tests
 .vscode
+.idea
+cmake-build-debug
+cmake-build-tests
