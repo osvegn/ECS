@@ -12,6 +12,8 @@ var world__logger_8h =
       [ "WORLD_LOG_LEVEL_ERROR", "world__logger_8h.html#a5d7ee46be4a5c8a58876b97c497f2738afb8aeeffd05486dd98795d09879e729f", null ],
       [ "WORLD_LOG_LEVEL_FATAL", "world__logger_8h.html#a5d7ee46be4a5c8a58876b97c497f2738a8f88bd972299eb043a19c0851c52a4af", null ]
     ] ],
+    [ "get_world_log_level", "world__logger_8h.html#a37392c678cd329397a79686d30aa7b93", null ],
+    [ "set_world_log_level", "world__logger_8h.html#a7559f40e4615ce2879f2edee447d6043", null ],
     [ "world_log", "world__logger_8h.html#af7472095fa238acfee648af9075ff66e", null ],
     [ "world_log_destroy", "world__logger_8h.html#a652cdb629ae44951644415f04b464031", null ],
     [ "world_log_init", "world__logger_8h.html#a34af02d4a590ad432e3355c149941a88", null ]
