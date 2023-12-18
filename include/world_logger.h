@@ -30,4 +30,7 @@ int world_log_init(FILE *f);
 int world_log(enum world_log_level level, const char *filename, int line, const char *fmt, ...);
 void world_log_destroy(void);
 
+void set_world_log_level(enum world_log_level level);
+enum world_log_level get_world_log_level(void);
+
 #endif /* WORLD_LOGGER_H */
