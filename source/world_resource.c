@@ -8,6 +8,7 @@
  */
 
 #include "world.h"
+#include "world_logger.h"
 
 /// @brief It finds the index of a resource type in a resource list.
 /// @param resource_list The list of resources on which find the corresponding type.
@@ -39,6 +40,7 @@ int world_add_resource(world_t *world, resource_t *resource)
     if (index < world->resource_list.size(&world->resource_list)) {
         return -1;
     }
+    log_info("Adding resource of type %d to world", resource->type);
     return (world->resource_list.emplace_back(&world->resource_list, resource));
 }
 
@@ -46,6 +48,7 @@ int world_remove_resource_by_type(world_t *world, unsigned int type)
 {
     unsigned int index = find_resource_by_type(&world->resource_list, type);
 
+    log_info("Removing resource of type %d from world", type);
     if (index < world->resource_list.size(&world->resource_list)) {
         return (world->resource_list.erase(&world->resource_list, index));
     }

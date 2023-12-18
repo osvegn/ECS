@@ -13,6 +13,7 @@
 
 void component_destructor(component_t *c)
 {
+    log_info("Component (%d) destructor called", c->type);
     if (c->data)
         free(c->data);
     c->data = 0;

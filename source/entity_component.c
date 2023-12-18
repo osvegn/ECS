@@ -55,9 +55,10 @@ int entity_add_component(entity_t *entity, component_t *component)
     unsigned int index = find_component(entity, component);
 
     if (index < entity->components.size(&entity->components)) {
-        log_error("Entity already contains component of type %d", component->type);
+        log_error("Entity (id: %d) already contains component of type %d", entity->id, component->type);
         return -1;
     }
+    log_info("Adding component of type %d to entity (id: %d)", component->type, entity->id);
     return (entity->components.emplace_back(&entity->components, component));
 }
 
@@ -65,10 +66,11 @@ int entity_remove_component_by_type(entity_t *entity, unsigned int type)
 {
     unsigned int index = find_component_by_type(entity, type);
 
+    log_info("Removing component of type %d to entity (id: %d).", type, entity->id);
     if (index < entity->components.size(&entity->components)) {
         return (entity->components.erase(&entity->components, index));
     }
-    log_error("Entity does not contain component of type %d.", type);
+    log_error("Entity (id: %d) does not contain component of type %d.", entity->id, type);
     return -1;
 }
 
@@ -80,7 +82,7 @@ int entity_remove_component(entity_t *entity, component_t *component)
 component_t *entity_get_component_by_type(entity_t *entity, unsigned int type)
 {
     if (entity->components.size(&entity->components) == 0) {
-        log_error("Entity does not contain any components.");
+        log_error("Entity (id: %d) does not contain any components.", entity->id);
         return NULL;
     }
     for (unsigned int index = 0; index < entity->components.size(&entity->components); index++) {
@@ -88,7 +90,7 @@ component_t *entity_get_component_by_type(entity_t *entity, unsigned int type)
             return entity->components.at(&entity->components, index);
         }
     }
-    log_error("Entity does not contain component of type %d.", type);
+    log_error("Entity (id: %d) does not contain component of type %d.", entity->id, type);
     return NULL;
 }
 
