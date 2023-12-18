@@ -7,5 +7,5 @@ var ecs__event_8c =
     [ "event_queue_constructor", "ecs__event_8c.html#a4afb0c8fe53865151bbfc3c70b3c974e", null ],
     [ "event_queue_destructor", "ecs__event_8c.html#a6fd79436c062cb2110773c7bfb208b71", null ],
     [ "event_queue_size", "ecs__event_8c.html#a189e2512e21df82999ee698e47daca39", null ],
-    [ "get_event", "ecs__event_8c.html#a08eae6645d968957e4808b61239d0627", null ]
+    [ "get_event", "ecs__event_8c.html#a2b00b0e22bf13c31b93d96204ed3fe37", null ]
 ];

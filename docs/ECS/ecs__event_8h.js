@@ -1,14 +1,23 @@
 var ecs__event_8h =
 [
-    [ "event_s", "structevent__s.html", "structevent__s" ],
+    [ "ecs_event_s", "structecs__event__s.html", "structecs__event__s" ],
+    [ "ecs_event_s::Input", "unionecs__event__s_1_1Input.html", "unionecs__event__s_1_1Input" ],
     [ "ecs_controller_t", "ecs__event_8h.html#a231748ea1cbb2ae993a0a7b647314e6c", null ],
+    [ "ecs_event_t", "ecs__event_8h.html#a7f9b607ab7a8a017899b161799ec8247", null ],
+    [ "ecs_event_type_t", "ecs__event_8h.html#a6d37ff16d6bf1ba4a853465c555d37b8", null ],
     [ "ecs_keyboard_t", "ecs__event_8h.html#a8d3c34af605964338652d698280b94d2", null ],
     [ "ecs_mouse_t", "ecs__event_8h.html#a19a39fe8b8e0e1b5c97e68f837acaac2", null ],
     [ "event_queue", "ecs__event_8h.html#a05303084c94b345b0f55152c2ade88c4", null ],
-    [ "event_t", "ecs__event_8h.html#ada2c77252a33c839a00748f3e7e96bcb", null ],
     [ "ecs_controller_e", "ecs__event_8h.html#a6612357a99866c217745148df70812fa", [
       [ "CONTROLLER_UNDEFINED", "ecs__event_8h.html#a6612357a99866c217745148df70812faa22b6960d47c1257593cad37cce9bf7b9", null ],
       [ "CONTROLLER_MAX", "ecs__event_8h.html#a6612357a99866c217745148df70812faaece622b946eb6f66b6bebe19b9def7ed", null ]
+    ] ],
+    [ "ecs_event_type_e", "ecs__event_8h.html#ad6d0310861b904a4076e472fa2b3d3ee", [
+      [ "EVENT_UNDEFINED", "ecs__event_8h.html#ad6d0310861b904a4076e472fa2b3d3eea626f8750ac9dc2870b612405f14a236d", null ],
+      [ "EVENT_MOUSE", "ecs__event_8h.html#ad6d0310861b904a4076e472fa2b3d3eea0ae1a24fe32a700c33d28d953819e249", null ],
+      [ "EVENT_KEYBOARD", "ecs__event_8h.html#ad6d0310861b904a4076e472fa2b3d3eeaf5c591c7be4033aad620eb85848c673b", null ],
+      [ "EVENT_CONTROLLER", "ecs__event_8h.html#ad6d0310861b904a4076e472fa2b3d3eea1d87c72b850ce03decec898eb70851ab", null ],
+      [ "EVENT_MAX", "ecs__event_8h.html#ad6d0310861b904a4076e472fa2b3d3eeaf66ca241c2a2e3ef806d69cb9fd7c339", null ]
     ] ],
     [ "ecs_keyboard_e", "ecs__event_8h.html#a5b3e6405381ba66b45378c7486c1d31a", [
       [ "KEYBOARD_UNDEFINED", "ecs__event_8h.html#a5b3e6405381ba66b45378c7486c1d31aa52f11e4dfd7952e90eee959dff072b43", null ],
@@ -101,5 +110,5 @@ var ecs__event_8h =
     [ "event_queue_constructor", "ecs__event_8h.html#a4afb0c8fe53865151bbfc3c70b3c974e", null ],
     [ "event_queue_destructor", "ecs__event_8h.html#abe788772620a91d8a4d42b2192ae82cc", null ],
     [ "event_queue_size", "ecs__event_8h.html#a189e2512e21df82999ee698e47daca39", null ],
-    [ "get_event", "ecs__event_8h.html#a08eae6645d968957e4808b61239d0627", null ]
+    [ "get_event", "ecs__event_8h.html#a2b00b0e22bf13c31b93d96204ed3fe37", null ]
 ];

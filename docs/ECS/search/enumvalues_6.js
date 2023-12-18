@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['right_5fclick_0',['RIGHT_CLICK',['../ecs__event_8h.html#a3b1266726c0e10701d4c78d166f56902a6bde2d8671c3faadcbb101451167afcf',1,'ecs_event.h']]]
+  ['outline_0',['OUTLINE',['../ecs__graphics_8h.html#acb9c9cc68358d7e15c3895140ac000bea6e6262f8d11e39222f4b1e5a68489f94',1,'ecs_graphics.h']]]
 ];

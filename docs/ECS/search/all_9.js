@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['key_0',['key',['../structevent__s.html#af59db858186c7c2fa126ab92cb6b6d80',1,'event_s']]],
+  ['key_0',['key',['../unionecs__event__s_1_1Input.html#af59db858186c7c2fa126ab92cb6b6d80',1,'ecs_event_s::Input']]],
   ['key_5f0_1',['KEY_0',['../ecs__event_8h.html#a5b3e6405381ba66b45378c7486c1d31aa6b30f8af6c880e1aca01b91aa13c6ff9',1,'ecs_event.h']]],
   ['key_5f1_2',['KEY_1',['../ecs__event_8h.html#a5b3e6405381ba66b45378c7486c1d31aa35bcc2bc85513df4f3897a9d64a9c51c',1,'ecs_event.h']]],
   ['key_5f2_3',['KEY_2',['../ecs__event_8h.html#a5b3e6405381ba66b45378c7486c1d31aa2333d7c312aa98622c41e74c5d13e8de',1,'ecs_event.h']]],

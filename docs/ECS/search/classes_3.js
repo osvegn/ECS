@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['shape_5fs_0',['shape_s',['../structshape__s.html',1,'']]],
-  ['system_5fs_1',['system_s',['../structsystem__s.html',1,'']]]
+  ['resource_5fs_0',['resource_s',['../structresource__s.html',1,'']]]
 ];
