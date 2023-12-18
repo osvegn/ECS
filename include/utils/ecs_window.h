@@ -7,6 +7,8 @@
  * Copyright (c) 2023 ECS
  */
 
+#ifndef ECS_WINDOW_H_
+#define ECS_WINDOW_H_
 
 typedef struct ecs_window_s {
     unsigned int width;
@@ -93,3 +95,5 @@ void copy_window(ecs_window_t *dest, ecs_window_t *src);
 
 void load_window(ecs_window_t *win);
 void unload_window(ecs_window_t *win);
+
+#endif // ECS_WINDOW_H_

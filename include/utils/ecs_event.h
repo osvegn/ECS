@@ -7,6 +7,9 @@
  * Copyright (c) 2023 ECS
  */
 
+#ifndef ECS_EVENT_H_
+#define ECS_EVENT_H_
+
 #include "vector.h"
 
 typedef enum ecs_mouse_e {
@@ -130,3 +133,5 @@ void add_controller_event(ecs_controller_t controller, float value, int device_i
 void get_event(ecs_event_t *event);
 void event_queue_clear(void);
 unsigned int event_queue_size(void);
+
+#endif // ECS_EVENT_H_

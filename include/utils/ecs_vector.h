@@ -7,6 +7,9 @@
  * Copyright (c) 2023 ECS
  */
 
+#ifndef ECS_VECTOR_H_
+#define ECS_VECTOR_H_
+
 typedef struct ecs_vector2i_s {
     int x;
     int y;
@@ -69,3 +72,5 @@ ecs_vector3f_t *mul_vector3f(ecs_vector3f_t *a, ecs_vector3f_t *b);
 ecs_vector3f_t *mul_vector3f_value(ecs_vector3f_t *a, double value);
 ecs_vector3f_t *div_vector3f(ecs_vector3f_t *a, ecs_vector3f_t *b);
 ecs_vector3f_t *div_vector3f_value(ecs_vector3f_t *a, double value);
+
+#endif // ECS_VECTOR_H_

@@ -7,6 +7,9 @@
  * Copyright (c) 2023 ECS
  */
 
+#ifndef ECS_GRAPHICS_H_
+#define ECS_GRAPHICS_H_
+
 #include "vector.h"
 #include "utils/ecs_color.h"
 #include "utils/ecs_vector.h"
@@ -49,3 +52,5 @@ void *get_texture(shape_t *shape);
 
 int load_texture(shape_t *shape, char *filename);
 int draw_shape(shape_t *shape);
+
+#endif // ECS_GRAPHICS_H_

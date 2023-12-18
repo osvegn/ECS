@@ -7,6 +7,9 @@
  * Copyright (c) 2023 ECS
  */
 
+#ifndef ECS_COLOR_H_
+#define ECS_COLOR_H_
+
 #define uchar unsigned char
 
 typedef struct ecs_color_s {
@@ -23,3 +26,5 @@ typedef struct ecs_color_s {
 void copy_color(ecs_color_t *dest, ecs_color_t *src);
 void set_color(ecs_color_t *color, uchar r, uchar g, uchar b);
 void set_alpha(ecs_color_t *color, uchar alpha);
+
+#endif // ECS_COLOR_H_
