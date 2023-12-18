@@ -8,6 +8,7 @@
  */
 
 #include "world.h"
+#include "world_logger.h"
 #include <stddef.h>
 
 int world_run_systems(world_t *world)
@@ -17,6 +18,7 @@ int world_run_systems(world_t *world)
     unsigned int size = systems->size(systems);
     int rvalue = 0;
 
+    log_info("Running systems");
     for (unsigned int i = 0; i < size && rvalue == 0; i++) {
         system = systems->at(systems, i);
         if (system && system->run)
@@ -24,5 +26,6 @@ int world_run_systems(world_t *world)
         else
             rvalue = -1;
     }
+    log_info("Systems stopped");
     return rvalue;
 }

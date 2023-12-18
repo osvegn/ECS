@@ -8,6 +8,7 @@
  */
 
 #include "world.h"
+#include "world_logger.h"
 
 static unsigned int find_system_by_type(vector_t *system_list, unsigned int type)
 {
@@ -32,6 +33,7 @@ int world_add_system(world_t *world, system_t *system)
 {
     unsigned int index = find_system(&world->system_list, system);
 
+    log_info("Adding system of type %d to world", system->type);
     if (index < world->system_list.size(&world->system_list)) {
         return -1;
     }
@@ -43,8 +45,8 @@ int world_remove_system_by_type(world_t *world, unsigned int type)
 {
     unsigned int index = find_system_by_type(&world->system_list, type);
 
+    log_info("Removing system of type %d from world", type);
     return (world->system_list.erase(&world->system_list, index));
-
 }
 
 int world_remove_system(world_t *world, system_t *system)

@@ -8,7 +8,7 @@
  */
 
 #include "world.h"
-#include "component.h"
+#include "world_logger.h"
 #include <stdarg.h>
 
 static unsigned int find_entity_by_id(vector_t *entity_list, unsigned int id)
@@ -34,6 +34,7 @@ int world_add_entity(world_t *world, entity_t *entity)
 {
     unsigned int index = find_entity(&world->entity_list, entity);
 
+    log_info("Adding entity (id: %d) to world", entity->id);
     if (index < world->entity_list.size(&world->entity_list)) {
         return -1;
     }
@@ -45,6 +46,7 @@ int world_remove_entity_by_id(world_t *world, unsigned int id)
 {
     unsigned int index = find_entity_by_id(&world->entity_list, id);
 
+    log_info("Removing entity (id: %d) from world", id);
     if (index < world->entity_list.size(&world->entity_list)) {
         return (world->entity_list.erase(&world->entity_list, index));
     }
@@ -89,6 +91,8 @@ int world_join_entities_from_vector(world_t *world, vector_t *entities, vector_t
 
     if (vector_constructor(entities, sizeof(vector_t *), 0) < 0)
         return -1;
+    log_info("Joining entities");
+    log_info("Number of arguments: %d", args->size(args));
     for (unsigned int index = 0; index < world->entity_list.size(&world->entity_list); index++) {
         for (unsigned int i = 0; i < args->size(args); i++) {
             e = world->entity_list.at(&world->entity_list, index);
@@ -109,6 +113,7 @@ int world_join_entities(world_t *world, vector_t *entities, unsigned int count, 
     int c_type = 0;
     int r_value = 0;
     vector_t args;
+
 
     if (vector_constructor(&args, sizeof(int), count) < 0)
         return -1;
