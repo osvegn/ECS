@@ -13,7 +13,7 @@ static event_queue queue = {0};
 
 void event_queue_constructor(void)
 {
-    vector_constructor(&queue, sizeof(event_t), 10);
+    vector_constructor(&queue, sizeof(ecs_event_t), 10);
 }
 
 void event_queue_destructor()
@@ -23,12 +23,11 @@ void event_queue_destructor()
 
 void add_mouse_event(ecs_mouse_t mouse, float value, int device_id)
 {
-    event_t e = {
-        .controller=CONTROLLER_UNDEFINED,
+    ecs_event_t e = {
         .device_id=device_id,
-        .key=KEYBOARD_UNDEFINED,
-        .mouse=mouse,
-        .value=value
+        .input.mouse=mouse,
+        .value=value,
+        .type=EVENT_MOUSE
     };
     queue.emplace_back(&queue, &e);
 
@@ -36,31 +35,29 @@ void add_mouse_event(ecs_mouse_t mouse, float value, int device_id)
 
 void add_key_event(ecs_keyboard_t key, float value, int device_id)
 {
-    event_t e = {
-        .controller=CONTROLLER_UNDEFINED,
+    ecs_event_t e = {
         .device_id=device_id,
-        .key=key,
-        .mouse=MOUSE_UNDEFINED,
-        .value=value
+        .input.key=key,
+        .value=value,
+        .type=EVENT_KEYBOARD
     };
     queue.emplace_back(&queue, &e);
 }
 
 void add_controller_event(ecs_controller_t controller, float value, int device_id)
 {
-    event_t e = {
-        .controller=controller,
+    ecs_event_t e = {
+        .input.controller=controller,
         .device_id=device_id,
-        .key=KEYBOARD_UNDEFINED,
-        .mouse=MOUSE_UNDEFINED,
         .value=value,
+        .type=EVENT_CONTROLLER
     };
     queue.emplace_back(&queue, &e);
 }
 
-void get_event(event_t *event)
+void get_event(ecs_event_t *event)
 {
-    (*event) = *(event_t *)queue.at(&queue, 0);
+    (*event) = *(ecs_event_t *)queue.at(&queue, 0);
     queue.erase(&queue, 0);
 }
 

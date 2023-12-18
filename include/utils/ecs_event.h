@@ -100,13 +100,24 @@ typedef enum ecs_controller_e {
     CONTROLLER_MAX
 } ecs_controller_t;
 
-typedef struct event_s {
-    ecs_mouse_t mouse;
-    ecs_keyboard_t key;
-    ecs_controller_t controller;
+typedef enum ecs_event_type_e {
+    EVENT_UNDEFINED,
+    EVENT_MOUSE,
+    EVENT_KEYBOARD,
+    EVENT_CONTROLLER,
+    EVENT_MAX
+} ecs_event_type_t;
+
+typedef struct ecs_event_s {
+    union Input {
+        ecs_mouse_t mouse;
+        ecs_keyboard_t key;
+        ecs_controller_t controller;
+    } input;
+    ecs_event_type_t type;
     int device_id;
     float value;
-} event_t;
+} ecs_event_t;
 
 typedef vector_t event_queue;
 
@@ -116,6 +127,6 @@ void add_mouse_event(ecs_mouse_t mouse, float value, int device_id);
 void add_key_event(ecs_keyboard_t key, float value, int device_id);
 void add_controller_event(ecs_controller_t controller, float value, int device_id);
 
-void get_event(event_t *event);
+void get_event(ecs_event_t *event);
 void event_queue_clear(void);
 unsigned int event_queue_size(void);
