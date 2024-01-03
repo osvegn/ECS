@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "client_s", "structclient__s.html", "structclient__s" ],
     [ "component_s", "structcomponent__s.html", "structcomponent__s" ],
     [ "ecs_color_s", "structecs__color__s.html", "structecs__color__s" ],
     [ "ecs_event_s", "structecs__event__s.html", "structecs__event__s" ],
@@ -10,6 +11,7 @@ var annotated_dup =
     [ "ecs_window_s", "structecs__window__s.html", "structecs__window__s" ],
     [ "entity_s", "structentity__s.html", "structentity__s" ],
     [ "resource_s", "structresource__s.html", "structresource__s" ],
+    [ "server_s", "structserver__s.html", "structserver__s" ],
     [ "shape_s", "structshape__s.html", "structshape__s" ],
     [ "system_s", "structsystem__s.html", "structsystem__s" ],
     [ "world_s", "structworld__s.html", "structworld__s" ]
