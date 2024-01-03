@@ -43,9 +43,14 @@ int server_bind(server_t *server)
     int rvalue = 0;
 
     log_info("Binding server");
-    rvalue = bind(server->socket, (struct sockaddr *)&server->address, server->address_len);
-    if (rvalue < 0)
+    log_fatal("Server socket: %d", server->socket);
+    log_fatal("Server address: %s", inet_ntoa(server->address.sin_addr));
+    log_fatal("Server port: %d", ntohs(server->address.sin_port));
+    rvalue = bind(server->socket, (struct sockaddr*)&server->address, server->address_len);
+    if (rvalue < 0) {
+        perror("bind");
         return -1;
+    }
     log_info("Server bound");
     return 0;
 }
@@ -55,7 +60,9 @@ int server_set_address(server_t *server, const char *ip, unsigned short port)
     log_info("Setting server address");
     server->address.sin_family = AF_INET;
     server->address.sin_addr.s_addr = inet_addr(ip);
+//    server->address.sin_addr.s_addr = htonl(INADDR_ANY);
     server->address.sin_port = htons(port);
+    server->address_len = sizeof(server->address);
     log_info("Server address set");
     return 0;
 }
@@ -116,6 +123,7 @@ int client_set_address(client_t *client, const char *ip, unsigned short port)
     client->address.sin_family = AF_INET;
     client->address.sin_addr.s_addr = inet_addr(ip);
     client->address.sin_port = htons(port);
+    client->address_len = sizeof(client->address);
     log_info("Client address set");
     return 0;
 }
