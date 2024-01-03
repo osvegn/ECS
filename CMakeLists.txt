@@ -34,6 +34,7 @@ set(SOURCE
     ${ECS_SOURCE_ROOT}/utils/ecs_vector.c
     ${ECS_SOURCE_ROOT}/utils/ecs_window.c
     ${ECS_SOURCE_ROOT}/utils/ecs_event.c
+    ${ECS_SOURCE_ROOT}/utils/network.c
 )
 set_property(GLOBAL PROPERTY VECTOR_SOURCE ${VECTOR_SOURCE})
 
