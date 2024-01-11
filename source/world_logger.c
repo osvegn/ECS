@@ -17,7 +17,7 @@
 #endif
 
 FILE *file = NULL;
-static enum world_log_level level = WORLD_LOG_LEVEL_ERROR;
+static enum world_log_level level = WORLD_LOG_LEVEL_INFO;
 
 int world_log_init(FILE *f)
 {

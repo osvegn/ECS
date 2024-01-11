@@ -26,11 +26,14 @@ int server_destructor(server_t *server);
 int server_bind(server_t *server);
 int server_set_address(server_t *server, const char *ip, unsigned short port);
 int server_listen(server_t *server, int backlog);
+int server_accept(server_t *server);
 
 typedef struct client_s {
     int socket;
     struct sockaddr_in address;
     socklen_t address_len;
+    time_t created_at;
+    bool is_connected;
 } client_t;
 
 int client_constructor(client_t *client);

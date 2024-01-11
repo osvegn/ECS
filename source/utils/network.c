@@ -8,10 +8,11 @@
 */
 
 #include "network.h"
-#include <unistd.h>
 #include "world_logger.h"
-#include <string.h>
 #include <arpa/inet.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
 
 /// Server
 
@@ -43,14 +44,9 @@ int server_bind(server_t *server)
     int rvalue = 0;
 
     log_info("Binding server");
-    log_fatal("Server socket: %d", server->socket);
-    log_fatal("Server address: %s", inet_ntoa(server->address.sin_addr));
-    log_fatal("Server port: %d", ntohs(server->address.sin_port));
     rvalue = bind(server->socket, (struct sockaddr*)&server->address, server->address_len);
-    if (rvalue < 0) {
-        perror("bind");
+    if (rvalue < 0)
         return -1;
-    }
     log_info("Server bound");
     return 0;
 }
@@ -60,7 +56,6 @@ int server_set_address(server_t *server, const char *ip, unsigned short port)
     log_info("Setting server address");
     server->address.sin_family = AF_INET;
     server->address.sin_addr.s_addr = inet_addr(ip);
-//    server->address.sin_addr.s_addr = htonl(INADDR_ANY);
     server->address.sin_port = htons(port);
     server->address_len = sizeof(server->address);
     log_info("Server address set");
@@ -79,6 +74,19 @@ int server_listen(server_t *server, int backlog)
     return 0;
 }
 
+int server_accept(server_t *server)
+{
+    client_t client = {0};
+
+    log_info("Accepting connection...");
+    client.socket = accept(server->socket, (struct sockaddr *)&client.address, &client.address_len);
+    client.is_connected = (client.socket > 0);
+    client.created_at = time(0);
+    server->clients.emplace_back(&server->clients, &client);
+    log_info("Connection accepted");
+    return client.socket;
+}
+
 /// Client
 
 int client_constructor(client_t *client)
@@ -88,6 +96,8 @@ int client_constructor(client_t *client)
     memset(&client->address, 0, sizeof(struct sockaddr_in));
     client->address_len = 0;
     client->socket = socket(AF_INET, SOCK_STREAM, 0);
+    client->created_at = time(0);
+    client->is_connected = false;
     if (client->socket < 0)
         return -1;
     log_info("Client created");
@@ -107,12 +117,10 @@ int client_connect(client_t *client)
 
     log_info("Connecting client");
     rvalue = connect(client->socket, (struct sockaddr *)&client->address, client->address_len);
-    log_info("Client socket: %d", client->socket);
-    log_info("Client address: %s", inet_ntoa(client->address.sin_addr));
-    log_info("Client port: %d", ntohs(client->address.sin_port));
-    log_info("Client rvalue: %d", rvalue);
     if (rvalue < 0)
         return -1;
+    client->created_at = time(0);
+    client->is_connected = true;
     log_info("Client connected");
     return 0;
 }
