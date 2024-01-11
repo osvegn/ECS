@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"world__logger_8h.html#af7472095fa238acfee648af9075ff66e":[1,0,0,8,8],
+"world__logger_8h_source.html":[1,0,0,8],
+"world__resource_8c.html":[1,0,1,7],
+"world__resource_8c.html#a1560e18899fbe4e54d1802330b3d1948":[1,0,1,7,2],
 "world__resource_8c.html#a815baab96080a74c676000e986f2ea09":[1,0,1,7,4],
 "world__resource_8c.html#a816c2d0c07da2dcc4df867f26d03cf63":[1,0,1,7,1],
 "world__resource_8c.html#a85e7b1294385ca7dd73582e73f085793":[1,0,1,7,3],

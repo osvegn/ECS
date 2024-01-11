@@ -52,7 +52,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "ecs__vector_8h.html#ae386cbbb86ad3bd199e1ee67dbf181a4",
-"world__resource_8c.html#a815baab96080a74c676000e986f2ea09"
+"world__logger_8h.html#af7472095fa238acfee648af9075ff66e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
